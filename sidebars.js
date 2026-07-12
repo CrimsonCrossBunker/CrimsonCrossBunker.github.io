@@ -13,7 +13,9 @@ const sidebars = {
       items: [
         'newbie/intro',
         'newbie/getting-started',
+        'newbie/controls',
         'newbie/first-day',
+        'newbie/first-week',
       ],
     },
   ],
@@ -26,8 +28,24 @@ const sidebars = {
       collapsed: false,
       items: [
         'dev/intro',
+        'dev/environment',
         'dev/build',
+        'dev/testing',
         'dev/contributing',
+      ],
+    },
+  ],
+
+  modSidebar: [
+    {
+      type: 'category',
+      label: 'MOD 制作教程',
+      collapsed: false,
+      items: [
+        'mod/intro',
+        'mod/first-mod',
+        'mod/content',
+        'mod/test-and-publish',
       ],
     },
   ],
@@ -43,7 +61,6 @@ const sidebars = {
         'contribute/code',
         'contribute/tileset',
         'contribute/translation',
-        'contribute/content',
       ],
     },
   ],

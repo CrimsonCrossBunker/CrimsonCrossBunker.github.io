@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Cataclysm: Cleanwater Bomb',
-  tagline: 'CCB —— 新人教程 · 开发者教程 · 工作状态',
+  tagline: '在末日中活下去，也亲手塑造它',
   favicon: 'img/favicon.ico',
 
   // Mermaid 流程图支持
@@ -20,6 +20,19 @@ const config = {
     },
   },
   themes: ['@docusaurus/theme-mermaid'],
+
+  plugins: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        language: ['zh'],
+        indexBlog: true,
+        indexPages: true,
+        docsRouteBasePath: '/docs',
+      },
+    ],
+  ],
 
   future: {
     v4: true,
@@ -41,10 +54,9 @@ const config = {
   // 国际化：简体中文为主，英文备选
   i18n: {
     defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans', 'en'],
+    locales: ['zh-Hans'],
     localeConfigs: {
       'zh-Hans': {label: '简体中文'},
-      en: {label: 'English'},
     },
   },
 
@@ -87,7 +99,8 @@ const config = {
     ({
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
-        respectPrefersColorScheme: true,
+        defaultMode: 'dark',
+        respectPrefersColorScheme: false,
       },
       navbar: {
         title: 'CCB',
@@ -96,34 +109,30 @@ const config = {
           src: 'img/logo.png',
         },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'newbieSidebar',
-            position: 'left',
-            label: '新人教程',
-          },
+          {type: 'docSidebar', sidebarId: 'newbieSidebar', position: 'left', label: '开始游玩'},
           {
             type: 'docSidebar',
             sidebarId: 'devSidebar',
             position: 'left',
-            label: '开发者教程',
+            label: '开发',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'modSidebar',
+            position: 'left',
+            label: '制作 MOD',
           },
           {
             type: 'docSidebar',
             sidebarId: 'contributeSidebar',
             position: 'left',
-            label: '贡献指南',
+            label: '参与贡献',
           },
-          {to: '/roadmap', label: '开发路线', position: 'left'},
-          {to: '/blog', label: '工作状态', position: 'left'},
+          {to: '/blog', label: '项目动态', position: 'left'},
           {to: '/community', label: '社区', position: 'left'},
           {
-            type: 'localeDropdown',
-            position: 'right',
-          },
-          {
             href: 'https://github.com/LYHGLYTX/Cataclysm-Cleanwater-Bomb',
-            label: 'GitHub',
+            label: 'GitHub ↗',
             position: 'right',
           },
         ],
@@ -132,7 +141,7 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: '教程',
+            title: '生存终端',
             items: [
               {
                 label: '新人教程',
@@ -143,12 +152,12 @@ const config = {
                 to: '/docs/dev/intro',
               },
               {
-                label: '贡献指南',
-                to: '/docs/contribute/intro',
+                label: 'MOD 教程',
+                to: '/docs/mod/intro',
               },
               {
-                label: '开发路线',
-                to: '/docs/roadmap/vision',
+                label: '贡献指南',
+                to: '/docs/contribute/intro',
               },
             ],
           },
@@ -174,12 +183,13 @@ const config = {
             ],
           },
           {
-            title: '更多',
+            title: '项目',
             items: [
               {
-                label: '工作状态',
+                label: '项目动态',
                 to: '/blog',
               },
+              {label: '开发路线', to: '/roadmap'},
               {
                 label: 'CCB 仓库',
                 href: 'https://github.com/LYHGLYTX/Cataclysm-Cleanwater-Bomb',
@@ -187,7 +197,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Cataclysm: Cleanwater Bomb. Built with Docusaurus.`,
+        copyright: `© ${new Date().getFullYear()} Cataclysm: Cleanwater Bomb · 社区驱动的末日生存项目`,
       },
       prism: {
         theme: prismThemes.github,

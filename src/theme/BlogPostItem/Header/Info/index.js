@@ -9,7 +9,7 @@ function Spacer() {
   return <>{' · '}</>;
 }
 
-const BADGES = ['每日最佳员工', '勤奋贡献者', '积极贡献者'];
+const BADGES = ['每日最佳员工', '勤奋贡献者', '积极贡献者', '合并王'];
 
 function AuthorChip({author, imgUrl, link, badge}) {
   return (
@@ -42,7 +42,7 @@ export default function BlogPostItemHeaderInfo({className}) {
   });
   const formattedDate = dateTimeFormat.format(new Date(date));
 
-  const top3 = authors.slice(0, 3);
+  const top4 = authors.slice(0, 4);
 
   return (
     <div className={clsx(styles.container, className)}>
@@ -56,9 +56,9 @@ export default function BlogPostItemHeaderInfo({className}) {
         )}
       </div>
 
-      {top3.length > 0 && (
+      {top4.length > 0 && (
         <div className={styles.chips}>
-          {top3.map((author, idx) => {
+          {top4.map((author, idx) => {
             const imgUrl = assets.authorsImageUrls?.[idx] ?? author.imageURL;
             const link = author.url || author.page?.permalink || '#';
             return (

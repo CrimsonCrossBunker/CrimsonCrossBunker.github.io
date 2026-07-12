@@ -10,6 +10,8 @@
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
+    "blog:update": "node scripts/generate-all-blogs.js ../Cataclysm-Cleanwater-Bomb",
+    "blog:rebuild": "node scripts/generate-all-blogs.js ../Cataclysm-Cleanwater-Bomb --force --prune",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids"
   },
@@ -18,6 +20,7 @@
     "@docusaurus/faster": "3.10.1",
     "@docusaurus/preset-classic": "3.10.1",
     "@docusaurus/theme-mermaid": "^3.10.1",
+    "@easyops-cn/docusaurus-search-local": "^0.55.2",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",

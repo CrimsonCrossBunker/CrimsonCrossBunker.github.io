@@ -1,66 +1,31 @@
-import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
-const FeatureList = [
-  {
-    title: '新人教程',
-    icon: '🎮',
-    to: '/docs/newbie/intro',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: '第一次玩 CCB？从下载安装到活过第一天，一步步带你上手生存。',
-    cta: '开始上手',
-  },
-  {
-    title: '开发者教程',
-    icon: '🛠️',
-    to: '/docs/dev/intro',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: '想参与开发或制作模组？了解如何从源码编译，以及向 CCB 提交贡献的流程。',
-    cta: '查看文档',
-  },
-  {
-    title: '贡献指南',
-    icon: '🤝',
-    to: '/docs/contribute/intro',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: '代码、贴图、翻译、内容 —— 不管会不会写代码，都有适合你的参与方式。',
-    cta: '参与进来',
-  },
+const PATHS = [
+  {code: '01', label: 'PLAY', title: '新人教程', desc: '从下载、设置到第一天和第一周，建立一套可靠的生存节奏。', to: '/docs/newbie/intro', meta: '零基础 · 玩家'},
+  {code: '02', label: 'BUILD', title: '开发者教程', desc: '搭建环境、编译 CCB、验证修改，并通过规范流程提交代码。', to: '/docs/dev/intro', meta: '进阶 · 开发'},
+  {code: '03', label: 'MOD', title: 'MOD 制作', desc: '用 JSON 创建第一个模组，加入物品、配方和更多游戏内容。', to: '/docs/mod/intro', meta: '入门 · 创作'},
+  {code: '04', label: 'LOCALIZE', title: '翻译贡献', desc: '无需编程即可参与；也包含字符串标记、提取和本地验证。', to: '/docs/contribute/translation', meta: '零基础 · 语言'},
+  {code: '05', label: 'PIXEL', title: '贴图贡献', desc: '认领缺失 ID，画像素图，并通过工作表与工具完成归置。', to: '/docs/contribute/tileset', meta: '入门 · 美术'},
 ];
-
-function Feature({Svg, title, description, icon, to, cta, index}) {
-  return (
-    <div className={clsx('col col--4')}>
-      <Link to={to} className={styles.featureCard} style={{'--i': index}}>
-        <div className={styles.featureArt}>
-          <Svg className={styles.featureSvg} role="img" />
-        </div>
-        <div className={styles.featureHead}>
-          <span className={styles.featureIcon}>{icon}</span>
-          <Heading as="h3" className={styles.featureTitle}>{title}</Heading>
-        </div>
-        <p className={styles.featureDesc}>{description}</p>
-        <span className={styles.featureCta}>{cta} <span className={styles.featureArrow}>→</span></span>
-      </Link>
-    </div>
-  );
-}
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
+    <section className={styles.paths}>
       <div className="container">
-        <div className={styles.sectionHead}>
-          <Heading as="h2" className={styles.sectionTitle}>
-            <span className={styles.sectionBar} />从这里开始
-          </Heading>
-          <p className={styles.sectionNote}>无论你想玩、想开发还是想贡献，都有一条清晰的路径</p>
-        </div>
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} index={idx} {...props} />
+        <header className={styles.head}>
+          <div><span>ACCESS ROUTES / 访问路径</span><Heading as="h2">你今天想做什么？</Heading></div>
+          <p>每条路线都从必要背景开始，以一个可以亲手验证的结果结束。</p>
+        </header>
+        <div className={styles.grid}>
+          {PATHS.map((path) => (
+            <Link key={path.code} to={path.to} className={styles.card}>
+              <div className={styles.cardTop}><span>{path.code}</span><i>{path.label}</i></div>
+              <Heading as="h3">{path.title}</Heading>
+              <p>{path.desc}</p>
+              <div className={styles.cardFoot}><small>{path.meta}</small><b aria-hidden="true">↗</b></div>
+            </Link>
           ))}
         </div>
       </div>

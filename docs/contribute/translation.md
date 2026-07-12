@@ -1,94 +1,68 @@
 ---
 sidebar_position: 4
 title: 翻译贡献
+description: 在线翻译、校对术语，以及为开发者说明字符串提取和本地验证。
 ---
 
 # 翻译贡献
 
-CCB 在 CDDA 基础上做多语言本地化。**不需要会写代码**，只要懂中文和想翻译的目标语言，就可以帮忙！
+:::info[两条路线]
+**在线译者**不需要源码或 GitHub；**开发者**负责让新增文本具备正确上下文并进入翻译模板。
+:::
 
-## 如何参与（普通人版）
+## 在线译者路线
 
-CCB 使用 [Transifex](https://www.transifex.com/) 作为翻译平台，全部在线操作，**不需要下载游戏源码、不需要 GitHub、不需要任何开发工具**。
+CCB 使用 [Transifex 项目](https://app.transifex.com/Cataclysm-Cleanwater-Bomb/cataclysm-cleanwater-bomb/dashboard/)协作翻译。
 
-### 1. 注册 Transifex 账号
+1. 注册 Transifex 账号并申请加入目标语言团队。
+2. 先阅读项目术语、已有相似词条和上下文。
+3. 从短而明确的界面文本开始，不要一次认领大量陌生机制。
+4. 保留占位符、标签、换行和格式控制符。
+5. 提交后关注校对反馈，在实际游戏中检查显示长度和语气。
 
-打开 [Transifex 注册页](https://www.transifex.com/signup/)，用邮箱注册一个免费账号。
+### 翻译检查表
 
-### 2. 加入 CCB 翻译项目
-
-访问 CCB 翻译项目主页：
-
-> **[app.transifex.com/Cataclysm-Cleanwater-Bomb/cataclysm-cleanwater-bomb/dashboard/](https://app.transifex.com/Cataclysm-Cleanwater-Bomb/cataclysm-cleanwater-bomb/dashboard/)**
-
-点击 **"Join team"** 或 **"Help translate"** 按钮，选择你擅长的语言，等待通过审核后即可开始翻译。
-
-### 3. 开始翻译
-
-进入项目后你会看到一个翻译界面：
-
-- **左侧**是英文原文（待翻译的字符串）
-- **右侧**是你填写译文的地方
-- 界面会显示哪些词条已翻译、哪些待翻译
-- 翻译完一条会自动跳转到下一条
-- 支持全文搜索和过滤器
-
-### 4. 翻译同步到游戏
-
-你提交的翻译会自动保存，CI 构建时会自动拉取到游戏中，**不需要手动提交 PR**。
-
----
-
-## 翻译质量与约定
-
-翻译 CDDA 系游戏有些特有的坑，无论什么语言都需注意：
-
-| 要点 | 说明 |
+| 检查 | 例子 |
 |---|---|
-| **占位符不能动** | `%s`、`%d`、`<name>`、`<global_val>` 这类占位符要原样保留 |
-| **复数形式** | 英文的 `msgid_plural` 要按目标语言的复数规则填写，中文通常不区分 |
-| **术语统一** | 同一术语在全局保持一致译法，建议参考已有翻译 |
-| **不要翻译 ID** | `id` 字段是游戏内部标识，只翻译 `name`、`description` 等展示字段 |
-| **语气简洁** | 游戏内空间有限，译文尽量简洁、符合目标语言习惯而非直译 |
+| 占位符数量与顺序不丢失 | `%s`、`%d`、`{name}` |
+| 游戏标签保持原样 | `<color_red>`、变量标签 |
+| 同一机制使用统一术语 | 技能、状态、身体部位、物品类别 |
+| 根据上下文处理词性 | 名词、按钮动作和完整句子不能机械共用译法 |
+| 不翻译内部 ID | JSON 的 `id`、枚举和文件名 |
 
-Transifex 界面会校验格式，格式错误会提示修改。
+:::warning[不要只看孤立英文]
+词条可能有复数、性别、上下文或格式限制。上下文不清楚时先搜索游戏内容或请求开发者补充注释，不要靠猜测定稿。
+:::
 
----
+## 校对路线
 
-## 翻译管道（开发者参考）
+校对不仅是改错字，还要检查术语一致、语气、标点、界面长度和占位符。提出修改时说明使用场景和依据，避免同一个词在多个页面来回改写。
 
-```mermaid
-flowchart TD
-    A[CCB 源码更新] -->|update_pot.sh| B[.pot 模板推送至 Transifex]
-    B --> C[译者在 Transifex 翻译]
-    C --> D[CI 自动拉取 .po 文件]
-    D --> E[compile_mo.sh 编译 .mo]
-    E --> F[游戏内显示对应语言]
-```
+## 开发者路线
 
-## 本地化文件结构
+CCB 使用 gettext 流程。当前仓库中的关键入口包括：
 
-CCB 的翻译走 gettext 的 `.po` / `.mo` 体系：
-
-| 路径 | 作用 |
+| 文件 | 作用 |
 |---|---|
-| `lang/po/` | `.po` 翻译文件 |
-| `lang/mo/` | 编译后的 `.mo`（游戏实际加载） |
-| `lang/update_pot.sh` | 从源码和 JSON 提取待翻译字符串 |
-| `lang/extract_json_strings.py` | 从 JSON 数据里抽取可翻译文本 |
-| `lang/compile_mo.sh` | 把 `.po` 编译成 `.mo` |
+| `lang/update_pot.sh` | 更新待翻译模板 |
+| `lang/extract_json_strings.py` | 从 JSON 提取可翻译文本 |
+| `lang/compile_mo.sh` | 编译本地翻译供游戏加载 |
+| `.github/workflows/push-translation-template.yml` | 推送模板的自动化流程 |
+| `.github/workflows/build-translations.yml` | 构建翻译资源 |
 
-## 本地校验
-
-如果你需要在本地验证翻译文件格式：
+新增 C++ 或 JSON 文本时，按 `doc/TRANSLATING.md` 使用正确的翻译类型、复数和上下文注释。MOD 本地化另见 `doc/TRANSLATING_MOD.md`。
 
 ```bash
-cd lang && ./compile_mo.sh        # 编译检查
-./discard_invalid_po.sh           # 过滤格式有问题的条目
+cd lang
+./update_pot.sh
+./compile_mo.sh
 ```
 
-## 报名 / 联系
+脚本依赖和参数可能变化，执行前阅读脚本帮助与仓库工作流。提交时检查生成差异，确保没有把无关的大规模模板变化混入功能 PR。
 
-- **Transifex 项目**：[Cataclysm-Cleanwater-Bomb](https://app.transifex.com/Cataclysm-Cleanwater-Bomb/cataclysm-cleanwater-bomb/dashboard/)
-- **QQ 群**：加入[社区](/community)开发贡献群（252513599）
-- **Discord**：https://discord.gg/tUG9MFwCqf
+## 完成标志
+
+- 在线贡献：词条通过格式检查，并完成至少一次上下文复核。
+- 开发贡献：新增文本能被提取，本地翻译可以编译并在游戏中显示。
+
+需要帮助时加入[翻译贡献群或 Discord](/community)。
