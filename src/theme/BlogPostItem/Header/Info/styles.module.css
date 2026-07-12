@@ -44,13 +44,18 @@
 }
 
 .badge勤奋贡献者 {
-  background: var(--ifm-color-emphasis-200);
-  color: var(--ifm-color-emphasis-700);
+  background: linear-gradient(135deg, #84fab0, #8fd3f4);
+  color: #1a5c3a;
 }
 
 .badge积极贡献者 {
-  background: var(--ifm-color-emphasis-100);
-  color: var(--ifm-color-emphasis-500);
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  color: #7c3a1a;
+}
+
+.badge合并王 {
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+  color: #4a2066;
 }
 
 .chipLink {

@@ -1,87 +1,31 @@
 ---
 sidebar_position: 2
 title: 代码贡献
+description: 选择代码任务并进入完整开发、测试和 PR 路线。
 ---
 
 # 代码贡献
 
-面向想修 bug、加功能、或帮忙同步上游 CDDA 的开发者。
+:::info[适合你吗？]
+如果你想修复 C++、构建、Android、CI 或底层工具问题，请走代码贡献路线。只添加物品和玩法内容时，优先阅读 [MOD 教程](/docs/mod/intro)。
+:::
 
-## 准备工作
+## 开始前
 
-1. 在 GitHub 上 fork [Cataclysm-Cleanwater-Bomb](https://github.com/LYHGLYTX/Cataclysm-Cleanwater-Bomb)
-2. clone 你的 fork 到本地
-3. 能从源码编译游戏（见[编译游戏](/docs/dev/build)）
+1. 在 Issue、路线图或社区中选择一个边界明确的问题。
+2. 确认没有其他人正在完成同一任务；较大设计先讨论。
+3. 按[开发者教程](/docs/dev/intro)配置环境并完成一次无修改构建。
+4. 为任务建立独立分支，先写下可复现的现状和验收条件。
 
-## 工作流
+## 完整流程
 
-```mermaid
-flowchart LR
-    A[fork + clone] --> B[新建分支]
-    B --> C[改代码]
-    C --> D[本地编译 + 测试]
-    D --> E{通过?}
-    E -->|否| C
-    E -->|是| F[push 到 fork]
-    F --> G[开 PR 到 CCB master]
-    G --> H[审查 + 合并]
-```
+- [准备开发环境](/docs/dev/environment)
+- [编译游戏](/docs/dev/build)
+- [测试与调试](/docs/dev/testing)
+- [提交贡献](/docs/dev/contributing)
 
-## 分支与提交规范
+代码贡献页不重复维护构建命令与 PR 模板，避免两份教程发生偏差。所有细节以 CCB 当前 `CONTRIBUTING.md`、平台编译文档和 CI 工作流为准。
 
-- **分支命名**：按内容类别，例如 `fix/vehicle-crash`、`feat/tileset-coverage`、`sync-cdda-cpp`
-- **不直接推 master**：永远在新分支上工作
-- **提交信息**：简洁说明做了什么，一行概括 + 必要时正文展开
-- **PR 标题**：说明修复内容或同步范围
-- **PR 描述**：列出改动点、验证情况（是否编译通过、是否跑了测试）
-
-## 同步上游 CDDA
-
-CCB 定期从 [CleverRaven/Cataclysm-DDA](https://github.com/CleverRaven/Cataclysm-DDA) 同步已合并的 PR。典型做法是**按类别分支 cherry-pick**，便于分批审查：
-
-```mermaid
-flowchart TD
-    A[确定上次同步点] --> B[列出上游新合并 PR]
-    B --> C{按类别分组}
-    C --> D[内容/JSON 修复]
-    C --> E[C++ 机制]
-    C --> F[模组]
-    C --> G[SDL3/渲染/CI]
-    D --> H[各自分支 cherry-pick]
-    E --> H
-    F --> H
-    G --> H
-    H --> I[合并到一起编译验证]
-    I --> J{编译通过?}
-    J -->|否| K[修复冲突/构建问题]
-    K --> I
-    J -->|是| L[分别开 PR 合并]
-```
-
-## 处理合并冲突
-
-当多个分支改了同一文件，先合无冲突的分支，再 rebase 有冲突的分支到最新 master：
-
-```bash
-git checkout <冲突分支>
-git rebase origin/master
-# 解决冲突后
-git add <冲突文件>
-git rebase --continue
-git push --force-with-lease origin <冲突分支>
-```
-
-解决冲突时以**上游权威态**为准，除非 CCB 有意保留自有改动。
-
-## 编译验证
-
-合并前务必本地编译通过（见[编译游戏](/docs/dev/build)）。JSON 数据改动也要通过校验，避免格式错误导致游戏加载失败：
-
-```bash
-# JSON 格式化与校验
-python3 tools/format/format.py
-```
-
-:::tip
-不确定改动是否合适？先到[开发贡献 QQ 群](/community)问一声，避免白做工。
+:::tip[不知道从哪里下手]
+带上操作系统、构建方式和你感兴趣的子系统，到[开发贡献群或 Discord](/community)询问适合新贡献者的任务。
 :::

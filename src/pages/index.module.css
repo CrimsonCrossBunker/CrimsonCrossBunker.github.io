@@ -1,51 +1,27 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.heroFade {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 90px;
-  background: linear-gradient(to bottom, transparent, var(--ifm-background-color));
-  z-index: 1;
-  pointer-events: none;
-}
-
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
-
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.mainWrapper {
-  position: relative;
-  overflow: hidden;
-  background: #dce4f0;
-}
-
-[data-theme='dark'] .mainWrapper {
-  background: #0d1117;
-}
-
-.mainWrapper > *:not(:first-child) {
-  position: relative;
-  z-index: 1;
-}
+.hero { position: relative; min-height: calc(100vh - 60px); display: flex; flex-direction: column; justify-content: center; overflow: hidden; border-bottom: 1px solid var(--ccb-line); background: radial-gradient(circle at 78% 36%, rgba(66,203,160,.14), transparent 28%), linear-gradient(115deg, #07100e 0%, #0b1513 62%, #0d1b17 100%); }
+.hero::before { content: ''; position: absolute; inset: 0; opacity: .22; background-image: linear-gradient(rgba(141,245,210,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(141,245,210,.08) 1px, transparent 1px); background-size: 48px 48px; mask-image: linear-gradient(to bottom, #000, transparent 86%); }
+.scanlines { position: absolute; inset: 0; pointer-events: none; opacity: .12; background: repeating-linear-gradient(to bottom, transparent 0, transparent 3px, #000 4px); }
+.heroInner { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(360px, .85fr); gap: clamp(3rem, 8vw, 8rem); align-items: center; padding-top: 7rem; padding-bottom: 7rem; }
+.eyebrow, .kicker { color: var(--ccb-cyan); font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; }
+.eyebrow span { color: var(--ccb-danger); text-shadow: 0 0 10px currentColor; }
+.heroTitle { margin: 1.2rem 0 1.6rem; font-size: clamp(3.6rem, 8vw, 7rem); line-height: .98; letter-spacing: .055em; text-shadow: 0 0 36px rgba(141,245,210,.1); }
+.heroTitle span { color: var(--ccb-cyan); }
+.heroLead { max-width: 640px; color: #aebfb7; font-size: 1.05rem; line-height: 1.9; }
+.heroActions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
+.terminal { min-width: 0; border: 1px solid var(--ccb-line-strong); border-radius: var(--ccb-radius); background: rgba(5,12,10,.78); box-shadow: 0 26px 64px rgba(0,0,0,.42), inset 0 0 50px rgba(66,203,160,.025); }
+.terminalBar { height: 42px; display: flex; align-items: center; gap: 7px; padding: 0 14px; border-bottom: 1px solid var(--ccb-line); background: rgba(141,245,210,.04); }
+.terminalBar span { width: 8px; height: 8px; border-radius: 50%; background: #384842; }
+.terminalBar span:first-child { background: var(--ccb-danger); }.terminalBar span:nth-child(2) { background: var(--ccb-amber); }.terminalBar span:nth-child(3) { background: var(--ccb-cyan-deep); }
+.terminalBar b { margin-left: auto; color: var(--ccb-muted); font: 400 .72rem var(--ccb-font-code); }
+.terminalBody { padding: 1.7rem; font: .84rem/1.7 var(--ccb-font-code); color: #9eb2aa; }
+.terminalBody p { margin: 0 0 1rem; }.terminalBody i { color: var(--ccb-cyan); font-style: normal; }.terminalBody .ok { color: var(--ccb-cyan); }
+.terminalBody dl { margin: 1.5rem 0; }.terminalBody dl div { display: flex; justify-content: space-between; gap: 1rem; padding: .75rem 0; border-bottom: 1px dashed var(--ccb-line); }.terminalBody dt { color: #e1eee8; }.terminalBody dd { margin: 0; color: var(--ccb-muted); text-align: right; }
+.cursor span { color: var(--ccb-cyan); animation: blink 1s steps(1) infinite; }
+.heroFoot { position: absolute; z-index: 1; left: 0; right: 0; bottom: 0; border-top: 1px solid var(--ccb-line); color: #60756d; font: .62rem var(--ccb-font-code); letter-spacing: .16em; }.heroFoot > div { height: 48px; display: flex; align-items: center; justify-content: space-between; }.heroFoot i { color: var(--ccb-cyan); font-style: normal; }
+.main { background: var(--ccb-bg); }
+.gallerySection { padding: 6rem 0; border-top: 1px solid var(--ccb-line); background: linear-gradient(180deg, var(--ccb-bg), var(--ccb-bg-raised)); }
+.sectionHead { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 2rem; }.sectionHead h2 { font-size: clamp(2rem, 4vw, 3.2rem); margin: .55rem 0 0; }.sectionHead p { max-width: 430px; margin: 0; color: var(--ccb-muted); }
+.join { padding: 5.5rem 0; border-top: 1px solid var(--ccb-line); background: radial-gradient(circle at 10% 50%, rgba(141,245,210,.08), transparent 28%); }.joinInner { display: flex; justify-content: space-between; gap: 3rem; align-items: center; }.join h2 { margin: .5rem 0; font-size: clamp(2rem, 4vw, 3rem); }.join p { margin: 0; color: var(--ccb-muted); }.joinActions { display: flex; align-items: center; gap: 1.5rem; flex-shrink: 0; }
+@keyframes blink { 50% { opacity: 0; } }
+@media (max-width: 996px) { .hero { min-height: auto; }.heroInner { grid-template-columns: 1fr; padding-top: 5rem; padding-bottom: 7rem; }.terminal { transform: none; }.sectionHead, .joinInner { align-items: flex-start; flex-direction: column; }.joinActions { align-items: flex-start; flex-direction: column; } }
+@media (max-width: 600px) { .heroTitle { font-size: 3.25rem; }.terminal { display: none; }.heroInner { padding-top: 4rem; }.gallerySection, .join { padding: 4rem 0; } }

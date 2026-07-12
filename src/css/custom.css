@@ -1,212 +1,220 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+@font-face {
+  font-family: 'Fusion Pixel';
+  src: url('/fonts/fusion-pixel/fusion-pixel-12px-proportional-zh_hans.ttf.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+}
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #3b6cb4;
-  --ifm-color-primary-dark: #3561a2;
-  --ifm-color-primary-darker: #325c99;
-  --ifm-color-primary-darkest: #294c7e;
-  --ifm-color-primary-light: #477bc0;
-  --ifm-color-primary-lighter: #5083c4;
-  --ifm-color-primary-lightest: #6b98d0;
-  --ifm-background-color: #dce4f0;
-  --ifm-background-surface-color: #e3eaf4;
-  --ifm-font-color-base: #2a3a4e;
-  --ifm-navbar-background-color: #1a1a2e;
-  --ifm-navbar-link-color: #c8ddf5;
-  --ifm-navbar-link-hover-color: #ffffff;
-  --ifm-footer-background-color: #1a1a2e;
-  --ifm-footer-link-color: #c8ddf5;
-  --ifm-footer-link-hover-color: #ffffff;
-  --ifm-footer-title-color: #ffffff;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  color-scheme: dark;
+  --ccb-font-pixel: 'Fusion Pixel', 'Microsoft YaHei', 'PingFang SC', sans-serif;
+  --ccb-font-code: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  --ccb-bg: #09100f;
+  --ccb-bg-raised: #101a18;
+  --ccb-bg-soft: #15221f;
+  --ccb-panel: rgba(16, 26, 24, 0.86);
+  --ccb-line: rgba(141, 245, 210, 0.16);
+  --ccb-line-strong: rgba(141, 245, 210, 0.35);
+  --ccb-text: #d8e7df;
+  --ccb-muted: #91a69d;
+  --ccb-cyan: #8df5d2;
+  --ccb-cyan-deep: #42cba0;
+  --ccb-amber: #ffc66d;
+  --ccb-danger: #ff7d6e;
+  --ccb-radius-sm: 4px;
+  --ccb-radius: 8px;
+  --ccb-radius-lg: 12px;
+  --ccb-shadow: 0 18px 55px rgba(0, 0, 0, 0.34);
+  --ifm-font-family-base: var(--ccb-font-pixel);
+  --ifm-font-family-monospace: var(--ccb-font-code);
+  --ifm-color-primary: #71e7bf;
+  --ifm-color-primary-dark: #55dfb1;
+  --ifm-color-primary-darker: #47dbaa;
+  --ifm-color-primary-darkest: #28bd8e;
+  --ifm-color-primary-light: #8df0cb;
+  --ifm-color-primary-lighter: #9bf3d2;
+  --ifm-color-primary-lightest: #c3fae7;
+  --ifm-background-color: var(--ccb-bg);
+  --ifm-background-surface-color: var(--ccb-bg-raised);
+  --ifm-font-color-base: var(--ccb-text);
+  --ifm-heading-color: #effaf5;
+  --ifm-navbar-background-color: rgba(9, 16, 15, 0.94);
+  --ifm-footer-background-color: #060b0a;
+  --ifm-code-font-size: 92%;
+  --ifm-line-height-base: 1.82;
+  --ifm-global-radius: var(--ccb-radius-sm);
+  --docusaurus-highlighted-code-line-bg: rgba(141, 245, 210, 0.1);
 }
 
-.contributors-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.contributor-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  text-decoration: none;
-  color: var(--ifm-font-color-base);
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-.contributor-badge:hover {
-  text-decoration: none;
-  color: var(--ifm-link-color);
-}
-
-.contributor-badge img {
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.blog-list-page article h2 {
-  font-size: 2rem;
-}
-
-article table th:first-child,
-article table td:first-child { width: 70px; white-space: nowrap; }
-article table th:nth-child(3),
-article table td:nth-child(3) { width: 110px; white-space: nowrap; }
-article table th:nth-child(4),
-article table td:nth-child(4) { width: 105px; white-space: nowrap; }
-
-.hero--primary {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-}
-
-.navbar {
-  background: #1a1a2e !important;
-}
-
-.footer--dark {
-  background: #1a1a2e !important;
-}
-
-[data-theme='dark'] .navbar,
-[data-theme='dark'] .footer--dark {
-  background: #0d1117 !important;
-}
-
-.hero__title {
-  color: #c0d0e0 !important;
-}
-
-.hero__subtitle {
-  color: #8aa0b8;
-}
-
-body {
-  background: #dce4f0;
-}
-
-[data-theme='dark'] body {
-  background: #0d1117;
+[data-theme='light'] {
+  color-scheme: light;
+  --ccb-bg: #edf2ed;
+  --ccb-bg-raised: #f8faf7;
+  --ccb-bg-soft: #e2ebe5;
+  --ccb-panel: rgba(248, 250, 247, 0.9);
+  --ccb-line: rgba(16, 73, 59, 0.16);
+  --ccb-line-strong: rgba(16, 103, 78, 0.35);
+  --ccb-text: #1d302a;
+  --ccb-muted: #60756d;
+  --ccb-cyan: #087d5b;
+  --ccb-cyan-deep: #056348;
+  --ccb-amber: #9b5b00;
+  --ccb-shadow: 0 16px 42px rgba(28, 58, 48, 0.12);
+  --ifm-background-color: var(--ccb-bg);
+  --ifm-background-surface-color: var(--ccb-bg-raised);
+  --ifm-font-color-base: var(--ccb-text);
+  --ifm-heading-color: #10251e;
+  --ifm-navbar-background-color: rgba(248, 250, 247, 0.95);
+  --ifm-footer-background-color: #10231d;
+  --ifm-color-primary: #087d5b;
+  --ifm-color-primary-dark: #076f51;
+  --ifm-color-primary-darker: #06694c;
+  --ifm-color-primary-darkest: #05573f;
+  --ifm-color-primary-light: #098b65;
+  --ifm-color-primary-lighter: #0a9169;
+  --ifm-color-primary-lightest: #0ba477;
 }
 
 html {
-  background: #dce4f0;
+  background: var(--ccb-bg);
+  scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
-[data-theme='dark'] html {
-  background: #0d1117;
+body {
+  background:
+    linear-gradient(rgba(141, 245, 210, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(141, 245, 210, 0.025) 1px, transparent 1px),
+    var(--ccb-bg);
+  background-size: 32px 32px;
+  font-size: 17px;
+  letter-spacing: 0.025em;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
-[data-theme='dark'] {
-  --ifm-color-primary: #5b9bd5;
-  --ifm-color-primary-dark: #4a8cc7;
-  --ifm-color-primary-darker: #4285bf;
-  --ifm-color-primary-darkest: #3770a3;
-  --ifm-color-primary-light: #6ca7db;
-  --ifm-color-primary-lighter: #76aedf;
-  --ifm-color-primary-lightest: #92bfe6;
-  --ifm-background-color: #0d1117;
-  --ifm-background-surface-color: #161b22;
-  --ifm-font-color-base: #c8ddf5;
-  --ifm-navbar-background-color: #0d1117;
-  --ifm-navbar-link-color: #c8ddf5;
-  --ifm-navbar-link-hover-color: #ffffff;
-  --ifm-footer-background-color: #0d1117;
-  --ifm-footer-link-color: #c8ddf5;
-  --ifm-footer-link-hover-color: #ffffff;
-  --ifm-footer-title-color: #ffffff;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+#__docusaurus {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
-.hero .button--secondary {
-  background: rgba(192, 208, 224, 0.15);
-  color: #c0d0e0;
-  border: 1px solid rgba(255,255,255,0.15);
+.container {
+  min-width: 0;
 }
 
-.hero .button--secondary:hover {
-  background: rgba(192, 208, 224, 0.25);
-  color: #ffffff;
-  border-color: rgba(255,255,255,0.3);
-}
-
-/* ===== 全站共享设计语言（与 roadmap 统一） ===== */
-:root {
-  --ccb-accent-grad: linear-gradient(135deg, #5b9bd5, #3b6cb4);
-  --ccb-hero-grad: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-  --ccb-card-radius: 14px;
-  --ccb-card-shadow: 0 12px 30px rgba(15, 52, 96, 0.13);
-}
-
-/* 平滑滚动 + 锚点偏移，避免标题被固定导航遮挡 */
-html { scroll-behavior: smooth; }
+::selection { background: rgba(141, 245, 210, 0.28); }
 :target { scroll-margin-top: 5rem; }
+a { transition: color 150ms ease, border-color 150ms ease, background 150ms ease; }
 
-/* 链接过渡更顺滑 */
-a { transition: color 0.15s ease; }
-
-/* 全站卡片悬浮统一手感 */
-.card {
-  border-radius: var(--ccb-card-radius);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--ccb-card-shadow);
+.navbar {
+  border-bottom: 1px solid var(--ccb-line);
+  box-shadow: none;
+  backdrop-filter: blur(16px);
 }
 
-/* 主按钮微交互 */
-.button--primary {
-  transition: transform 0.15s ease, box-shadow 0.2s ease;
-}
-.button--primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(59, 108, 180, 0.35);
+.navbar__brand { letter-spacing: 0.14em; }
+.navbar__logo img { image-rendering: pixelated; }
+.navbar__link { font-size: 0.92rem; }
+.navbar__link--active { color: var(--ccb-cyan); }
+
+.footer--dark {
+  border-top: 1px solid var(--ccb-line);
+  background: var(--ifm-footer-background-color);
 }
 
-/* 文档区告示块（admonition）圆角与左条更精致 */
+.footer__title { color: var(--ccb-cyan); letter-spacing: 0.12em; }
+.footer__link-item { color: #a7bbb2; }
+
+.button {
+  border-radius: var(--ccb-radius-sm);
+  letter-spacing: 0.06em;
+  transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
+}
+
+.button:hover { transform: translateY(-2px); }
+.button--primary { color: #06110d; box-shadow: 0 0 28px rgba(113, 231, 191, 0.16); }
+.button--outline { border-color: var(--ccb-line-strong); color: var(--ccb-text); }
+
+.theme-doc-sidebar-container { border-right-color: var(--ccb-line) !important; }
+.menu { padding: 1rem 0.75rem; font-size: 0.92rem; }
+.menu__link { border-radius: var(--ccb-radius-sm); }
+.menu__link--active { background: rgba(113, 231, 191, 0.1); }
+.table-of-contents { border-left-color: var(--ccb-line); font-size: 0.82rem; }
+
+.theme-doc-markdown,
+.markdown {
+  max-width: 820px;
+  font-size: 1rem;
+}
+
+.markdown > h1:first-child {
+  font-size: clamp(2rem, 5vw, 3.15rem);
+  margin-bottom: 1.3rem;
+  letter-spacing: 0.06em;
+}
+
+.markdown h2 {
+  margin-top: 2.8rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--ccb-line);
+}
+
+.markdown h2::before { content: '// '; color: var(--ccb-cyan); }
+.markdown h3::before { content: '> '; color: var(--ccb-amber); }
+.markdown p, .markdown li { line-height: 1.82; }
+.markdown strong { color: var(--ccb-cyan); font-weight: 700; }
+.markdown img { border: 1px solid var(--ccb-line); border-radius: var(--ccb-radius); }
+
+code, pre, kbd { font-family: var(--ccb-font-code); letter-spacing: 0; }
+.theme-code-block { border: 1px solid var(--ccb-line); border-radius: var(--ccb-radius); box-shadow: var(--ccb-shadow); }
+kbd { border: 1px solid var(--ccb-line-strong); background: var(--ccb-bg-soft); box-shadow: 0 2px 0 var(--ccb-line-strong); }
+
 .theme-admonition {
-  border-radius: 12px;
-  border-left-width: 4px;
+  border: 1px solid var(--ccb-line);
+  border-left-width: 3px;
+  border-radius: var(--ccb-radius);
+  background: var(--ccb-panel);
 }
 
-/* 文档表格：圆角包裹 + 表头着色 + 斑马纹 */
-.markdown table {
-  border-radius: 10px;
+.table-wrapper, .markdown table {
+  border: 1px solid var(--ccb-line);
+  border-radius: var(--ccb-radius);
   overflow: hidden;
-  box-shadow: 0 1px 0 var(--ifm-color-emphasis-200);
-}
-.markdown table thead tr {
-  background: var(--ifm-color-emphasis-100);
-}
-.markdown table tbody tr:nth-child(2n) {
-  background: var(--ifm-color-emphasis-100);
 }
 
-/* 自定义滚动条（桌面） */
+.markdown table { display: table; width: 100%; }
+.markdown table th { color: var(--ccb-cyan); background: var(--ccb-bg-soft); }
+.markdown table tr:nth-child(2n) { background: rgba(141, 245, 210, 0.025); }
+
+.pagination-nav__link {
+  border-color: var(--ccb-line);
+  border-radius: var(--ccb-radius);
+  background: var(--ccb-panel);
+}
+
+.pagination-nav__link:hover { border-color: var(--ccb-line-strong); }
+.breadcrumbs__link { border-radius: var(--ccb-radius-sm); }
+
+.contributors-row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+.contributor-badge { display: inline-flex; align-items: center; gap: 0.3rem; color: var(--ccb-text); font-size: 0.9rem; }
+.contributor-badge img { border-radius: 50%; object-fit: cover; }
+.blog-list-page article { padding-bottom: 2rem; border-bottom: 1px solid var(--ccb-line); }
+
 @media (pointer: fine) {
-  * { scrollbar-width: thin; scrollbar-color: var(--ifm-color-primary) transparent; }
-  *::-webkit-scrollbar { width: 10px; height: 10px; }
-  *::-webkit-scrollbar-thumb {
-    background: var(--ifm-color-primary);
-    border-radius: 999px;
-    border: 2px solid transparent;
-    background-clip: content-box;
-  }
-  *::-webkit-scrollbar-track { background: transparent; }
+  * { scrollbar-width: thin; scrollbar-color: var(--ccb-cyan-deep) transparent; }
+  *::-webkit-scrollbar { width: 9px; height: 9px; }
+  *::-webkit-scrollbar-thumb { background: var(--ccb-cyan-deep); border: 2px solid transparent; background-clip: content-box; }
 }
 
-/* 尊重无障碍：减少动效偏好 */
+@media (max-width: 996px) {
+  body { font-size: 16px; }
+  .navbar__items--right .navbar__item { display: none; }
+  .markdown table { display: block; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .card, .button--primary { transition: none; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }

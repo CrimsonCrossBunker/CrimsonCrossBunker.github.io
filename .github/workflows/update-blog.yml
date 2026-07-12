@@ -13,15 +13,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 拉取 CCB 主仓库历史
+        uses: actions/checkout@v4
+        with:
+          repository: LYHGLYTX/Cataclysm-Cleanwater-Bomb
+          ref: master
+          path: ccb-source
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
 
       - name: 生成活动博客
-        run: node scripts/generate-activity-blog.js
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/generate-all-blogs.js ccb-source
 
       - name: 提交并推送
         run: |
