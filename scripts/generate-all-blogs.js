@@ -154,8 +154,31 @@ function githubUser(name) {
   return {name: login, login, verified: true};
 }
 
+function userKey(user) {
+  return user.verified && user.login
+    ? `github:${user.login.toLowerCase()}`
+    : `name:${user.name.toLowerCase()}`;
+}
+
+function preferredUser(current, candidate) {
+  if (!current) return candidate;
+  if (candidate.verified && !current.verified) return candidate;
+  if (candidate.verified && current.verified
+    && candidate.login.toLowerCase() === current.login.toLowerCase()) {
+    const currentIsLogin = current.name.toLowerCase() === current.login.toLowerCase();
+    const candidateIsLogin = candidate.name.toLowerCase() === candidate.login.toLowerCase();
+    if (currentIsLogin && !candidateIsLogin) return candidate;
+  }
+  return current;
+}
+
 function parseRecords(output) {
   return output.split('\x1e').map((record) => record.replace(/^\n+|\n+$/g, '')).filter(Boolean);
+}
+
+function isUpstreamSyncPR(title, sourceRef) {
+  return /^(?:sync(?:hronize)?\b|同步\s*(?:CDDA|上游))/i.test(title.trim())
+    || /\/(?:sync|sync-upstream)\/(?:cdda|upstream)(?:[-/]|$)/i.test(sourceRef);
 }
 
 function buildPRMap() {
@@ -179,9 +202,12 @@ function buildPRMap() {
     if (parents.length < 2) continue;
     const [firstParent, secondParent] = parents;
     const number = Number(match[1]);
-    const branchOwner = githubUser(match[2].split('/')[0]);
+    const sourceRef = match[2];
+    const branchOwner = githubUser(sourceRef.split('/')[0]);
     const tipLine = git('log', '-1', '--format=%an%x1f%ae%x1f%s', secondParent).trim();
     const [tipName = '', tipEmail = '', tipSubject = ''] = tipLine.split('\x1f');
+    const title = lines.slice(1).find((line) => !line.startsWith('Merge ')) || tipSubject || '无标题';
+    const upstreamSync = isUpstreamSyncPR(title, sourceRef);
     const rawTipUser = resolveUser(tipName, tipEmail);
     if (rawTipUser.name !== '未知贡献者'
       && (branchOwner.login.toLowerCase() !== REPO_OWNER
@@ -200,25 +226,26 @@ function buildPRMap() {
       : (tipUser.name.toLowerCase() === branchOwner.name.toLowerCase() ? branchOwner : tipUser);
 
     const authorCounts = new Map();
-    for (const authorLine of git(
-      'log', '--no-merges', '--format=%an%x1f%ae', `${firstParent}..${secondParent}`,
-    ).split('\n')) {
-      if (!authorLine) continue;
-      const [authorName, authorEmail = ''] = authorLine.split('\x1f');
-      const resolvedUser = resolveUser(authorName, authorEmail);
-      const user = !resolvedUser.verified
-        && resolvedUser.name.toLowerCase() === rawTipUser.name.toLowerCase()
-        ? tipUser
-        : resolvedUser;
-      const key = user.name.toLowerCase();
-      const current = authorCounts.get(key) || {user, commits: 0};
-      if (user.verified && !current.user.verified) current.user = user;
-      current.commits++;
-      authorCounts.set(key, current);
+    if (!upstreamSync) {
+      for (const authorLine of git(
+        'log', '--no-merges', '--format=%an%x1f%ae', `${firstParent}..${secondParent}`,
+      ).split('\n')) {
+        if (!authorLine) continue;
+        const [authorName, authorEmail = ''] = authorLine.split('\x1f');
+        const resolvedUser = resolveUser(authorName, authorEmail);
+        const user = !resolvedUser.verified
+          && resolvedUser.name.toLowerCase() === rawTipUser.name.toLowerCase()
+          ? tipUser
+          : resolvedUser;
+        const key = userKey(user);
+        const current = authorCounts.get(key) || {user, commits: 0};
+        current.user = preferredUser(current.user, user);
+        current.commits++;
+        authorCounts.set(key, current);
+      }
     }
     const contributors = [...authorCounts.values()].sort((a, b) => b.commits - a.commits);
     const contributor = contributors[0]?.user || creator;
-    const title = lines.slice(1).find((line) => !line.startsWith('Merge ')) || tipSubject || '无标题';
 
     map.set(hash, {
       number,
@@ -228,6 +255,7 @@ function buildPRMap() {
       contributor,
       contributors,
       merger: resolveUser(mergerName, mergerEmail),
+      upstreamSync,
       dateIso,
     });
   }
@@ -266,8 +294,8 @@ function dayFor(dateStr) {
 }
 
 function rememberUser(day, user) {
-  const key = user.name.toLowerCase();
-  if (!day.users.has(key) || user.verified) day.users.set(key, user);
+  const key = userKey(user);
+  day.users.set(key, preferredUser(day.users.get(key), user));
   return key;
 }
 
@@ -317,7 +345,7 @@ function scoreDay(day) {
   const add = (user, field, amount = 1) => {
     const key = rememberUser(day, user);
     const current = stats.get(key) || {user, commits: 0, prs: 0, merges: 0};
-    if (user.verified && !current.user.verified) current.user = user;
+    current.user = preferredUser(current.user, user);
     current[field] += amount;
     stats.set(key, current);
   };
@@ -357,10 +385,10 @@ function renderPost(dateStr, day) {
     .filter((entry) => entry.commits > 0 || entry.prs > 0)
     .slice(0, 3)
     .map((entry, index) => ({...entry, badge: contributorBadges[index]}));
-  const awardedKeys = new Set(awards.map((entry) => entry.user.name.toLowerCase()));
+  const awardedKeys = new Set(awards.map((entry) => userKey(entry.user)));
   const mergeWinner = [...stats]
     .sort((a, b) => b.merges - a.merges || a.user.name.localeCompare(b.user.name))
-    .find((entry) => entry.merges > 0 && !awardedKeys.has(entry.user.name.toLowerCase()));
+    .find((entry) => entry.merges > 0 && !awardedKeys.has(userKey(entry.user)));
   if (mergeWinner) awards.push({...mergeWinner, badge: '合并大王'});
 
   const lines = [
