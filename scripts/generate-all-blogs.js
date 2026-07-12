@@ -176,11 +176,6 @@ function parseRecords(output) {
   return output.split('\x1e').map((record) => record.replace(/^\n+|\n+$/g, '')).filter(Boolean);
 }
 
-function isUpstreamSyncPR(title, sourceRef) {
-  return /^(?:sync(?:hronize)?\b|同步\s*(?:CDDA|上游))/i.test(title.trim())
-    || /\/(?:sync|sync-upstream)\/(?:cdda|upstream)(?:[-/]|$)/i.test(sourceRef);
-}
-
 function buildPRMap() {
   const output = git(
     'log', TARGET_REF, '--first-parent', '--merges', '--reverse',
@@ -207,7 +202,6 @@ function buildPRMap() {
     const tipLine = git('log', '-1', '--format=%an%x1f%ae%x1f%s', secondParent).trim();
     const [tipName = '', tipEmail = '', tipSubject = ''] = tipLine.split('\x1f');
     const title = lines.slice(1).find((line) => !line.startsWith('Merge ')) || tipSubject || '无标题';
-    const upstreamSync = isUpstreamSyncPR(title, sourceRef);
     const rawTipUser = resolveUser(tipName, tipEmail);
     if (rawTipUser.name !== '未知贡献者'
       && (branchOwner.login.toLowerCase() !== REPO_OWNER
@@ -226,23 +220,21 @@ function buildPRMap() {
       : (tipUser.name.toLowerCase() === branchOwner.name.toLowerCase() ? branchOwner : tipUser);
 
     const authorCounts = new Map();
-    if (!upstreamSync) {
-      for (const authorLine of git(
-        'log', '--no-merges', '--format=%an%x1f%ae', `${firstParent}..${secondParent}`,
-      ).split('\n')) {
-        if (!authorLine) continue;
-        const [authorName, authorEmail = ''] = authorLine.split('\x1f');
-        const resolvedUser = resolveUser(authorName, authorEmail);
-        const user = !resolvedUser.verified
-          && resolvedUser.name.toLowerCase() === rawTipUser.name.toLowerCase()
-          ? tipUser
-          : resolvedUser;
-        const key = userKey(user);
-        const current = authorCounts.get(key) || {user, commits: 0};
-        current.user = preferredUser(current.user, user);
-        current.commits++;
-        authorCounts.set(key, current);
-      }
+    for (const authorLine of git(
+      'log', '--no-merges', '--format=%an%x1f%ae', `${firstParent}..${secondParent}`,
+    ).split('\n')) {
+      if (!authorLine) continue;
+      const [authorName, authorEmail = ''] = authorLine.split('\x1f');
+      const resolvedUser = resolveUser(authorName, authorEmail);
+      const user = !resolvedUser.verified
+        && resolvedUser.name.toLowerCase() === rawTipUser.name.toLowerCase()
+        ? tipUser
+        : resolvedUser;
+      const key = userKey(user);
+      const current = authorCounts.get(key) || {user, commits: 0};
+      current.user = preferredUser(current.user, user);
+      current.commits++;
+      authorCounts.set(key, current);
     }
     const contributors = [...authorCounts.values()].sort((a, b) => b.commits - a.commits);
     const contributor = contributors[0]?.user || creator;
@@ -255,7 +247,6 @@ function buildPRMap() {
       contributor,
       contributors,
       merger: resolveUser(mergerName, mergerEmail),
-      upstreamSync,
       dateIso,
     });
   }
