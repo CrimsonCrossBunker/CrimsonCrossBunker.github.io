@@ -107,6 +107,13 @@ function noreplyLogin(email) {
 
 const identityByEmail = new Map();
 const verifiedByName = new Map();
+// 同一贡献者在普通邮箱提交和 GitHub noreply 提交中使用了不同显示名，
+// 仅凭 git 邮箱无法自动关联，保留已核实的显示名到 GitHub 登录名映射。
+const KNOWN_LOGIN_BY_NAME = new Map([
+  ['lunaglaze', 'LunaGlaze'],
+  ['eliadoarias', 'EliadOArias'],
+  ['yuebai', 'byiyuebai'],
+]);
 const identityLines = git(
   'log', TARGET_REF, `--since=${PROJECT_START}T00:00:00+08:00`, '--format=%an%x1f%ae',
 ).split('\n').filter(Boolean);
@@ -131,8 +138,13 @@ for (const line of identityLines) {
   }
 }
 
+for (const [name, login] of KNOWN_LOGIN_BY_NAME) verifiedByName.set(name, login);
+
 function resolveUser(name, email = '') {
-  const verified = noreplyLogin(email) || verifiedByName.get(cleanName(name).toLowerCase());
+  const displayName = cleanName(name);
+  const knownLogin = KNOWN_LOGIN_BY_NAME.get(displayName.toLowerCase());
+  if (knownLogin) return {name: displayName, login: knownLogin, verified: true};
+  const verified = noreplyLogin(email) || verifiedByName.get(displayName.toLowerCase());
   if (verified) return {name: verified, login: verified, verified: true};
   return identityByEmail.get(email) || {name: cleanName(name), verified: false};
 }
@@ -153,6 +165,7 @@ function buildPRMap() {
     '--format=%H%x1f%P%x1f%cI%x1f%an%x1f%ae%x1f%B%x1e',
   );
   const map = new Map();
+  const loginByName = new Map(verifiedByName);
 
   for (const record of parseRecords(output)) {
     const [hash, parentsText, dateIso, mergerName, mergerEmail, ...bodyParts] = record.split('\x1f');
@@ -170,6 +183,11 @@ function buildPRMap() {
     const tipLine = git('log', '-1', '--format=%an%x1f%ae%x1f%s', secondParent).trim();
     const [tipName = '', tipEmail = '', tipSubject = ''] = tipLine.split('\x1f');
     const rawTipUser = resolveUser(tipName, tipEmail);
+    if (rawTipUser.name !== '未知贡献者'
+      && (branchOwner.login.toLowerCase() !== REPO_OWNER
+        || rawTipUser.name.toLowerCase() === branchOwner.login.toLowerCase())) {
+      loginByName.set(rawTipUser.name.toLowerCase(), branchOwner.login);
+    }
     // 普通邮箱无法直接反查 GitHub 帐号。PR head 的仓库所有者是可靠的
     // GitHub 身份，因此保留提交者显示名，并用 head owner 提供头像和链接。
     const tipUser = !rawTipUser.verified
@@ -213,6 +231,24 @@ function buildPRMap() {
       dateIso,
     });
   }
+
+  // 有些贡献者早期使用普通邮箱，直到较晚的 PR 才能确认 GitHub 帐号。
+  // PR 扫描完成后统一回填，避免早期文章缺少头像和个人主页链接。
+  const linkKnownUser = (user) => {
+    if (user.verified) return user;
+    const login = loginByName.get(user.name.toLowerCase());
+    return login ? {...user, login, verified: true} : user;
+  };
+  for (const pr of map.values()) {
+    pr.creator = linkKnownUser(pr.creator);
+    pr.contributor = linkKnownUser(pr.contributor);
+    pr.merger = linkKnownUser(pr.merger);
+    pr.contributors = pr.contributors.map((entry) => ({
+      ...entry,
+      user: linkKnownUser(entry.user),
+    }));
+  }
+  for (const [name, login] of loginByName) verifiedByName.set(name, login);
   return map;
 }
 
