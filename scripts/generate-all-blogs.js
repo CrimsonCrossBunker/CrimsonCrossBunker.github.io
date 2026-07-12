@@ -22,6 +22,7 @@ const option = (name) => args.find((arg) => arg.startsWith(`--${name}=`))?.slice
 const REPO_PATH = args.find((arg) => !arg.startsWith('--')) || '../Cataclysm-Cleanwater-Bomb';
 const BLOG_DIR = path.join(__dirname, '..', 'blog');
 const REPO_SLUG = option('repo') || 'LYHGLYTX/Cataclysm-Cleanwater-Bomb';
+const REPO_OWNER = REPO_SLUG.split('/')[0].toLowerCase();
 // CCB 在当前 GitHub 仓库建立独立 first-parent 主线的日期。
 // 此前的对象属于 fork 的上游祖先或临时 refs，不是 CCB 项目动态。
 const PROJECT_START = option('project-start') || '2026-06-02';
@@ -122,18 +123,23 @@ for (const line of identityLines) {
   const verified = noreplyLogin(email) || verifiedByName.get(cleanName(rawName).toLowerCase());
   const name = verified || cleanName(rawName);
   if (!identityByEmail.has(email) || verified) {
-    identityByEmail.set(email, {name, verified: Boolean(verified)});
+    identityByEmail.set(email, {
+      name,
+      login: verified || undefined,
+      verified: Boolean(verified),
+    });
   }
 }
 
 function resolveUser(name, email = '') {
   const verified = noreplyLogin(email) || verifiedByName.get(cleanName(name).toLowerCase());
-  if (verified) return {name: verified, verified: true};
+  if (verified) return {name: verified, login: verified, verified: true};
   return identityByEmail.get(email) || {name: cleanName(name), verified: false};
 }
 
 function githubUser(name) {
-  return {name: cleanName(name), verified: true};
+  const login = cleanName(name);
+  return {name: login, login, verified: true};
 }
 
 function parseRecords(output) {
@@ -163,7 +169,14 @@ function buildPRMap() {
     const branchOwner = githubUser(match[2].split('/')[0]);
     const tipLine = git('log', '-1', '--format=%an%x1f%ae%x1f%s', secondParent).trim();
     const [tipName = '', tipEmail = '', tipSubject = ''] = tipLine.split('\x1f');
-    const tipUser = resolveUser(tipName, tipEmail);
+    const rawTipUser = resolveUser(tipName, tipEmail);
+    // 普通邮箱无法直接反查 GitHub 帐号。PR head 的仓库所有者是可靠的
+    // GitHub 身份，因此保留提交者显示名，并用 head owner 提供头像和链接。
+    const tipUser = !rawTipUser.verified
+      && rawTipUser.name !== '未知贡献者'
+      && branchOwner.login.toLowerCase() !== REPO_OWNER
+      ? {...rawTipUser, login: branchOwner.login, verified: true}
+      : rawTipUser;
     const creator = tipUser.name === '未知贡献者'
       ? branchOwner
       : (tipUser.name.toLowerCase() === branchOwner.name.toLowerCase() ? branchOwner : tipUser);
@@ -174,7 +187,11 @@ function buildPRMap() {
     ).split('\n')) {
       if (!authorLine) continue;
       const [authorName, authorEmail = ''] = authorLine.split('\x1f');
-      const user = resolveUser(authorName, authorEmail);
+      const resolvedUser = resolveUser(authorName, authorEmail);
+      const user = !resolvedUser.verified
+        && resolvedUser.name.toLowerCase() === rawTipUser.name.toLowerCase()
+        ? tipUser
+        : resolvedUser;
       const key = user.name.toLowerCase();
       const current = authorCounts.get(key) || {user, commits: 0};
       if (user.verified && !current.user.verified) current.user = user;
@@ -275,54 +292,48 @@ function scoreDay(day) {
     for (const entry of pr.contributors) add(entry.user, 'commits', entry.commits);
   }
   return [...stats.values()].sort((a, b) => {
-    const aScore = a.merges * 4 + a.prs * 3 + a.commits;
-    const bScore = b.merges * 4 + b.prs * 3 + b.commits;
+    // 合并工作单独评选“合并大王”，不计入每日贡献者排名。
+    const aScore = a.prs * 3 + a.commits;
+    const bScore = b.prs * 3 + b.commits;
     return bScore - aScore || a.user.name.localeCompare(b.user.name);
   });
 }
 
-function authorYaml(users) {
-  if (!users.length) return 'authors: []';
-  return `authors:\n${users.map((user) => {
+function authorYaml(awards) {
+  if (!awards.length) return 'authors: []';
+  return `authors:\n${awards.map(({user}) => {
     const name = JSON.stringify(user.name);
     if (!user.verified) return `  - {name: ${name}}`;
-    return `  - {name: ${name}, image_url: "https://github.com/${user.name}.png?size=40", url: "https://github.com/${user.name}"}`;
+    return `  - {name: ${name}, image_url: "https://github.com/${user.login}.png?size=40", url: "https://github.com/${user.login}"}`;
   }).join('\n')}`;
 }
 
 function contributorMarkup(user) {
   const safeName = escapeMDX(user.name);
   if (!user.verified) return `  <span class="contributor-badge"><span>${safeName}</span></span>`;
-  return `  <a href="https://github.com/${user.name}" title="@${user.name}" class="contributor-badge"><img src="https://github.com/${user.name}.png?size=40" width="28" height="28" loading="lazy" alt="" /><span>${safeName}</span></a>`;
+  return `  <a href="https://github.com/${user.login}" title="@${user.login}" class="contributor-badge"><img src="https://github.com/${user.login}.png?size=40" width="28" height="28" loading="lazy" alt="" /><span>${safeName}</span></a>`;
 }
 
 function renderPost(dateStr, day) {
   const stats = scoreDay(day);
-  const picked = [];
-  const pickedKeys = new Set();
-  const pick = (entry) => {
-    if (!entry) return;
-    const key = entry.user.name.toLowerCase();
-    if (pickedKeys.has(key)) return;
-    pickedKeys.add(key);
-    picked.push(entry.user);
-  };
-  for (const entry of [...stats].sort((a, b) => b.commits - a.commits)) {
-    if (picked.length >= 3) break;
-    if (entry.commits > 0) pick(entry);
-  }
-  pick([...stats].sort((a, b) => b.merges - a.merges).find((entry) => entry.merges > 0));
-  for (const entry of stats) {
-    if (picked.length >= 12) break;
-    pick(entry);
-  }
+  const contributorBadges = ['每日最佳员工', '勤奋贡献者', '积极贡献者'];
+  const awards = stats
+    .filter((entry) => entry.commits > 0 || entry.prs > 0)
+    .slice(0, 3)
+    .map((entry, index) => ({...entry, badge: contributorBadges[index]}));
+  const awardedKeys = new Set(awards.map((entry) => entry.user.name.toLowerCase()));
+  const mergeWinner = [...stats]
+    .sort((a, b) => b.merges - a.merges || a.user.name.localeCompare(b.user.name))
+    .find((entry) => entry.merges > 0 && !awardedKeys.has(entry.user.name.toLowerCase()));
+  if (mergeWinner) awards.push({...mergeWinner, badge: '合并大王'});
 
   const lines = [
     '---',
     `slug: ${dateStr}-activity`,
     `title: CCB 开发动态 (${dateStr})`,
     `date: ${dateStr}`,
-    authorYaml(picked),
+    authorYaml(awards),
+    `author_badges: [${awards.map(({badge}) => JSON.stringify(badge)).join(', ')}]`,
     'tags: [activity, auto]',
     '---',
     '',

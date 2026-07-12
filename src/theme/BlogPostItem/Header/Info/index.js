@@ -9,7 +9,8 @@ function Spacer() {
   return <>{' · '}</>;
 }
 
-const BADGES = ['每日最佳员工', '勤奋贡献者', '积极贡献者', '合并王'];
+// 兼容尚未写入 author_badges 的历史自动文章。
+const DEFAULT_BADGES = ['每日最佳员工', '勤奋贡献者', '积极贡献者', '合并大王'];
 
 function AuthorChip({author, imgUrl, link, badge}) {
   return (
@@ -30,7 +31,7 @@ function AuthorChip({author, imgUrl, link, badge}) {
 }
 
 export default function BlogPostItemHeaderInfo({className}) {
-  const {metadata, assets} = useBlogPost();
+  const {metadata, assets, frontMatter} = useBlogPost();
   const {date, readingTime} = metadata;
   const authors = metadata.authors;
 
@@ -42,7 +43,10 @@ export default function BlogPostItemHeaderInfo({className}) {
   });
   const formattedDate = dateTimeFormat.format(new Date(date));
 
-  const top4 = authors.slice(0, 4);
+  const badges = Array.isArray(frontMatter.author_badges)
+    ? frontMatter.author_badges
+    : DEFAULT_BADGES;
+  const awardedAuthors = authors.slice(0, badges.length);
 
   return (
     <div className={clsx(styles.container, className)}>
@@ -56,9 +60,9 @@ export default function BlogPostItemHeaderInfo({className}) {
         )}
       </div>
 
-      {top4.length > 0 && (
+      {awardedAuthors.length > 0 && (
         <div className={styles.chips}>
-          {top4.map((author, idx) => {
+          {awardedAuthors.map((author, idx) => {
             const imgUrl = assets.authorsImageUrls?.[idx] ?? author.imageURL;
             const link = author.url || author.page?.permalink || '#';
             return (
@@ -67,7 +71,7 @@ export default function BlogPostItemHeaderInfo({className}) {
                 author={author}
                 imgUrl={imgUrl}
                 link={link}
-                badge={BADGES[idx]}
+                badge={badges[idx]}
               />
             );
           })}

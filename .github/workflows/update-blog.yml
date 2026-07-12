@@ -28,6 +28,9 @@ jobs:
         with:
           node-version: "20"
 
+      - name: 安装站点依赖
+        run: npm ci
+
       - name: 生成活动博客
         run: node scripts/generate-all-blogs.js ccb-source
 
