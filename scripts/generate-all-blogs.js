@@ -21,7 +21,7 @@ const args = process.argv.slice(2);
 const option = (name) => args.find((arg) => arg.startsWith(`--${name}=`))?.slice(name.length + 3);
 const REPO_PATH = args.find((arg) => !arg.startsWith('--')) || '../Cataclysm-Cleanwater-Bomb';
 const BLOG_DIR = path.join(__dirname, '..', 'blog');
-const REPO_SLUG = option('repo') || 'LYHGLYTX/Cataclysm-Cleanwater-Bomb';
+const REPO_SLUG = option('repo') || 'CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb';
 const REPO_OWNER = REPO_SLUG.split('/')[0].toLowerCase();
 // CCB 在当前 GitHub 仓库建立独立 first-parent 主线的日期。
 // 此前的对象属于 fork 的上游祖先或临时 refs，不是 CCB 项目动态。
