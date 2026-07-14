@@ -39,13 +39,13 @@ const config = {
   },
 
   // 生产环境 URL（GitHub Pages）
-  url: 'https://LYHGLYTX.github.io',
-  // 项目站点路径：https://LYHGLYTX.github.io/CCB-SITE/
+  url: 'https://crimsoncrossbunker.github.io',
+  // 组织站点地址：https://crimsoncrossbunker.github.io/
   baseUrl: '/',
 
   // GitHub Pages 部署配置
-  organizationName: 'LYHGLYTX', // GitHub 用户/组织名
-  projectName: 'CCB-SITE', // 仓库名
+  organizationName: 'CrimsonCrossBunker', // GitHub 用户/组织名
+  projectName: 'CrimsonCrossBunker.github.io', // 仓库名
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
@@ -68,7 +68,7 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           editUrl:
-            'https://github.com/LYHGLYTX/CCB-SITE/tree/main/',
+            'https://github.com/CrimsonCrossBunker/CrimsonCrossBunker.github.io/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -82,7 +82,7 @@ const config = {
             xslt: true,
           },
           editUrl:
-            'https://github.com/LYHGLYTX/CCB-SITE/tree/main/',
+            'https://github.com/CrimsonCrossBunker/CrimsonCrossBunker.github.io/tree/main/',
           onInlineTags: 'warn',
           onInlineAuthors: 'ignore',
           onUntruncatedBlogPosts: 'warn',
@@ -131,7 +131,7 @@ const config = {
           {to: '/blog', label: '项目动态', position: 'left'},
           {to: '/community', label: '社区', position: 'left'},
           {
-            href: 'https://github.com/LYHGLYTX/Cataclysm-Cleanwater-Bomb',
+            href: 'https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb',
             label: 'GitHub ↗',
             position: 'right',
           },
@@ -192,7 +192,7 @@ const config = {
               {label: '开发路线', to: '/roadmap'},
               {
                 label: 'CCB 仓库',
-                href: 'https://github.com/LYHGLYTX/Cataclysm-Cleanwater-Bomb',
+                href: 'https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb',
               },
             ],
           },
