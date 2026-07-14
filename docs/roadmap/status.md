@@ -12,7 +12,7 @@ title: 当前工作大纲
 这里汇总 CCB 三条贡献线（开发 / 贴图 / 翻译）的当前状态与待办。高层方向见[开发方向与愿景](./vision)。
 
 :::info[状态如何更新]
-本页是**高层进度概览**，手动维护。颗粒度的任务（具体 issue、bug、PR）请看仓库的 [GitHub Issues](https://github.com/LYHGLYTX/Cataclysm-Cleanwater-Bomb/issues) 与 Pull Requests。
+本页是**高层进度概览**，手动维护。颗粒度的任务（具体 issue、bug、PR）请看仓库的 [GitHub Issues](https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/issues) 与 Pull Requests。
 :::
 
 ---
@@ -133,6 +133,6 @@ title: 当前工作大纲
 
 ## 想认领任务？
 
-- 找具体的 bug / 功能：[GitHub Issues](https://github.com/LYHGLYTX/Cataclysm-Cleanwater-Bomb/issues)
+- 找具体的 bug / 功能：[GitHub Issues](https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/issues)
 - 想画贴图：[贴图贡献](/docs/contribute/tileset) + 贴图 QQ 群（694984594）
 - 想参与开发 / 翻译：[社区](/community)的开发贡献群（252513599）
