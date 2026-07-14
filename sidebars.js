@@ -29,8 +29,12 @@ const sidebars = {
       items: [
         'dev/intro',
         'dev/environment',
-        'dev/build',
-        'dev/macos-sdl2',
+        {
+          type: 'category',
+          label: '编译游戏',
+          link: { type: 'doc', id: 'dev/build' },
+          items: ['dev/macos-sdl2'],
+        },
         'dev/testing',
         'dev/contributing',
       ],
