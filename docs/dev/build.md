@@ -44,7 +44,7 @@ Visual Studio 用户应完整执行 `doc/c++/COMPILING-VS-VCPKG.md`，包括 vcp
 
 ## macOS 与 Android
 
-macOS 的 Homebrew、SDL 与应用包步骤位于 `doc/c++/COMPILING.md`。Android 构建由 Gradle 调用 NDK；先确认仓库要求的 JDK、SDK、NDK 版本，再使用仓库提供的 Gradle wrapper，避免用系统全局 Gradle 替代。
+macOS 的 Homebrew、SDL 与应用包步骤位于 `doc/c++/COMPILING.md`。Apple Silicon 用户还可以参考社区实测的 [macOS ARM64 SDL2 图形版构建指南](./macos-sdl2)。Android 构建由 Gradle 调用 NDK；先确认仓库要求的 JDK、SDK、NDK 版本，再使用仓库提供的 Gradle wrapper，避免用系统全局 Gradle 替代。
 
 ## 验证构建
 

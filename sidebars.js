@@ -30,6 +30,7 @@ const sidebars = {
         'dev/intro',
         'dev/environment',
         'dev/build',
+        'dev/macos-sdl2',
         'dev/testing',
         'dev/contributing',
       ],
