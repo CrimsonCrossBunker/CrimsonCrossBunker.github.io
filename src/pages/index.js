@@ -26,7 +26,7 @@ function HomepageHeader() {
           </p>
           <div className={styles.heroActions}>
             <Link className="button button--primary button--lg" to="/docs/newbie/intro">开始生存</Link>
-            <Link className="button button--outline button--lg" href="https://github.com/LYHGLYTX/Cataclysm-Cleanwater-Bomb/releases">下载最新版 ↗</Link>
+            <Link className="button button--outline button--lg" href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/releases">下载最新版 ↗</Link>
           </div>
         </div>
         <aside className={styles.terminal} aria-label="CCB 项目状态">
