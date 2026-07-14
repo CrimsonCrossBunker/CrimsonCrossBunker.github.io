@@ -8,14 +8,14 @@
  *
  * 环境变量:
  *   GITHUB_TOKEN      - GitHub API 令牌（Actions 中自动提供）
- *   GITHUB_REPOSITORY - 仓库名，默认 LYHGLYTX/Cataclysm-Cleanwater-Bomb
+ *   GITHUB_REPOSITORY - 仓库名，默认 CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb
  *   LOOKBACK_DAYS     - 回顾天数，默认 1
  */
 
 const fs = require("fs");
 const path = require("path");
 
-const REPO = process.env.GITHUB_REPOSITORY || "LYHGLYTX/Cataclysm-Cleanwater-Bomb";
+const REPO = process.env.GITHUB_REPOSITORY || "CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb";
 const LOOKBACK_DAYS = parseInt(process.env.LOOKBACK_DAYS || "1", 10);
 const BLOG_DIR = path.join(__dirname, "..", "blog");
 const DRY_RUN = process.argv.includes("--dry-run");
