@@ -1,34 +1,30 @@
 ---
 sidebar_position: 4
-title: macOS ARM64 SDL2 构建指南
-description: 在 Apple Silicon macOS 上使用 Homebrew、CMake 和 Ninja 构建 CCB 的 SDL2 图形版。
+title: macOS构建指南
+description: 在 macOS 上使用 Homebrew、CMake 或者 Ninja 构建 CCB 的 SDL2 图形版。
 ---
 
 # macOS ARM64 SDL2 构建指南
 
-:::note[来源说明]
-本文由 CCB 社区群友提供，记录在 macOS ARM64（M5）上的实测构建过程，并由项目维护者整理进站点。
-:::
+本文记录在 macOS 上从零构建图形化程序的过程，供大家参考和纠正喵 ^ ^
 
-记录在 macOS ARM64（M5）上从零构建图形化的过程。
-
----
+实际在 mac 上构建还是比较方便的，你可以使用纯终端来构建和运行。当然想更方便一点的话，使用Clion是更好的选择。
 
 ## 目录
 
 1. [准备工作：安装依赖](#1-准备工作安装依赖)
 2. [克隆仓库](#2-克隆仓库)
-3. [必要的代码修改](#3-必要的代码修改)
+3. [构建时代码修改](#3-构建时代码修改)
 4. [构建项目](#4-构建项目)
 5. [获取运行时资源](#5-获取运行时资源)
 6. [首次运行与配置](#6-首次运行与配置)
-7. [已知问题与排查](#7-已知问题与排查)
+7. [其他问题](#7-其他问题)
 
 ---
 
 ## 1. 准备工作：安装依赖
 
-### 1.1 Xcode Command Line Tools
+### 1.1 Xcode
 
 安装 Command Line Tools：
 
@@ -36,14 +32,14 @@ description: 在 Apple Silicon macOS 上使用 Homebrew、CMake 和 Ninja 构建
 xcode-select --install
 ```
 
-装 `clang`、`make` 等基础编译工具
+验证：
 
 ```bash
 clang --version
 # 应输出类似：Apple clang version 17.0.0 ...
 ```
 
-### 1.2 Homebrew（macOS）
+### 1.2 Homebrew
 
 安装：
 
@@ -53,7 +49,7 @@ clang --version
 
 > **注意**：安装脚本会提示你按回车确认，并在最后提示将 Homebrew 添加到 PATH。请按照终端输出的提示操作（通常是运行一两条 `echo` 和 `eval` 命令）。
 
-验证 Homebrew 安装成功：
+验证：
 
 ```bash
 brew --version
@@ -61,19 +57,18 @@ brew --version
 
 ### 1.3 安装构建工具和依赖库
 
-本项目使用 **CMake** 管理构建，**Ninja** 作为构建执行器。SDL2 图形模式需要 SDL2 系列库：
-
 ```bash
-# 构建工具
-brew install cmake      # 跨平台构建系统
-brew install ninja      # 快速构建执行器，替代 make
+# cmake， CLion中也有自带的cmake
+brew install cmake
+# 快速构建执行器，在终端下可以替代 make， CLion中也有自带的ninja
+brew install ninja      
 
 # SDL2 图形库（TILES 模式必需）
 brew install sdl2       # 图形和窗口管理
-brew install sdl2_image # 图片加载（PNG、JPEG 等格式）
-brew install sdl2_ttf   # TrueType 字体渲染
+brew install sdl2_image # 图片加载
+brew install sdl2_ttf   # 字体渲染
 
-# 本地化工具（中文翻译必需）
+# 本地化工具（可选项，中文翻译需要）
 brew install gettext    # 提供 msgfmt，用于编译 .po → .mo 翻译文件
 ```
 
@@ -86,12 +81,12 @@ brew install gettext    # 提供 msgfmt，用于编译 .po → .mo 翻译文件
 
 | 包名 | 用途 | 构建模式 |
 |------|------|----------|
-| `cmake` | 生成构建文件 | 所有模式 |
-| `ninja` | 快速并行编译 | 所有模式 |
-| `sdl2` | 创建窗口、处理输入 | TILES |
-| `sdl2_image` | 加载贴图资源 | TILES |
-| `sdl2_ttf` | 渲染游戏内文字 | TILES |
-| `gettext` | 编译中文翻译文件 | 全部（如需中文） |
+| `cmake` | 生成构建文件 | 所有场景 |
+| `ninja` | 快速并行编译 | 所有场景 |
+| `sdl2` | 创建窗口、处理输入 | TILES 模式 |
+| `sdl2_image` | 加载贴图资源 | TILES 模式 |
+| `sdl2_ttf` | 渲染游戏内文字 | TILES 模式 |
+| `gettext` | 编译中文翻译文件 | 需自编译中文的场景 |
 | `ncurses` | 终端 UI | 仅 CURSES 模式 |
 
 ---
@@ -105,7 +100,7 @@ cd Cataclysm-Cleanwater-Bomb
 
 ---
 
-## 3. 必要的代码修改
+## 3. 构建时代码修改
 
 在 macOS ARM64 上需要两个小改动才能成功编译。**这些改动不影响其他平台**。
 
@@ -113,7 +108,7 @@ cd Cataclysm-Cleanwater-Bomb
 
 **文件**：`CMakeLists.txt`（项目根目录），约第 113-119 行
 
-**问题**：`-mcx16` 是 x86 专属的编译器标志，用于启用 128 位 `cmpxchg16b` 原子指令。ARM64 芯片没有这条指令，强行传入会导致 CMake 的所有编译器检测失败，报错 `Could NOT find Threads`。
+**问题**：`-mcx16` 是 x86 专属的编译器标志，用于启用 128 位 `cmpxchg16b` 原子指令。ARM64 芯片没有这条指令，传入会导致 CMake 的所有编译器检测失败，报错 `Could NOT find Threads`。
 
 **修改方法**：将 `-mcx16` 加上架构判断，只在 x86 上启用：
 
@@ -127,15 +122,15 @@ if (NOT MSVC)
 endif()
 ```
 
-**为什么安全**：这个标志只是 x86 上的一项性能优化（原子操作的 128 位支持），去掉后 ARM64 使用自己的 128 位原子指令（`ldp`/`stp` + `lse`），游戏行为完全一致。
-
-### 3.2 修复二：ncurses 宽字符支持（仅 CURSES 终端模式模式需要）
+### 3.2 修复二：ncurses 宽字符支持（可选，仅 CURSES 终端模式模式需要）
 
 **文件**：`src/third-party/imtui/imtui-impl-ncurses.cpp`，约第 9-10 行
 
-**适用范围**：仅当构建 CURSES（终端）模式时需要此修复。SDL2 图形模式下该文件不会被编译，因此此修复对 TILES 模式没有影响。
+**适用范围**：仅当构建 CURSES（终端）模式时需要此修复。SDL2 图形模式下该文件不会被编译，因此该修复对 TILES 模式没有影响。
 
-**问题**：代码中使用了 `waddwstr`（宽字符版本的窗口写入函数），这需要 `NCURSES_WIDECHAR 1` 宏。但旧代码在 macOS 上禁用了这个宏（用 `#if !defined(__APPLE__)` 包裹），因为当年 macOS 自带的旧版 ncurses 不支持宽字符。如今 Homebrew 的 ncurses 完全支持，这个限制已经过时了。
+**问题**：代码中使用了 `waddwstr`（宽字符版本的窗口写入函数），这需要 `NCURSES_WIDECHAR 1` 宏。但旧代码在 macOS 上禁用了这个宏（用 `#if !defined(__APPLE__)` 包裹），可能当年 macOS 自带的旧版 ncurses 不支持宽字符喵。如今 Homebrew 的 ncurses 完全支持，这个限制已经过时了喵。
+
+> Homebrew 的 ncurses 在所有平台上都支持宽字符。通过 Homebrew 安装的 ncurses 以 `-I/opt/homebrew/opt/ncurses/include` 路径编译，其头文件完全支持 `waddwstr`。
 
 **修改方法**：将第 9-10 行改为无条件定义：
 
@@ -151,8 +146,6 @@ endif()
 > #endif
 > ```
 > 直接把 `#if` / `#endif` 删掉，只保留 `#define NCURSES_WIDECHAR 1` 这一行。
-
-**为什么安全**：Homebrew 的 ncurses 在所有平台上都支持宽字符。通过 Homebrew 安装的 ncurses 以 `-I/opt/homebrew/opt/ncurses/include` 路径编译，其头文件完全支持 `waddwstr`。
 
 ---
 
@@ -207,7 +200,7 @@ ls -lh cataclysm-tiles
 
 ### 4.3 CLion
 
-我使用了 CLion IDE：
+如果你使用了 CLion IDE：
 
 1. 用 CLion 打开项目根目录
 2. 打开 **Settings → Build, Execution, Deployment → CMake**
@@ -215,8 +208,8 @@ ls -lh cataclysm-tiles
    ```
    -DTILES=ON -DUSE_SDL3=OFF -DSOUND=ON
    ```
-4. 在 **Run Configuration** 中选择 Target 为 `cataclysm-tiles`（不是 `cataclysm`）
-5. 点击构建按钮即可
+4. 在 **Run Configuration** 中选择 Target 为 `cataclysm-tiles`（注意喵！这里不是 `cataclysm`，不要选错了喵！）
+5. 点击构建按钮等待构建完毕即可喵，然后你就可以运行测试了喵。
 
 ---
 
@@ -230,35 +223,20 @@ ls -lh cataclysm-tiles
 |------|------|------|
 | 贴图包（tilesets） | `gfx/` | 图形界面必须，否则看不到地图和角色 |
 | 音效包 | `data/sound/` | 可选，SOUND=ON 时需要 |
-| 中文翻译文件 | `lang/mo/zh_CN/LC_MESSAGES/cataclysm-dda.mo` | 中文界面必需 |
+| 中文翻译文件 | `lang/mo/zh_CN/LC_MESSAGES/cataclysm-dda.mo` | 中文界面必需喵 |
 | 游戏数据 | `data/` | 仓库已包含大部分，但 mods 可能不全 |
 
 ### 5.2 从官方 Release 提取资源
 
-最简单的方法是从官方发布的 `.app` 包里复制：
+可以从已发布且安装过的 `.app` 包里复制资源到本地的构建目录
 
 ```bash
-# 假设你下载的官方 DMG 已挂载，或 .app 在废纸篓中
+# 假设你下载的官方 DMG 已挂载
 # .app 内的资源路径：
 #   Cataclysm.app/Contents/Resources/
 #     ├── gfx/          → 贴图包
 #     ├── data/sound/   → 音效
 #     └── lang/mo/      → 翻译文件
-```
-
-如果你有从废纸篓恢复的 `.app`：
-
-```bash
-# 复制贴图（19 个 tileset）
-cp -r ~/.Trash/Cataclysm.app/Contents/Resources/gfx/* gfx/
-
-# 复制音效
-cp -r ~/.Trash/Cataclysm.app/Contents/Resources/data/sound data/
-
-# 复制中文翻译
-mkdir -p lang/mo/zh_CN/LC_MESSAGES
-cp ~/.Trash/Cataclysm.app/Contents/Resources/lang/mo/zh_CN/LC_MESSAGES/cataclysm-dda.mo \
-   lang/mo/zh_CN/LC_MESSAGES/
 ```
 
 ---
@@ -275,6 +253,18 @@ cp ~/.Trash/Cataclysm.app/Contents/Resources/lang/mo/zh_CN/LC_MESSAGES/cataclysm
 
 首次启动后，游戏会在 `~/Library/Application Support/Cataclysm/` 下自动生成默认配置文件和存档目录。
 
+注意！这里有一个小窍门喵！有的伙伴可能之前已经从官方下载了Mac版本的游戏包，并且打开运行过了！这种情况下，如果你作为开发者，又构建并且启动了另一个 cataclysm 游戏，那么这两个游戏的配置和设定文件其实是共享并且冲突的喵！
+
+为了避免冲突，强烈建议在开发构建时，使用 `--userdir <路径>`  来手动指定一个默认的游戏配置储存位置，比如这样启动：
+
+```
+./cataclysm-tiles --userdir ./userdata
+```
+
+这样会在你开发仓库的位置创建一个 userdata 目录，用于储存游戏配置，这样就好多了喵！不会冲突了喵！
+
+当然，使用CLion的话，也可以点击运行图标右边的三个小点，然后在 **调试/配置** 界面，更改 **cataclysm-tiles** 的 **程序实参**，加一个 `--userdir ./userdata` 进去就行了喵！
+
 ### 6.2 中文设置
 
 启动游戏后，在主菜单中：
@@ -290,13 +280,13 @@ cp ~/.Trash/Cataclysm.app/Contents/Resources/lang/mo/zh_CN/LC_MESSAGES/cataclysm
 
 ---
 
-## 7. 已知问题与排查
+## 7. 其他问题
 
 ### 7.1 SDL2 窗口模式黑屏
 
 **现象**：游戏以窗口模式启动后，画面全黑，只有切换到全屏才正常显示。
 
-**原因**：Homebrew 当前的 `sdl2-compat`（将 SDL2 API 调用转换为 SDL3 底层实现）在窗口模式下有渲染问题。
+**原因**：可能是 Homebrew 当前的 `sdl2-compat`（将 SDL2 API 调用转换为 SDL3 底层实现）在窗口模式下有渲染问题。
 
 **解决方案**：
 
@@ -306,10 +296,13 @@ cp ~/.Trash/Cataclysm.app/Contents/Resources/lang/mo/zh_CN/LC_MESSAGES/cataclysm
 
 在游戏内设置 → 图形中调整，一般配合游戏内侧边栏设置一起用。
 - **终端宽度/高度**：控制显示范围
-- **缩放比例**：控制贴图和文字大小
-- **字体**：图形模式下可以用系统字体
+- **缩放比例**：控制贴图和文字大小，不要调太大喵！显示效果会坏掉的喵！
+- **字体**：图形模式下可以控制系统字体
 
 ---
 
-> **文档版本**：2026-07-13
+> **文档版本**：v1.1
+>
 > **适用版本**：Cataclysm: Cleanwater Bomb，基于 CleverRaven/Cataclysm-DDA commit `221c786e7d`
+>
+> **最近修改**：2026-07-14 by [千远万花](https://github.com/RitaRossweiss) 
