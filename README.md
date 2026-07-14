@@ -18,7 +18,7 @@ npm install
 npm start
 ```
 
-启动后在浏览器打开 http://localhost:3000/CCB-SITE/，大部分改动会实时刷新。
+启动后在浏览器打开 http://localhost:3000/，大部分改动会实时刷新。
 
 ## 构建
 

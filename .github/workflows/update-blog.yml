@@ -19,7 +19,7 @@ jobs:
       - name: 拉取 CCB 主仓库历史
         uses: actions/checkout@v4
         with:
-          repository: LYHGLYTX/Cataclysm-Cleanwater-Bomb
+          repository: CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb
           ref: master
           path: ccb-source
           fetch-depth: 0
