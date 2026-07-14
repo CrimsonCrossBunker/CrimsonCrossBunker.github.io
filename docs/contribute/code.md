@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 5
 title: 代码贡献
 description: 选择代码任务并进入完整开发、测试和 PR 路线。
 ---
@@ -23,8 +23,13 @@ description: 选择代码任务并进入完整开发、测试和 PR 路线。
 - [编译游戏](/docs/dev/build)
 - [测试与调试](/docs/dev/testing)
 - [提交贡献](/docs/dev/contributing)
+- [完整 PR 提交教程](./pull-requests)
 
-代码贡献页不重复维护构建命令与 PR 模板，避免两份教程发生偏差。所有细节以 CCB 当前 `CONTRIBUTING.md`、平台编译文档和 CI 工作流为准。
+开发者教程解释如何构建和验证；PR 教程解释如何 Fork、建分支、填写 `Summary`、关联 Issue 和响应审查。所有细节最终以 CCB 当前 `CONTRIBUTING.md`、PR 模板、平台编译文档和 CI 工作流为准。
+
+## 选择 Issue 与标签
+
+开始实现前先阅读[提交 Issue](./issues)和[标签与分流规则](./labels)。适合首次贡献的任务通常带有 `good first issue`，需要社区协助的已确认任务通常带有 `help wanted`。标签只是筛选入口，动手前仍要阅读完整讨论和最新代码。
 
 :::tip[不知道从哪里下手]
 带上操作系统、构建方式和你感兴趣的子系统，到[开发贡献群或 Discord](/community)询问适合新贡献者的任务。

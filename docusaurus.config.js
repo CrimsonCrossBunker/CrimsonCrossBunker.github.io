@@ -173,6 +173,10 @@ const config = {
                 href: 'https://www.reddit.com/r/CataclysmCB/',
               },
               {
+                label: 'Transifex 翻译团队',
+                href: 'https://app.transifex.com/Cataclysm-Cleanwater-Bomb/cataclysm-cleanwater-bomb/dashboard/',
+              },
+              {
                 label: 'QQ 群 / 加入我们',
                 to: '/community',
               },

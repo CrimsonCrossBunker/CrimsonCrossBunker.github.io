@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 6
 title: 贴图贡献
 description: 从认领缺失 ID、绘制像素图到工作表校验和贴图仓库归置。
 ---

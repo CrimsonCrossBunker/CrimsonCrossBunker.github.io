@@ -94,13 +94,12 @@ title: 当前工作大纲
 | 任务 | 状态 |
 |------|------|
 | 本地化文件结构：`.po` → `.mo` 编译工具链 | ✅ |
-| Transifex 配置指向 CDDA 上游项目 | ✅ |
+| Transifex 配置指向 CCB 自有项目 | ✅ |
 
 ### 待办
 
 | 任务 | 优先级 | 备注 |
 |------|--------|------|
-| 确定翻译协作平台与提交流程 | 🔴 高 | Transifex vs GitHub 直接提交，待决策 |
 | 组织社区校对 | 🟡 中 | 已有翻译的质量审核机制 |
 | 中文本地化术语表 | 🟡 中 | 统一物品/怪物/机制的中文译名 |
 
@@ -135,4 +134,5 @@ title: 当前工作大纲
 
 - 找具体的 bug / 功能：[GitHub Issues](https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/issues)
 - 想画贴图：[贴图贡献](/docs/contribute/tileset) + 贴图 QQ 群（694984594）
-- 想参与开发 / 翻译：[社区](/community)的开发贡献群（252513599）
+- 想参与开发：[社区](/community)的开发贡献群（252513599）
+- 想参与翻译：[CCB Transifex](https://app.transifex.com/Cataclysm-Cleanwater-Bomb/cataclysm-cleanwater-bomb/dashboard/)或[翻译贡献指南](/docs/contribute/translation)

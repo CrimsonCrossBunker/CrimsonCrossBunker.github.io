@@ -48,6 +48,8 @@ Bugfixes "修复……"
 
 类别和模板可能更新，提交前以仓库当前 `CONTRIBUTING.md` 和 PR 模板为准。
 
+第一次提交或需要 Fork、关闭关键词、Draft、CI 与 rebase 的逐步说明时，阅读[完整 PR 提交教程](/docs/contribute/pull-requests)。自动分类与模块标签见[标签与分流规则](/docs/contribute/labels)。
+
 ## 审查与 CI
 
 把 CI 失败分成两类：由当前改动引起的失败应修复；基础设施或主分支已有问题应提供证据并说明。响应审查时优先更新代码或解释设计依据，不要只回复“已改”而不给出改动位置和验证。

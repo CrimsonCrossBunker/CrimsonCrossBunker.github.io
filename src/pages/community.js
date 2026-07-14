@@ -8,6 +8,7 @@ import styles from './community.module.css';
 const ONLINE = [
   {code: 'DIS', name: 'Discord', desc: '开发讨论、玩家交流与国际社区', href: 'https://discord.gg/tUG9MFwCqf'},
   {code: 'RDT', name: 'Reddit', desc: '分享存档、反馈与长篇讨论', href: 'https://www.reddit.com/r/CataclysmCB/'},
+  {code: 'TX', name: 'Transifex', desc: 'CCB 官方翻译团队、在线翻译与校对', href: 'https://app.transifex.com/Cataclysm-Cleanwater-Bomb/cataclysm-cleanwater-bomb/dashboard/'},
   {code: 'GIT', name: 'GitHub', desc: 'Issue、代码审查与版本发布', href: 'https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb'},
 ];
 
@@ -31,7 +32,7 @@ export default function Community() {
       <main className={`container ${styles.main}`}>
         <section><div className={styles.sectionHead}><span>PUBLIC CHANNELS</span><Heading as="h2">公共频道</Heading></div><div className={styles.onlineGrid}>{ONLINE.map((item) => <a key={item.name} href={item.href} className={styles.onlineCard}><b>{item.code}</b><div><Heading as="h3">{item.name}</Heading><p>{item.desc}</p></div><i>↗</i></a>)}</div></section>
         <section><div className={styles.sectionHead}><span>QQ GROUPS</span><Heading as="h2">中文协作群</Heading></div><div className={styles.groupGrid}>{GROUPS.map((group) => <GroupCard key={group.number} group={group} />)}</div></section>
-        <aside className={styles.note}><b>REPORT PROTOCOL</b><p>Bug 反馈请附版本号、系统、存档或最小复现；开发问题请附构建命令和第一条有效错误。二维码失效时可使用群号搜索。</p></aside>
+        <aside className={styles.note}><b>REPORT PROTOCOL</b><p>Bug 反馈请附版本号、系统、存档或最小复现；开发问题请附构建命令和第一条有效错误。翻译与校对请进入 CCB Transifex 项目。二维码失效时可使用群号搜索。</p></aside>
       </main>
     </Layout>
   );
