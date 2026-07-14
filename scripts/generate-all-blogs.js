@@ -16,6 +16,13 @@
 const {execFileSync} = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const {
+  KNOWN_LOGIN_BY_NAME,
+  cleanName,
+  compareContributorStats,
+  isMergeCommitSubject,
+  knownLogin,
+} = require('./activity-blog-helpers');
 
 const args = process.argv.slice(2);
 const option = (name) => args.find((arg) => arg.startsWith(`--${name}=`))?.slice(name.length + 3);
@@ -95,11 +102,6 @@ function formatDate(isoDate) {
   return `${get('year')}-${get('month')}-${get('day')}`;
 }
 
-function cleanName(name) {
-  const clean = String(name || '').replace(/\s*git config\b.*$/i, '').trim();
-  return clean || '未知贡献者';
-}
-
 function noreplyLogin(email) {
   const match = String(email || '').match(/^(?:\d+\+)?([^@]+)@users\.noreply\.github\.com$/i);
   return match?.[1] || null;
@@ -107,27 +109,22 @@ function noreplyLogin(email) {
 
 const identityByEmail = new Map();
 const verifiedByName = new Map();
-// 同一贡献者在普通邮箱提交和 GitHub noreply 提交中使用了不同显示名，
-// 仅凭 git 邮箱无法自动关联，保留已核实的显示名到 GitHub 登录名映射。
-const KNOWN_LOGIN_BY_NAME = new Map([
-  ['lunaglaze', 'LunaGlaze'],
-  ['eliadoarias', 'EliadOArias'],
-  ['yuebai', 'byiyuebai'],
-]);
 const identityLines = git(
   'log', TARGET_REF, `--since=${PROJECT_START}T00:00:00+08:00`, '--format=%an%x1f%ae',
 ).split('\n').filter(Boolean);
 
 for (const line of identityLines) {
   const [rawName, email = ''] = line.split('\x1f');
-  const verified = noreplyLogin(email);
+  const verified = noreplyLogin(email) || knownLogin(rawName, email);
   if (verified) verifiedByName.set(cleanName(rawName).toLowerCase(), verified);
 }
 
 for (const line of identityLines) {
   if (!line) continue;
   const [rawName, email = ''] = line.split('\x1f');
-  const verified = noreplyLogin(email) || verifiedByName.get(cleanName(rawName).toLowerCase());
+  const verified = noreplyLogin(email)
+    || knownLogin(rawName, email)
+    || verifiedByName.get(cleanName(rawName).toLowerCase());
   const name = verified || cleanName(rawName);
   if (!identityByEmail.has(email) || verified) {
     identityByEmail.set(email, {
@@ -142,8 +139,8 @@ for (const [name, login] of KNOWN_LOGIN_BY_NAME) verifiedByName.set(name, login)
 
 function resolveUser(name, email = '') {
   const displayName = cleanName(name);
-  const knownLogin = KNOWN_LOGIN_BY_NAME.get(displayName.toLowerCase());
-  if (knownLogin) return {name: displayName, login: knownLogin, verified: true};
+  const known = knownLogin(displayName, email);
+  if (known) return {name: displayName, login: known, verified: true};
   const verified = noreplyLogin(email) || verifiedByName.get(displayName.toLowerCase());
   if (verified) return {name: verified, login: verified, verified: true};
   return identityByEmail.get(email) || {name: cleanName(name), verified: false};
@@ -221,10 +218,13 @@ function buildPRMap() {
 
     const authorCounts = new Map();
     for (const authorLine of git(
-      'log', '--no-merges', '--format=%an%x1f%ae', `${firstParent}..${secondParent}`,
+      'log', '--no-merges', '--format=%an%x1f%ae%x1f%s', `${firstParent}..${secondParent}`,
     ).split('\n')) {
       if (!authorLine) continue;
-      const [authorName, authorEmail = ''] = authorLine.split('\x1f');
+      const [authorName, authorEmail = '', authorSubject = ''] = authorLine.split('\x1f');
+      // cherry-pick 会把 merge commit 压成单父提交；标题仍能识别这类记录，
+      // 因此不能把它计入贡献者的 commit 数量。
+      if (isMergeCommitSubject(authorSubject)) continue;
       const resolvedUser = resolveUser(authorName, authorEmail);
       const user = !resolvedUser.verified
         && resolvedUser.name.toLowerCase() === rawTipUser.name.toLowerCase()
@@ -306,7 +306,7 @@ for (const record of parseRecords(mainlineOutput)) {
   } else {
     // first-parent 上非 CCB PR 的 merge（例如同步前的上游 merge 或普通分支 merge）
     // 既不能链接成 CCB PR，也不应伪装成一次直接提交。
-    if (parentsText.trim().split(/\s+/).length > 1) continue;
+    if (parentsText.trim().split(/\s+/).length > 1 || isMergeCommitSubject(subject)) continue;
     const author = resolveUser(authorName, authorEmail);
     day.commits.push({
       hash: fullHash.slice(0, 7),
@@ -346,12 +346,9 @@ function scoreDay(day) {
     add(pr.merger, 'merges');
     for (const entry of pr.contributors) add(entry.user, 'commits', entry.commits);
   }
-  return [...stats.values()].sort((a, b) => {
-    // 合并工作单独评选“合并大王”，不计入每日贡献者排名。
-    const aScore = a.prs * 3 + a.commits;
-    const bScore = b.prs * 3 + b.commits;
-    return bScore - aScore || a.user.name.localeCompare(b.user.name);
-  });
+  // PR 创建数和 merge 数只用于展示/单独奖项；每日贡献者严格按照
+  // 非合并 commit 数量排序。
+  return [...stats.values()].sort(compareContributorStats);
 }
 
 function authorYaml(awards) {
@@ -363,17 +360,19 @@ function authorYaml(awards) {
   }).join('\n')}`;
 }
 
-function contributorMarkup(user) {
+function contributorMarkup(entry) {
+  const {user, commits} = entry;
   const safeName = escapeMDX(user.name);
-  if (!user.verified) return `  <span class="contributor-badge"><span>${safeName}</span></span>`;
-  return `  <a href="https://github.com/${user.login}" title="@${user.login}" class="contributor-badge"><img src="https://github.com/${user.login}.png?size=40" width="28" height="28" loading="lazy" alt="" /><span>${safeName}</span></a>`;
+  const activityTitle = `${commits} 个非合并 commit`;
+  if (!user.verified) return `  <span class="contributor-badge" title="${activityTitle}"><span>${safeName}</span></span>`;
+  return `  <a href="https://github.com/${user.login}" title="@${user.login} · ${activityTitle}" class="contributor-badge"><img src="https://github.com/${user.login}.png?size=40" width="28" height="28" loading="lazy" alt="" /><span>${safeName}</span></a>`;
 }
 
 function renderPost(dateStr, day) {
   const stats = scoreDay(day);
   const contributorBadges = ['每日最佳员工', '勤奋贡献者', '积极贡献者'];
   const awards = stats
-    .filter((entry) => entry.commits > 0 || entry.prs > 0)
+    .filter((entry) => entry.commits > 0)
     .slice(0, 3)
     .map((entry, index) => ({...entry, badge: contributorBadges[index]}));
   const awardedKeys = new Set(awards.map((entry) => userKey(entry.user)));
@@ -398,8 +397,10 @@ function renderPost(dateStr, day) {
     '',
     '## 今日贡献者',
     '',
+    '按当日非合并 commit 数量排序；PR 创建与合并操作不计入名次。',
+    '',
     '<div class="contributors-row">',
-    ...stats.slice(0, 20).map((entry) => contributorMarkup(entry.user)),
+    ...stats.slice(0, 20).map((entry) => contributorMarkup(entry)),
     '</div>',
     '',
   ];

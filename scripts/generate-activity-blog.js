@@ -20,6 +20,12 @@ const LOOKBACK_DAYS = parseInt(process.env.LOOKBACK_DAYS || "1", 10);
 const BLOG_DIR = path.join(__dirname, "..", "blog");
 const DRY_RUN = process.argv.includes("--dry-run");
 
+function isMergeCommit(c) {
+  const subject = (c.commit?.message || "").split("\n")[0];
+  return (c.parents?.length || 0) > 1
+    || /^merge(?:\s+pull\s+request\b|\s+branch\b|\s+remote-tracking\s+branch\b|\s+tag\b|\s*:)/i.test(subject);
+}
+
 const TOKEN = process.env.GITHUB_TOKEN || "";
 const AUTH_HEADER = TOKEN ? { Authorization: `Bearer ${TOKEN}` } : {};
 
@@ -102,6 +108,7 @@ async function main() {
       fetchMergedPRs(since),
       fetchRecentCommits(since),
     ]);
+    commits = commits.filter((commit) => !isMergeCommit(commit));
   } catch (err) {
     console.error(err.message);
     process.exit(1);
@@ -126,8 +133,8 @@ async function main() {
     stats[u].commits++;
   }
   const contributors = Object.entries(stats)
-    .map(([name, s]) => ({ name, total: s.prs * 3 + s.commits, ...s }))
-    .sort((a, b) => b.total - a.total);
+    .map(([name, s]) => ({name, ...s}))
+    .sort((a, b) => b.commits - a.commits || a.name.localeCompare(b.name));
 
   // 生成内联作者（所有贡献者，带头像和 GitHub 链接）
   const authorsYaml = contributors
