@@ -8,7 +8,7 @@ import styles from './community.module.css';
 const ONLINE = [
   {code: 'DIS', name: 'Discord', desc: '开发讨论、玩家交流与国际社区', href: 'https://discord.gg/tUG9MFwCqf'},
   {code: 'RDT', name: 'Reddit', desc: '分享存档、反馈与长篇讨论', href: 'https://www.reddit.com/r/CataclysmCB/'},
-  {code: 'GIT', name: 'GitHub', desc: 'Issue、代码审查与版本发布', href: 'https://github.com/LYHGLYTX/Cataclysm-Cleanwater-Bomb'},
+  {code: 'GIT', name: 'GitHub', desc: 'Issue、代码审查与版本发布', href: 'https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb'},
 ];
 
 const GROUPS = [

@@ -12,7 +12,7 @@ description: 正确下载 CCB，完成首次启动和基础图形设置。
 
 ## 下载正确的版本
 
-只从 [CCB GitHub Releases](https://github.com/LYHGLYTX/Cataclysm-Cleanwater-Bomb/releases) 获取正式构建。发布页通常会包含多个平台和架构，请根据设备选择。
+只从 [CCB GitHub Releases](https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/releases) 获取正式构建。发布页通常会包含多个平台和架构，请根据设备选择。
 
 | 平台 | 选择与启动方式 |
 |---|---|
