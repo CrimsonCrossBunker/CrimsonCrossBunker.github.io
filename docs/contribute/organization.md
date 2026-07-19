@@ -18,6 +18,8 @@ CCB 欢迎玩家、译者、美术作者、MOD 作者和开发者参与。是否
 |---|---|---|
 | [Cataclysm-Cleanwater-Bomb](https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb) | 游戏源码、JSON、内置 MOD、构建、发布、Issue 与 PR | Issue、Fork、PR、代码审查 |
 | [CrimsonCrossBunker.github.io](https://github.com/CrimsonCrossBunker/CrimsonCrossBunker.github.io) | 官方网站、教程、路线说明和项目动态 | 文档 Issue、PR、链接与构建检查 |
+| [CCB-GUIDE](https://github.com/CrimsonCrossBunker/CCB-GUIDE) | 面向玩家的可搜索游戏资料指南与 GitHub Pages 前端 | 界面、检索、数据展示、无障碍与部署 PR |
+| [CCB-GUIDE-DATA](https://github.com/CrimsonCrossBunker/CCB-GUIDE-DATA) | 从 CCB Release 生成指南使用的 JSON、翻译与拼音索引 | 数据生成器、更新工作流与格式兼容性 PR |
 | [CCB_UNDEAD_PEOPLE](https://github.com/CrimsonCrossBunker/CCB_UNDEAD_PEOPLE) | CCB 使用的 UNDEAD_PEOPLE 贴图源、compose 工具和发布包 | 素材认领、工作表、贴图 PR |
 | [Catapult](https://github.com/CrimsonCrossBunker/Catapult) | 跨平台启动器与内容管理器 | 按该仓库自己的贡献规范提交 |
 | [CCB Transifex](https://app.transifex.com/Cataclysm-Cleanwater-Bomb/cataclysm-cleanwater-bomb/dashboard/) | 游戏在线翻译与语言团队协作 | 翻译、校对、术语讨论 |

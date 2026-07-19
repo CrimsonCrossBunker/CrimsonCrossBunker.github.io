@@ -5,11 +5,10 @@
 .head > p { max-width: 440px; margin: 0; color: var(--ccb-muted); }
 .grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; }
 .card { grid-column: span 2; min-height: 310px; display: flex; flex-direction: column; padding: 1.5rem; color: inherit; text-decoration: none; border: 1px solid var(--ccb-line); border-radius: var(--ccb-radius); background: linear-gradient(145deg, rgba(21,34,31,.92), rgba(12,21,19,.92)); transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease; }
-.card:nth-child(4), .card:nth-child(5) { grid-column: span 3; min-height: 270px; }
 .card:hover { color: inherit; text-decoration: none; transform: translateY(-5px); border-color: var(--ccb-line-strong); box-shadow: var(--ccb-shadow); }
 .cardTop { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3.3rem; font: .75rem var(--ccb-font-code); }
 .cardTop span { color: var(--ccb-cyan); }.cardTop i { color: var(--ccb-muted); font-style: normal; letter-spacing: .12em; }
 .card h3 { margin: 0 0 .75rem; font-size: 1.65rem; }.card > p { max-width: 440px; color: var(--ccb-muted); line-height: 1.75; }
 .cardFoot { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 1rem; border-top: 1px dashed var(--ccb-line); }.cardFoot small { color: #81968d; }.cardFoot b { color: var(--ccb-cyan); font-size: 1.25rem; transition: transform 160ms ease; }.card:hover .cardFoot b { transform: translate(3px,-3px); }
-@media (max-width: 996px) { .grid { grid-template-columns: repeat(2, 1fr); }.card, .card:nth-child(4), .card:nth-child(5) { grid-column: span 1; }.card:last-child { grid-column: span 2; }.head { align-items: flex-start; flex-direction: column; } }
-@media (max-width: 600px) { .paths { padding: 4.5rem 0; }.grid { grid-template-columns: 1fr; }.card, .card:nth-child(4), .card:nth-child(5), .card:last-child { grid-column: span 1; min-height: 250px; }.cardTop { margin-bottom: 2rem; } }
+@media (max-width: 996px) { .grid { grid-template-columns: repeat(2, 1fr); }.card { grid-column: span 1; }.head { align-items: flex-start; flex-direction: column; } }
+@media (max-width: 600px) { .paths { padding: 4.5rem 0; }.grid { grid-template-columns: 1fr; }.card { grid-column: span 1; min-height: 250px; }.cardTop { margin-bottom: 2rem; } }

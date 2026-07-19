@@ -131,6 +131,11 @@ const config = {
           {to: '/blog', label: '项目动态', position: 'left'},
           {to: '/community', label: '社区', position: 'left'},
           {
+            href: 'https://crimsoncrossbunker.github.io/CCB-GUIDE/?lang=zh_CN',
+            label: '游戏指南 ↗',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb',
             label: 'GitHub ↗',
             position: 'right',
@@ -197,6 +202,14 @@ const config = {
               {
                 label: 'CCB 仓库',
                 href: 'https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb',
+              },
+              {
+                label: '游戏资料指南',
+                href: 'https://crimsoncrossbunker.github.io/CCB-GUIDE/?lang=zh_CN',
+              },
+              {
+                label: '指南源码',
+                href: 'https://github.com/CrimsonCrossBunker/CCB-GUIDE',
               },
             ],
           },
