@@ -8,6 +8,7 @@ const PATHS = [
   {code: '03', label: 'MOD', title: 'MOD 制作', desc: '用 JSON 创建第一个模组，加入物品、配方和更多游戏内容。', to: '/docs/mod/intro', meta: '入门 · 创作'},
   {code: '04', label: 'LOCALIZE', title: '翻译贡献', desc: '无需编程即可参与；也包含字符串标记、提取和本地验证。', to: '/docs/contribute/translation', meta: '零基础 · 语言'},
   {code: '05', label: 'PIXEL', title: '贴图贡献', desc: '认领缺失 ID，画像素图，并通过工作表与工具完成归置。', to: '/docs/contribute/tileset', meta: '入门 · 美术'},
+  {code: '06', label: 'GUIDE', title: '游戏资料指南', desc: '搜索 CCB 最新版本的物品、怪物、配方和地形资料，支持中文与拼音检索。', to: 'https://crimsoncrossbunker.github.io/CCB-GUIDE/?lang=zh_CN', meta: '在线 · 玩家工具'},
 ];
 
 export default function HomepageFeatures() {
