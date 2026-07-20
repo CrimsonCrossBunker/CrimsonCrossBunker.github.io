@@ -15,6 +15,7 @@ const ONLINE = [
 const GROUPS = [
   {name: '玩家交流群', number: '552610319', img: 'img/qq/jiaoliu.jpg', desc: '游玩提问、反馈和日常交流'},
   {name: '开发贡献群', number: '252513599', img: 'img/qq/dev.jpg', desc: '代码、MOD 与项目协作'},
+  {name: 'CCB模组群', number: '362723132', img: 'img/qq/mod.jpg', desc: 'MOD 制作、交流与问题讨论'},
   {name: '贴图贡献群', number: '694984594', img: 'img/qq/tileset.jpg', desc: 'CCB 不死人贴图绘制与归置'},
   {name: '翻译贡献群', number: '316558115', img: 'img/qq/qrcode.jpg', desc: '词条翻译、术语和校对'},
 ];

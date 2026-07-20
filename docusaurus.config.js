@@ -132,7 +132,7 @@ const config = {
           {to: '/community', label: '社区', position: 'left'},
           {
             href: 'https://crimsoncrossbunker.github.io/CCB-GUIDE/?lang=zh_CN',
-            label: '游戏指南 ↗',
+            label: '物品维基 ↗',
             position: 'right',
           },
           {
