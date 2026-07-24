@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://crimsoncrossbunker.github.io/blog</id>
+    <title>Cataclysm: Cleanwater Bomb Blog</title>
+    <updated>2026-07-24T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://crimsoncrossbunker.github.io/blog"/>
+    <subtitle>Cataclysm: Cleanwater Bomb Blog</subtitle>
+    <icon>https://crimsoncrossbunker.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[CCB 开发动态 (2026-07-24)]]></title>
+        <id>https://crimsoncrossbunker.github.io/blog/2026-07-24-activity</id>
+        <link href="https://crimsoncrossbunker.github.io/blog/2026-07-24-activity"/>
+        <updated>2026-07-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026-07-24 开发动态，依据 CCB 主分支记录自动生成。]]></summary>
+        <content type="html"><![CDATA[<p>2026-07-24 开发动态，依据 CCB 主分支记录自动生成。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日贡献者">今日贡献者<a href="https://crimsoncrossbunker.github.io/blog/2026-07-24-activity#%E4%BB%8A%E6%97%A5%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="今日贡献者的直接链接" title="今日贡献者的直接链接" translate="no">​</a></h2>
+<p>按当日非合并 commit 数量排序；PR 创建与合并操作不计入名次。</p>
+<div class="contributors-row"><a href="https://github.com/LunaGlaze" title="@LunaGlaze · 9 个非合并 commit" class="contributor-badge"><img src="https://github.com/LunaGlaze.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LunaGlaze</span></a><a href="https://github.com/Standing-Storm" title="@Standing-Storm · 9 个非合并 commit" class="contributor-badge"><img src="https://github.com/Standing-Storm.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Standing-Storm</span></a><a href="https://github.com/LYHGLYTX" title="@LYHGLYTX · 3 个非合并 commit" class="contributor-badge"><img src="https://github.com/LYHGLYTX.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LYHGLYTX</span></a><a href="https://github.com/Minecrafthyr" title="@Minecrafthyr · 3 个非合并 commit" class="contributor-badge"><img src="https://github.com/Minecrafthyr.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Minecrafthyr</span></a><a href="https://github.com/Brambor" title="@Brambor · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/Brambor.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Brambor</span></a><a href="https://github.com/LyleSY" title="@LyleSY · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/LyleSY.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LyleSY</span></a><a href="https://github.com/Maleclypse" title="@Maleclypse · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/Maleclypse.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Maleclypse</span></a><a href="https://github.com/SariusSkelrets" title="@SariusSkelrets · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/SariusSkelrets.png?size=40" width="28" height="28" loading="lazy" alt=""><span>SariusSkelrets</span></a><span class="contributor-badge" title="1 个非合并 commit"><span>ahhwatson</span></span><a href="https://github.com/Blueflowerss" title="@Blueflowerss · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/Blueflowerss.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Blueflowerss</span></a><a href="https://github.com/Bydth" title="@Bydth · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/Bydth.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Bydth</span></a><span class="contributor-badge" title="1 个非合并 commit"><span>ExplosiveRunes</span></span><span class="contributor-badge" title="1 个非合并 commit"><span>kuutekitty</span></span><a href="https://github.com/SpinosaurusBoat" title="@SpinosaurusBoat · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/SpinosaurusBoat.png?size=40" width="28" height="28" loading="lazy" alt=""><span>SpinosaurusBoat</span></a></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已合并-pr5">已合并 PR（5）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-24-activity#%E5%B7%B2%E5%90%88%E5%B9%B6-pr5" class="hash-link" aria-label="已合并 PR（5）的直接链接" title="已合并 PR（5）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>PR</th><th>标题</th><th>创建者</th><th>主要贡献者</th><th>合并者</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/477" target="_blank" rel="noopener noreferrer" class="">#477</a></td><td>同步 CDDA 内容更新至 #88060（筛选 31 个 PR）</td><td>LYHGLYTX</td><td>Standing-Storm</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/478" target="_blank" rel="noopener noreferrer" class="">#478</a></td><td>Uncaring/PSYCHOPATH is not a good trait</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/479" target="_blank" rel="noopener noreferrer" class="">#479</a></td><td>增加更多堆叠并调整少量数据</td><td>Minecrafthyr</td><td>Minecrafthyr</td><td>LunaGlaze</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/480" target="_blank" rel="noopener noreferrer" class="">#480</a></td><td>Vehicle passenger parts' spatial capacity is a mess</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/481" target="_blank" rel="noopener noreferrer" class="">#481</a></td><td>[FTL] FTK fusion guns overheat tweak</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr></tbody></table>]]></content>
+        <author>
+            <name>LunaGlaze</name>
+            <uri>https://github.com/LunaGlaze</uri>
+        </author>
+        <author>
+            <name>Standing-Storm</name>
+            <uri>https://github.com/Standing-Storm</uri>
+        </author>
+        <author>
+            <name>LYHGLYTX</name>
+            <uri>https://github.com/LYHGLYTX</uri>
+        </author>
+        <category label="开发动态" term="开发动态"/>
+        <category label="自动生成" term="自动生成"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CCB 开发动态 (2026-07-23)]]></title>
+        <id>https://crimsoncrossbunker.github.io/blog/2026-07-23-activity</id>
+        <link href="https://crimsoncrossbunker.github.io/blog/2026-07-23-activity"/>
+        <updated>2026-07-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026-07-23 开发动态，依据 CCB 主分支记录自动生成。]]></summary>
+        <content type="html"><![CDATA[<p>2026-07-23 开发动态，依据 CCB 主分支记录自动生成。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日贡献者">今日贡献者<a href="https://crimsoncrossbunker.github.io/blog/2026-07-23-activity#%E4%BB%8A%E6%97%A5%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="今日贡献者的直接链接" title="今日贡献者的直接链接" translate="no">​</a></h2>
+<p>按当日非合并 commit 数量排序；PR 创建与合并操作不计入名次。</p>
+<div class="contributors-row"><a href="https://github.com/LunaGlaze" title="@LunaGlaze · 6 个非合并 commit" class="contributor-badge"><img src="https://github.com/LunaGlaze.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LunaGlaze</span></a><a href="https://github.com/lapp2333xhj" title="@lapp2333xhj · 0 个非合并 commit" class="contributor-badge"><img src="https://github.com/lapp2333xhj.png?size=40" width="28" height="28" loading="lazy" alt=""><span>lapp2333xhj</span></a></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已合并-pr1">已合并 PR（1）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-23-activity#%E5%B7%B2%E5%90%88%E5%B9%B6-pr1" class="hash-link" aria-label="已合并 PR（1）的直接链接" title="已合并 PR（1）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>PR</th><th>标题</th><th>创建者</th><th>主要贡献者</th><th>合并者</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/471" target="_blank" rel="noopener noreferrer" class="">#471</a></td><td>Adjust shooting experience and introduce two new shooting-related algorithms</td><td>LunaGlaze</td><td>LunaGlaze</td><td>lapp2333xhj</td></tr></tbody></table>]]></content>
+        <author>
+            <name>LunaGlaze</name>
+            <uri>https://github.com/LunaGlaze</uri>
+        </author>
+        <author>
+            <name>lapp2333xhj</name>
+            <uri>https://github.com/lapp2333xhj</uri>
+        </author>
+        <category label="开发动态" term="开发动态"/>
+        <category label="自动生成" term="自动生成"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CCB 开发动态 (2026-07-22)]]></title>
+        <id>https://crimsoncrossbunker.github.io/blog/2026-07-22-activity</id>
+        <link href="https://crimsoncrossbunker.github.io/blog/2026-07-22-activity"/>
+        <updated>2026-07-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026-07-22 开发动态，依据 CCB 主分支记录自动生成。]]></summary>
+        <content type="html"><![CDATA[<p>2026-07-22 开发动态，依据 CCB 主分支记录自动生成。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日贡献者">今日贡献者<a href="https://crimsoncrossbunker.github.io/blog/2026-07-22-activity#%E4%BB%8A%E6%97%A5%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="今日贡献者的直接链接" title="今日贡献者的直接链接" translate="no">​</a></h2>
+<p>按当日非合并 commit 数量排序；PR 创建与合并操作不计入名次。</p>
+<div class="contributors-row"><a href="https://github.com/LunaGlaze" title="@LunaGlaze · 16 个非合并 commit" class="contributor-badge"><img src="https://github.com/LunaGlaze.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LunaGlaze</span></a><a href="https://github.com/worm-girl" title="@worm-girl · 4 个非合并 commit" class="contributor-badge"><img src="https://github.com/worm-girl.png?size=40" width="28" height="28" loading="lazy" alt=""><span>worm-girl</span></a><a href="https://github.com/Killa-bite" title="@Killa-bite · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/Killa-bite.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Killa-bite</span></a><a href="https://github.com/lapp2333xhj" title="@lapp2333xhj · 0 个非合并 commit" class="contributor-badge"><img src="https://github.com/lapp2333xhj.png?size=40" width="28" height="28" loading="lazy" alt=""><span>lapp2333xhj</span></a><a href="https://github.com/LYHGLYTX" title="@LYHGLYTX · 0 个非合并 commit" class="contributor-badge"><img src="https://github.com/LYHGLYTX.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LYHGLYTX</span></a></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已合并-pr5">已合并 PR（5）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-22-activity#%E5%B7%B2%E5%90%88%E5%B9%B6-pr5" class="hash-link" aria-label="已合并 PR（5）的直接链接" title="已合并 PR（5）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>PR</th><th>标题</th><th>创建者</th><th>主要贡献者</th><th>合并者</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/462" target="_blank" rel="noopener noreferrer" class="">#462</a></td><td>Build(msvc): add Tracy Release x64 task</td><td>Killa-bite</td><td>Killa-bite</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/467" target="_blank" rel="noopener noreferrer" class="">#467</a></td><td>Misc tweaker: Copy several miscellaneous core module tweaks from C<!-- -->:TLG</td><td>LunaGlaze</td><td>LunaGlaze</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/469" target="_blank" rel="noopener noreferrer" class="">#469</a></td><td>修复FTK系列枪械的口袋顺序</td><td>LunaGlaze</td><td>LunaGlaze</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/468" target="_blank" rel="noopener noreferrer" class="">#468</a></td><td>Bamboo! Bamboo! Now we not only have bamboo item, but also plants made as terrain can also grow.</td><td>LunaGlaze</td><td>LunaGlaze</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/470" target="_blank" rel="noopener noreferrer" class="">#470</a></td><td>Restore legacy character point pools</td><td>Killa-bite</td><td>Killa-bite</td><td>lapp2333xhj</td></tr></tbody></table>]]></content>
+        <author>
+            <name>LunaGlaze</name>
+            <uri>https://github.com/LunaGlaze</uri>
+        </author>
+        <author>
+            <name>worm-girl</name>
+            <uri>https://github.com/worm-girl</uri>
+        </author>
+        <author>
+            <name>Killa-bite</name>
+            <uri>https://github.com/Killa-bite</uri>
+        </author>
+        <author>
+            <name>lapp2333xhj</name>
+            <uri>https://github.com/lapp2333xhj</uri>
+        </author>
+        <category label="开发动态" term="开发动态"/>
+        <category label="自动生成" term="自动生成"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CCB 开发动态 (2026-07-21)]]></title>
+        <id>https://crimsoncrossbunker.github.io/blog/2026-07-21-activity</id>
+        <link href="https://crimsoncrossbunker.github.io/blog/2026-07-21-activity"/>
+        <updated>2026-07-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026-07-21 开发动态，依据 CCB 主分支记录自动生成。]]></summary>
+        <content type="html"><![CDATA[<p>2026-07-21 开发动态，依据 CCB 主分支记录自动生成。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日贡献者">今日贡献者<a href="https://crimsoncrossbunker.github.io/blog/2026-07-21-activity#%E4%BB%8A%E6%97%A5%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="今日贡献者的直接链接" title="今日贡献者的直接链接" translate="no">​</a></h2>
+<p>按当日非合并 commit 数量排序；PR 创建与合并操作不计入名次。</p>
+<div class="contributors-row"><a href="https://github.com/LunaGlaze" title="@LunaGlaze · 6 个非合并 commit" class="contributor-badge"><img src="https://github.com/LunaGlaze.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LunaGlaze</span></a><a href="https://github.com/lapp2333xhj" title="@lapp2333xhj · 0 个非合并 commit" class="contributor-badge"><img src="https://github.com/lapp2333xhj.png?size=40" width="28" height="28" loading="lazy" alt=""><span>lapp2333xhj</span></a></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已合并-pr2">已合并 PR（2）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-21-activity#%E5%B7%B2%E5%90%88%E5%B9%B6-pr2" class="hash-link" aria-label="已合并 PR（2）的直接链接" title="已合并 PR（2）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>PR</th><th>标题</th><th>创建者</th><th>主要贡献者</th><th>合并者</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/456" target="_blank" rel="noopener noreferrer" class="">#456</a></td><td>Remove Megacity mod from storage.</td><td>LunaGlaze</td><td>LunaGlaze</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/455" target="_blank" rel="noopener noreferrer" class="">#455</a></td><td>Fix the bug where firearms with firing_requirements cannot correctly consume external UPS or bionic power</td><td>LunaGlaze</td><td>LunaGlaze</td><td>lapp2333xhj</td></tr></tbody></table>]]></content>
+        <author>
+            <name>LunaGlaze</name>
+            <uri>https://github.com/LunaGlaze</uri>
+        </author>
+        <author>
+            <name>lapp2333xhj</name>
+            <uri>https://github.com/lapp2333xhj</uri>
+        </author>
+        <category label="开发动态" term="开发动态"/>
+        <category label="自动生成" term="自动生成"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CCB 开发动态 (2026-07-20)]]></title>
+        <id>https://crimsoncrossbunker.github.io/blog/2026-07-20-activity</id>
+        <link href="https://crimsoncrossbunker.github.io/blog/2026-07-20-activity"/>
+        <updated>2026-07-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026-07-20 开发动态，依据 CCB 主分支记录自动生成。]]></summary>
+        <content type="html"><![CDATA[<p>2026-07-20 开发动态，依据 CCB 主分支记录自动生成。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日贡献者">今日贡献者<a href="https://crimsoncrossbunker.github.io/blog/2026-07-20-activity#%E4%BB%8A%E6%97%A5%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="今日贡献者的直接链接" title="今日贡献者的直接链接" translate="no">​</a></h2>
+<p>按当日非合并 commit 数量排序；PR 创建与合并操作不计入名次。</p>
+<div class="contributors-row"><a href="https://github.com/LunaGlaze" title="@LunaGlaze · 12 个非合并 commit" class="contributor-badge"><img src="https://github.com/LunaGlaze.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LunaGlaze</span></a><a href="https://github.com/LYHGLYTX" title="@LYHGLYTX · 5 个非合并 commit" class="contributor-badge"><img src="https://github.com/LYHGLYTX.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LYHGLYTX</span></a></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已合并-pr6">已合并 PR（6）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-20-activity#%E5%B7%B2%E5%90%88%E5%B9%B6-pr6" class="hash-link" aria-label="已合并 PR（6）的直接链接" title="已合并 PR（6）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>PR</th><th>标题</th><th>创建者</th><th>主要贡献者</th><th>合并者</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/445" target="_blank" rel="noopener noreferrer" class="">#445</a></td><td>Fix null explosion field sources</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/447" target="_blank" rel="noopener noreferrer" class="">#447</a></td><td>data: update localized MOTD links</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/450" target="_blank" rel="noopener noreferrer" class="">#450</a></td><td>Fix EOCs targeting removed unique NPCs</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/449" target="_blank" rel="noopener noreferrer" class="">#449</a></td><td>[FCL] Energy weapon adjustments, port FTK-93 fusion rifle from 0.D to Futurism Cataclysm</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/453" target="_blank" rel="noopener noreferrer" class="">#453</a></td><td>把加载图的dda改成Cleanwater Bomb</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/452" target="_blank" rel="noopener noreferrer" class="">#452</a></td><td>[FCL] Major adjustments to heavy rail rifle</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr></tbody></table>]]></content>
+        <author>
+            <name>LunaGlaze</name>
+            <uri>https://github.com/LunaGlaze</uri>
+        </author>
+        <author>
+            <name>LYHGLYTX</name>
+            <uri>https://github.com/LYHGLYTX</uri>
+        </author>
+        <category label="开发动态" term="开发动态"/>
+        <category label="自动生成" term="自动生成"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CCB 开发动态 (2026-07-19)]]></title>
+        <id>https://crimsoncrossbunker.github.io/blog/2026-07-19-activity</id>
+        <link href="https://crimsoncrossbunker.github.io/blog/2026-07-19-activity"/>
+        <updated>2026-07-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026-07-19 开发动态，依据 CCB 主分支记录自动生成。]]></summary>
+        <content type="html"><![CDATA[<p>2026-07-19 开发动态，依据 CCB 主分支记录自动生成。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日贡献者">今日贡献者<a href="https://crimsoncrossbunker.github.io/blog/2026-07-19-activity#%E4%BB%8A%E6%97%A5%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="今日贡献者的直接链接" title="今日贡献者的直接链接" translate="no">​</a></h2>
+<p>按当日非合并 commit 数量排序；PR 创建与合并操作不计入名次。</p>
+<div class="contributors-row"><a href="https://github.com/LunaGlaze" title="@LunaGlaze · 15 个非合并 commit" class="contributor-badge"><img src="https://github.com/LunaGlaze.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LunaGlaze</span></a><a href="https://github.com/LYHGLYTX" title="@LYHGLYTX · 11 个非合并 commit" class="contributor-badge"><img src="https://github.com/LYHGLYTX.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LYHGLYTX</span></a><a href="https://github.com/Standing-Storm" title="@Standing-Storm · 8 个非合并 commit" class="contributor-badge"><img src="https://github.com/Standing-Storm.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Standing-Storm</span></a><a href="https://github.com/Maleclypse" title="@Maleclypse · 5 个非合并 commit" class="contributor-badge"><img src="https://github.com/Maleclypse.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Maleclypse</span></a><span class="contributor-badge" title="3 个非合并 commit"><span>Enkail333</span></span><a href="https://github.com/gettingusedto" title="@gettingusedto · 3 个非合并 commit" class="contributor-badge"><img src="https://github.com/gettingusedto.png?size=40" width="28" height="28" loading="lazy" alt=""><span>gettingusedto</span></a><span class="contributor-badge" title="1 个非合并 commit"><span>ahhwatson</span></span><a href="https://github.com/BalthazarArgall" title="@BalthazarArgall · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/BalthazarArgall.png?size=40" width="28" height="28" loading="lazy" alt=""><span>BalthazarArgall</span></a><a href="https://github.com/Blueflowerss" title="@Blueflowerss · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/Blueflowerss.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Blueflowerss</span></a><a href="https://github.com/Bydth" title="@Bydth · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/Bydth.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Bydth</span></a><a href="https://github.com/GuardianDll" title="@GuardianDll · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/GuardianDll.png?size=40" width="28" height="28" loading="lazy" alt=""><span>GuardianDll</span></a><a href="https://github.com/kevingranade" title="@kevingranade · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/kevingranade.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Maya Granade</span></a><span class="contributor-badge" title="1 个非合并 commit"><span>Sergey Alirzaev</span></span><a href="https://github.com/Minecrafthyr" title="@Minecrafthyr · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/Minecrafthyr.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Wind Shodow</span></a></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已合并-pr10">已合并 PR（10）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-19-activity#%E5%B7%B2%E5%90%88%E5%B9%B6-pr10" class="hash-link" aria-label="已合并 PR（10）的直接链接" title="已合并 PR（10）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>PR</th><th>标题</th><th>创建者</th><th>主要贡献者</th><th>合并者</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/435" target="_blank" rel="noopener noreferrer" class="">#435</a></td><td>[FCL] Continue porting Rivtech weapons from legacy version (0.G)</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/437" target="_blank" rel="noopener noreferrer" class="">#437</a></td><td>Format recently added Futurism JSON</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/439" target="_blank" rel="noopener noreferrer" class="">#439</a></td><td>Make unit-sensitive tests platform independent</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/436" target="_blank" rel="noopener noreferrer" class="">#436</a></td><td>Use validated prebuilt shaders for Android releases</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/438" target="_blank" rel="noopener noreferrer" class="">#438</a></td><td>Fix: Correctly handle POWER_TRICKLE enchantment</td><td>LYHGLYTX</td><td>LunaGlaze</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/441" target="_blank" rel="noopener noreferrer" class="">#441</a></td><td>POWER_TRICKLE's settlement order</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/440" target="_blank" rel="noopener noreferrer" class="">#440</a></td><td>[FCL] Port and restore rail rifle from legacy version (0.E)</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/443" target="_blank" rel="noopener noreferrer" class="">#443</a></td><td>[FCL] Comprehensively add the Quantum Solar family to Futurism Cataclysm</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/444" target="_blank" rel="noopener noreferrer" class="">#444</a></td><td>Fix modular lab light mapgen updates</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/442" target="_blank" rel="noopener noreferrer" class="">#442</a></td><td>同步 CDDA 上游更新至 #88040（筛选 37 个 PR）</td><td>LYHGLYTX</td><td>Standing-Storm</td><td>LYHGLYTX</td></tr></tbody></table>]]></content>
+        <author>
+            <name>LunaGlaze</name>
+            <uri>https://github.com/LunaGlaze</uri>
+        </author>
+        <author>
+            <name>LYHGLYTX</name>
+            <uri>https://github.com/LYHGLYTX</uri>
+        </author>
+        <author>
+            <name>Standing-Storm</name>
+            <uri>https://github.com/Standing-Storm</uri>
+        </author>
+        <category label="开发动态" term="开发动态"/>
+        <category label="自动生成" term="自动生成"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CCB 开发动态 (2026-07-18)]]></title>
+        <id>https://crimsoncrossbunker.github.io/blog/2026-07-18-activity</id>
+        <link href="https://crimsoncrossbunker.github.io/blog/2026-07-18-activity"/>
+        <updated>2026-07-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026-07-18 开发动态，依据 CCB 主分支记录自动生成。]]></summary>
+        <content type="html"><![CDATA[<p>2026-07-18 开发动态，依据 CCB 主分支记录自动生成。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日贡献者">今日贡献者<a href="https://crimsoncrossbunker.github.io/blog/2026-07-18-activity#%E4%BB%8A%E6%97%A5%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="今日贡献者的直接链接" title="今日贡献者的直接链接" translate="no">​</a></h2>
+<p>按当日非合并 commit 数量排序；PR 创建与合并操作不计入名次。</p>
+<div class="contributors-row"><a href="https://github.com/LunaGlaze" title="@LunaGlaze · 8 个非合并 commit" class="contributor-badge"><img src="https://github.com/LunaGlaze.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LunaGlaze</span></a><a href="https://github.com/LYHGLYTX" title="@LYHGLYTX · 7 个非合并 commit" class="contributor-badge"><img src="https://github.com/LYHGLYTX.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LYHGLYTX</span></a><a href="https://github.com/dependabot[bot]" title="@dependabot[bot] · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/dependabot[bot].png?size=40" width="28" height="28" loading="lazy" alt=""><span>dependabot[bot]</span></a><a href="https://github.com/lapp2333xhj" title="@lapp2333xhj · 0 个非合并 commit" class="contributor-badge"><img src="https://github.com/lapp2333xhj.png?size=40" width="28" height="28" loading="lazy" alt=""><span>lapp2333xhj</span></a></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已合并-pr3">已合并 PR（3）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-18-activity#%E5%B7%B2%E5%90%88%E5%B9%B6-pr3" class="hash-link" aria-label="已合并 PR（3）的直接链接" title="已合并 PR（3）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>PR</th><th>标题</th><th>创建者</th><th>主要贡献者</th><th>合并者</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/414" target="_blank" rel="noopener noreferrer" class="">#414</a></td><td>Bump the github-actions group with 17 updates</td><td>LYHGLYTX</td><td>dependabot[bot]</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/431" target="_blank" rel="noopener noreferrer" class="">#431</a></td><td>[FCL] More advanced military soldier carrier</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/434" target="_blank" rel="noopener noreferrer" class="">#434</a></td><td>[FCL] Port Rivtech 5x50mm series items from 0.G</td><td>LunaGlaze</td><td>LunaGlaze</td><td>lapp2333xhj</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="主线直接提交7">主线直接提交（7）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-18-activity#%E4%B8%BB%E7%BA%BF%E7%9B%B4%E6%8E%A5%E6%8F%90%E4%BA%A47" class="hash-link" aria-label="主线直接提交（7）的直接链接" title="主线直接提交（7）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>提交</th><th>说明</th><th>作者</th><th>时间</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/commit/2d20dd15565c7414219f3ce2183fb1dc688f70f9" target="_blank" rel="noopener noreferrer" class="">2d20dd1</a></td><td>Optimize sparse tile rendering at distant zoom levels (#426)</td><td>LYHGLYTX</td><td>2026-07-18</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/commit/e71ab888acc39ef607dd54c8ae78fcb01db4b9b0" target="_blank" rel="noopener noreferrer" class="">e71ab88</a></td><td>Fix cached MacPorts setup on macOS runners (#427)</td><td>LYHGLYTX</td><td>2026-07-18</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/commit/33426f44f400daa2a652b71dd45fbbc56626c31e" target="_blank" rel="noopener noreferrer" class="">33426f4</a></td><td>Fix Android user storage migration (#428)</td><td>LYHGLYTX</td><td>2026-07-18</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/commit/935201b247b5789d2480c9541eeac248773ebd0d" target="_blank" rel="noopener noreferrer" class="">935201b</a></td><td>Fix Android asset upgrades and shader packaging (#429)</td><td>LYHGLYTX</td><td>2026-07-18</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/commit/e4949b2385c31fe61529eef885e07a54bbdf300f" target="_blank" rel="noopener noreferrer" class="">e4949b2</a></td><td>Treat canceled mod loading as normal control flow (#430)</td><td>LYHGLYTX</td><td>2026-07-18</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/commit/0e7d335929972896040105c9ce3f89c8a9ca77a3" target="_blank" rel="noopener noreferrer" class="">0e7d335</a></td><td>Preserve radiation mutation world default (#432)</td><td>LYHGLYTX</td><td>2026-07-18</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/commit/1cd8ed8dc803a1d56effaf8138faae4bb3508d43" target="_blank" rel="noopener noreferrer" class="">1cd8ed8</a></td><td>Add configurable progression and reproduction rates (#433)</td><td>LYHGLYTX</td><td>2026-07-18</td></tr></tbody></table>]]></content>
+        <author>
+            <name>LunaGlaze</name>
+            <uri>https://github.com/LunaGlaze</uri>
+        </author>
+        <author>
+            <name>LYHGLYTX</name>
+            <uri>https://github.com/LYHGLYTX</uri>
+        </author>
+        <author>
+            <name>dependabot[bot]</name>
+            <uri>https://github.com/dependabot[bot]</uri>
+        </author>
+        <author>
+            <name>lapp2333xhj</name>
+            <uri>https://github.com/lapp2333xhj</uri>
+        </author>
+        <category label="开发动态" term="开发动态"/>
+        <category label="自动生成" term="自动生成"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CCB 开发动态 (2026-07-17)]]></title>
+        <id>https://crimsoncrossbunker.github.io/blog/2026-07-17-activity</id>
+        <link href="https://crimsoncrossbunker.github.io/blog/2026-07-17-activity"/>
+        <updated>2026-07-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026-07-17 开发动态，依据 CCB 主分支记录自动生成。]]></summary>
+        <content type="html"><![CDATA[<p>2026-07-17 开发动态，依据 CCB 主分支记录自动生成。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日贡献者">今日贡献者<a href="https://crimsoncrossbunker.github.io/blog/2026-07-17-activity#%E4%BB%8A%E6%97%A5%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="今日贡献者的直接链接" title="今日贡献者的直接链接" translate="no">​</a></h2>
+<p>按当日非合并 commit 数量排序；PR 创建与合并操作不计入名次。</p>
+<div class="contributors-row"><a href="https://github.com/LYHGLYTX" title="@LYHGLYTX · 19 个非合并 commit" class="contributor-badge"><img src="https://github.com/LYHGLYTX.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LYHGLYTX</span></a><a href="https://github.com/ZihanZheng258" title="@ZihanZheng258 · 7 个非合并 commit" class="contributor-badge"><img src="https://github.com/ZihanZheng258.png?size=40" width="28" height="28" loading="lazy" alt=""><span>zihanZheng</span></a><a href="https://github.com/LunaGlaze" title="@LunaGlaze · 5 个非合并 commit" class="contributor-badge"><img src="https://github.com/LunaGlaze.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LunaGlaze</span></a><a href="https://github.com/lapp2333xhj" title="@lapp2333xhj · 0 个非合并 commit" class="contributor-badge"><img src="https://github.com/lapp2333xhj.png?size=40" width="28" height="28" loading="lazy" alt=""><span>lapp2333xhj</span></a></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已合并-pr9">已合并 PR（9）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-17-activity#%E5%B7%B2%E5%90%88%E5%B9%B6-pr9" class="hash-link" aria-label="已合并 PR（9）的直接链接" title="已合并 PR（9）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>PR</th><th>标题</th><th>创建者</th><th>主要贡献者</th><th>合并者</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/410" target="_blank" rel="noopener noreferrer" class="">#410</a></td><td>修复VEHICLE_DEGRADATION_WHEN_DAMAGE的注释描述错误</td><td>LunaGlaze</td><td>LunaGlaze</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/415" target="_blank" rel="noopener noreferrer" class="">#415</a></td><td>[FCL] A few minor futuristic military bunker adjustments</td><td>LunaGlaze</td><td>LunaGlaze</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/418" target="_blank" rel="noopener noreferrer" class="">#418</a></td><td>消息日志增加导出筛选结果功能</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/419" target="_blank" rel="noopener noreferrer" class="">#419</a></td><td>修复 tiles 渲染中的除零与空指针崩溃</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/420" target="_blank" rel="noopener noreferrer" class="">#420</a></td><td>优化 NPC 活动加载与执行的调试输出</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/423" target="_blank" rel="noopener noreferrer" class="">#423</a></td><td>区域整理优化</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/424" target="_blank" rel="noopener noreferrer" class="">#424</a></td><td>清空容器区域任务改为批量取出：unload_item() 一次性 dump 容器内容</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/425" target="_blank" rel="noopener noreferrer" class="">#425</a></td><td>修复 #423 合并后的代码格式</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/421" target="_blank" rel="noopener noreferrer" class="">#421</a></td><td>调整 NO_NPC_FOOD 以同时禁用 NPC 睡眠与疲劳</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="主线直接提交7">主线直接提交（7）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-17-activity#%E4%B8%BB%E7%BA%BF%E7%9B%B4%E6%8E%A5%E6%8F%90%E4%BA%A47" class="hash-link" aria-label="主线直接提交（7）的直接链接" title="主线直接提交（7）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>提交</th><th>说明</th><th>作者</th><th>时间</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/commit/e04361eea4175dc40c20edab1786f339ebfb5cd7" target="_blank" rel="noopener noreferrer" class="">e04361e</a></td><td>JSON：修复车辆老化模组描述的文本样式 (#409)</td><td>LYHGLYTX</td><td>2026-07-17</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/commit/41e31984c644fcc797ad7da3d5ad09bf851ebe46" target="_blank" rel="noopener noreferrer" class="">41e3198</a></td><td>fix: repair baseline test regressions (#411)</td><td>LYHGLYTX</td><td>2026-07-17</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/commit/14045062209b7ed34533547967ac9c6739759243" target="_blank" rel="noopener noreferrer" class="">1404506</a></td><td>修复无人值守制作 max_time 截止时间 (#412)</td><td>LYHGLYTX</td><td>2026-07-17</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/commit/025e07bc96fb985babadcbf3338f170643ca7b94" target="_blank" rel="noopener noreferrer" class="">025e07b</a></td><td>CI：重试被中断的 Transifex 翻译下载 (#413)</td><td>LYHGLYTX</td><td>2026-07-17</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/commit/2d725e89b7331118499f7abb12bebc1d78992644" target="_blank" rel="noopener noreferrer" class="">2d725e8</a></td><td>CI: keep GitHub Actions current and validate YAML (#408)</td><td>LYHGLYTX</td><td>2026-07-17</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/commit/0dabfa16886ef5312f612279bb772eb604fff3d7" target="_blank" rel="noopener noreferrer" class="">0dabfa1</a></td><td>Isolate multiplayer work from solo turns (#417)</td><td>LYHGLYTX</td><td>2026-07-17</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/commit/e359713cdfb2e10d181665de2cbe6ec8e9677a15" target="_blank" rel="noopener noreferrer" class="">e359713</a></td><td>统一 Tracy 埋点和 Catch2 性能基准入口 (#416)</td><td>LYHGLYTX</td><td>2026-07-17</td></tr></tbody></table>]]></content>
+        <author>
+            <name>LYHGLYTX</name>
+            <uri>https://github.com/LYHGLYTX</uri>
+        </author>
+        <author>
+            <name>zihanZheng</name>
+            <uri>https://github.com/ZihanZheng258</uri>
+        </author>
+        <author>
+            <name>LunaGlaze</name>
+            <uri>https://github.com/LunaGlaze</uri>
+        </author>
+        <author>
+            <name>lapp2333xhj</name>
+            <uri>https://github.com/lapp2333xhj</uri>
+        </author>
+        <category label="开发动态" term="开发动态"/>
+        <category label="自动生成" term="自动生成"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CCB 开发动态 (2026-07-16)]]></title>
+        <id>https://crimsoncrossbunker.github.io/blog/2026-07-16-activity</id>
+        <link href="https://crimsoncrossbunker.github.io/blog/2026-07-16-activity"/>
+        <updated>2026-07-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026-07-16 开发动态，依据 CCB 主分支记录自动生成。]]></summary>
+        <content type="html"><![CDATA[<p>2026-07-16 开发动态，依据 CCB 主分支记录自动生成。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日贡献者">今日贡献者<a href="https://crimsoncrossbunker.github.io/blog/2026-07-16-activity#%E4%BB%8A%E6%97%A5%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="今日贡献者的直接链接" title="今日贡献者的直接链接" translate="no">​</a></h2>
+<p>按当日非合并 commit 数量排序；PR 创建与合并操作不计入名次。</p>
+<div class="contributors-row"><a href="https://github.com/LYHGLYTX" title="@LYHGLYTX · 17 个非合并 commit" class="contributor-badge"><img src="https://github.com/LYHGLYTX.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LYHGLYTX</span></a><a href="https://github.com/LunaGlaze" title="@LunaGlaze · 5 个非合并 commit" class="contributor-badge"><img src="https://github.com/LunaGlaze.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LunaGlaze</span></a><a href="https://github.com/Minecrafthyr" title="@Minecrafthyr · 4 个非合并 commit" class="contributor-badge"><img src="https://github.com/Minecrafthyr.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Minecrafthyr</span></a><a href="https://github.com/lapp2333xhj" title="@lapp2333xhj · 0 个非合并 commit" class="contributor-badge"><img src="https://github.com/lapp2333xhj.png?size=40" width="28" height="28" loading="lazy" alt=""><span>lapp2333xhj</span></a></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已合并-pr7">已合并 PR（7）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-16-activity#%E5%B7%B2%E5%90%88%E5%B9%B6-pr7" class="hash-link" aria-label="已合并 PR（7）的直接链接" title="已合并 PR（7）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>PR</th><th>标题</th><th>创建者</th><th>主要贡献者</th><th>合并者</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/400" target="_blank" rel="noopener noreferrer" class="">#400</a></td><td>ferromagnetic Metal Repair</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/402" target="_blank" rel="noopener noreferrer" class="">#402</a></td><td>fix(json): remove invalid cupronickel repair item</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LunaGlaze</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/403" target="_blank" rel="noopener noreferrer" class="">#403</a></td><td>Fix pocket whitelist item selection crash</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/404" target="_blank" rel="noopener noreferrer" class="">#404</a></td><td>Fix pocket whitelist item selection crash</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/405" target="_blank" rel="noopener noreferrer" class="">#405</a></td><td>Disable vehicle degradation was approved.</td><td>LunaGlaze</td><td>LunaGlaze</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/401" target="_blank" rel="noopener noreferrer" class="">#401</a></td><td>清理样式（cleanup styles）</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/406" target="_blank" rel="noopener noreferrer" class="">#406</a></td><td>修复 Experimental Release 启动失败</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="主线直接提交1">主线直接提交（1）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-16-activity#%E4%B8%BB%E7%BA%BF%E7%9B%B4%E6%8E%A5%E6%8F%90%E4%BA%A41" class="hash-link" aria-label="主线直接提交（1）的直接链接" title="主线直接提交（1）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>提交</th><th>说明</th><th>作者</th><th>时间</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/commit/ce13d4261104dda55803694cacb6d28d424a8738" target="_blank" rel="noopener noreferrer" class="">ce13d42</a></td><td>Revert "Merge pull request #403 from CrimsonCrossBunker/fix/pr-401-ci"</td><td>LYHGLYTX</td><td>2026-07-16</td></tr></tbody></table>]]></content>
+        <author>
+            <name>LYHGLYTX</name>
+            <uri>https://github.com/LYHGLYTX</uri>
+        </author>
+        <author>
+            <name>LunaGlaze</name>
+            <uri>https://github.com/LunaGlaze</uri>
+        </author>
+        <author>
+            <name>Minecrafthyr</name>
+            <uri>https://github.com/Minecrafthyr</uri>
+        </author>
+        <author>
+            <name>lapp2333xhj</name>
+            <uri>https://github.com/lapp2333xhj</uri>
+        </author>
+        <category label="开发动态" term="开发动态"/>
+        <category label="自动生成" term="自动生成"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CCB 开发动态 (2026-07-15)]]></title>
+        <id>https://crimsoncrossbunker.github.io/blog/2026-07-15-activity</id>
+        <link href="https://crimsoncrossbunker.github.io/blog/2026-07-15-activity"/>
+        <updated>2026-07-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026-07-15 开发动态，依据 CCB 主分支记录自动生成。]]></summary>
+        <content type="html"><![CDATA[<p>2026-07-15 开发动态，依据 CCB 主分支记录自动生成。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日贡献者">今日贡献者<a href="https://crimsoncrossbunker.github.io/blog/2026-07-15-activity#%E4%BB%8A%E6%97%A5%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="今日贡献者的直接链接" title="今日贡献者的直接链接" translate="no">​</a></h2>
+<p>按当日非合并 commit 数量排序；PR 创建与合并操作不计入名次。</p>
+<div class="contributors-row"><a href="https://github.com/LuXts" title="@LuXts · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/LuXts.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LuXts</span></a><a href="https://github.com/LunaGlaze" title="@LunaGlaze · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/LunaGlaze.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LunaGlaze</span></a><a href="https://github.com/lapp2333xhj" title="@lapp2333xhj · 0 个非合并 commit" class="contributor-badge"><img src="https://github.com/lapp2333xhj.png?size=40" width="28" height="28" loading="lazy" alt=""><span>lapp2333xhj</span></a></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已合并-pr2">已合并 PR（2）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-15-activity#%E5%B7%B2%E5%90%88%E5%B9%B6-pr2" class="hash-link" aria-label="已合并 PR（2）的直接链接" title="已合并 PR（2）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>PR</th><th>标题</th><th>创建者</th><th>主要贡献者</th><th>合并者</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/393" target="_blank" rel="noopener noreferrer" class="">#393</a></td><td>Fix GitHub workflow automation</td><td>LunaGlaze</td><td>LunaGlaze</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/394" target="_blank" rel="noopener noreferrer" class="">#394</a></td><td>fix: 修复纯计数型工具作为原材料时的错误</td><td>LuXts</td><td>LuXts</td><td>lapp2333xhj</td></tr></tbody></table>]]></content>
+        <author>
+            <name>LuXts</name>
+            <uri>https://github.com/LuXts</uri>
+        </author>
+        <author>
+            <name>LunaGlaze</name>
+            <uri>https://github.com/LunaGlaze</uri>
+        </author>
+        <author>
+            <name>lapp2333xhj</name>
+            <uri>https://github.com/lapp2333xhj</uri>
+        </author>
+        <category label="开发动态" term="开发动态"/>
+        <category label="自动生成" term="自动生成"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CCB 开发动态 (2026-07-14)]]></title>
+        <id>https://crimsoncrossbunker.github.io/blog/2026-07-14-activity</id>
+        <link href="https://crimsoncrossbunker.github.io/blog/2026-07-14-activity"/>
+        <updated>2026-07-14T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026-07-14 开发动态，依据 CCB 主分支记录自动生成。]]></summary>
+        <content type="html"><![CDATA[<p>2026-07-14 开发动态，依据 CCB 主分支记录自动生成。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日贡献者">今日贡献者<a href="https://crimsoncrossbunker.github.io/blog/2026-07-14-activity#%E4%BB%8A%E6%97%A5%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="今日贡献者的直接链接" title="今日贡献者的直接链接" translate="no">​</a></h2>
+<p>按当日非合并 commit 数量排序；PR 创建与合并操作不计入名次。</p>
+<div class="contributors-row"><a href="https://github.com/LunaGlaze" title="@LunaGlaze · 16 个非合并 commit" class="contributor-badge"><img src="https://github.com/LunaGlaze.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LunaGlaze</span></a><a href="https://github.com/Standing-Storm" title="@Standing-Storm · 8 个非合并 commit" class="contributor-badge"><img src="https://github.com/Standing-Storm.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Standing-Storm</span></a><a href="https://github.com/GuardianDll" title="@GuardianDll · 4 个非合并 commit" class="contributor-badge"><img src="https://github.com/GuardianDll.png?size=40" width="28" height="28" loading="lazy" alt=""><span>GuardianDll</span></a><a href="https://github.com/Minecrafthyr" title="@Minecrafthyr · 4 个非合并 commit" class="contributor-badge"><img src="https://github.com/Minecrafthyr.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Minecrafthyr</span></a><a href="https://github.com/LYHGLYTX" title="@LYHGLYTX · 3 个非合并 commit" class="contributor-badge"><img src="https://github.com/LYHGLYTX.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LYHGLYTX</span></a><a href="https://github.com/Maleclypse" title="@Maleclypse · 3 个非合并 commit" class="contributor-badge"><img src="https://github.com/Maleclypse.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Maleclypse</span></a><a href="https://github.com/John-Candlebury" title="@John-Candlebury · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/John-Candlebury.png?size=40" width="28" height="28" loading="lazy" alt=""><span>John Candlebury</span></a><a href="https://github.com/np4Huk" title="@np4Huk · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/np4Huk.png?size=40" width="28" height="28" loading="lazy" alt=""><span>np4Huk</span></a><a href="https://github.com/kevindenham" title="@kevindenham · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/kevindenham.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Kevin Denham - AVIXA</span></a><a href="https://github.com/StriderDunedain" title="@StriderDunedain · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/StriderDunedain.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Maksim Trukhinov</span></a><a href="https://github.com/MrDraMaster" title="@MrDraMaster · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/MrDraMaster.png?size=40" width="28" height="28" loading="lazy" alt=""><span>MrDraMaster</span></a><a href="https://github.com/OromisElf" title="@OromisElf · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/OromisElf.png?size=40" width="28" height="28" loading="lazy" alt=""><span>OromisElf</span></a><a href="https://github.com/ZiggyRogue" title="@ZiggyRogue · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/ZiggyRogue.png?size=40" width="28" height="28" loading="lazy" alt=""><span>ZiggyRogue</span></a><a href="https://github.com/lapp2333xhj" title="@lapp2333xhj · 0 个非合并 commit" class="contributor-badge"><img src="https://github.com/lapp2333xhj.png?size=40" width="28" height="28" loading="lazy" alt=""><span>lapp2333xhj</span></a></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已合并-pr8">已合并 PR（8）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-14-activity#%E5%B7%B2%E5%90%88%E5%B9%B6-pr8" class="hash-link" aria-label="已合并 PR（8）的直接链接" title="已合并 PR（8）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>PR</th><th>标题</th><th>创建者</th><th>主要贡献者</th><th>合并者</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/385" target="_blank" rel="noopener noreferrer" class="">#385</a></td><td>Fix: Restore the Eyebot summon robot attack time event after its erroneous deletion</td><td>LunaGlaze</td><td>LunaGlaze</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/386" target="_blank" rel="noopener noreferrer" class="">#386</a></td><td>同步 CDDA 上游 2026-07-10 至 2026-07-14（26 个 PR）</td><td>Maleclypse</td><td>Standing-Storm</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/387" target="_blank" rel="noopener noreferrer" class="">#387</a></td><td>android: migrate CCB identity to CrimsonCrossBunker</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/388" target="_blank" rel="noopener noreferrer" class="">#388</a></td><td>try fix ROBOT_ATTACK tripoint to tripoint_bub_ms data trans make</td><td>LunaGlaze</td><td>LunaGlaze</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/389" target="_blank" rel="noopener noreferrer" class="">#389</a></td><td>调整羽毛和绒羽的体积、重量和堆叠</td><td>Minecrafthyr</td><td>Minecrafthyr</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/390" target="_blank" rel="noopener noreferrer" class="">#390</a></td><td>A few minor near-future structures (Futurism Cataclysm: Legacy Part.4)</td><td>LunaGlaze</td><td>LunaGlaze</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/391" target="_blank" rel="noopener noreferrer" class="">#391</a></td><td>ROBOT_ATTACK to actualize</td><td>LunaGlaze</td><td>LunaGlaze</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/392" target="_blank" rel="noopener noreferrer" class="">#392</a></td><td>补充 #390</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr></tbody></table>]]></content>
+        <author>
+            <name>LunaGlaze</name>
+            <uri>https://github.com/LunaGlaze</uri>
+        </author>
+        <author>
+            <name>Standing-Storm</name>
+            <uri>https://github.com/Standing-Storm</uri>
+        </author>
+        <author>
+            <name>GuardianDll</name>
+            <uri>https://github.com/GuardianDll</uri>
+        </author>
+        <author>
+            <name>lapp2333xhj</name>
+            <uri>https://github.com/lapp2333xhj</uri>
+        </author>
+        <category label="开发动态" term="开发动态"/>
+        <category label="自动生成" term="自动生成"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CCB 开发动态 (2026-07-13)]]></title>
+        <id>https://crimsoncrossbunker.github.io/blog/2026-07-13-activity</id>
+        <link href="https://crimsoncrossbunker.github.io/blog/2026-07-13-activity"/>
+        <updated>2026-07-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026-07-13 开发动态，依据 CCB 主分支记录自动生成。]]></summary>
+        <content type="html"><![CDATA[<p>2026-07-13 开发动态，依据 CCB 主分支记录自动生成。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日贡献者">今日贡献者<a href="https://crimsoncrossbunker.github.io/blog/2026-07-13-activity#%E4%BB%8A%E6%97%A5%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="今日贡献者的直接链接" title="今日贡献者的直接链接" translate="no">​</a></h2>
+<p>按当日非合并 commit 数量排序；PR 创建与合并操作不计入名次。</p>
+<div class="contributors-row"><a href="https://github.com/LunaGlaze" title="@LunaGlaze · 10 个非合并 commit" class="contributor-badge"><img src="https://github.com/LunaGlaze.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LunaGlaze</span></a><a href="https://github.com/LYHGLYTX" title="@LYHGLYTX · 3 个非合并 commit" class="contributor-badge"><img src="https://github.com/LYHGLYTX.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LYHGLYTX</span></a><a href="https://github.com/Killa-bite" title="@Killa-bite · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/Killa-bite.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Killa-bite</span></a><a href="https://github.com/lapp2333xhj" title="@lapp2333xhj · 0 个非合并 commit" class="contributor-badge"><img src="https://github.com/lapp2333xhj.png?size=40" width="28" height="28" loading="lazy" alt=""><span>lapp2333xhj</span></a></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已合并-pr5">已合并 PR（5）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-13-activity#%E5%B7%B2%E5%90%88%E5%B9%B6-pr5" class="hash-link" aria-label="已合并 PR（5）的直接链接" title="已合并 PR（5）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>PR</th><th>标题</th><th>创建者</th><th>主要贡献者</th><th>合并者</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/380" target="_blank" rel="noopener noreferrer" class="">#380</a></td><td>Fix ebook scan crash after loading</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/381" target="_blank" rel="noopener noreferrer" class="">#381</a></td><td>Sync CCB website and project lead credits across locales</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/382" target="_blank" rel="noopener noreferrer" class="">#382</a></td><td>Fix map memory after movement</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/383" target="_blank" rel="noopener noreferrer" class="">#383</a></td><td>CBM technology is going public; explore hospitals and labs to find it (Futurism Cataclysm: Legacy Part.3)</td><td>LunaGlaze</td><td>LunaGlaze</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/384" target="_blank" rel="noopener noreferrer" class="">#384</a></td><td>Feature: Add probabilistic ASRG map spawns</td><td>Killa-bite</td><td>Killa-bite</td><td>LunaGlaze</td></tr></tbody></table>]]></content>
+        <author>
+            <name>LunaGlaze</name>
+            <uri>https://github.com/LunaGlaze</uri>
+        </author>
+        <author>
+            <name>LYHGLYTX</name>
+            <uri>https://github.com/LYHGLYTX</uri>
+        </author>
+        <author>
+            <name>Killa-bite</name>
+            <uri>https://github.com/Killa-bite</uri>
+        </author>
+        <author>
+            <name>lapp2333xhj</name>
+            <uri>https://github.com/lapp2333xhj</uri>
+        </author>
+        <category label="开发动态" term="开发动态"/>
+        <category label="自动生成" term="自动生成"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CCB 开发动态 (2026-07-12)]]></title>
+        <id>https://crimsoncrossbunker.github.io/blog/2026-07-12-activity</id>
+        <link href="https://crimsoncrossbunker.github.io/blog/2026-07-12-activity"/>
+        <updated>2026-07-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026-07-12 开发动态，依据 CCB 主分支记录自动生成。]]></summary>
+        <content type="html"><![CDATA[<p>2026-07-12 开发动态，依据 CCB 主分支记录自动生成。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日贡献者">今日贡献者<a href="https://crimsoncrossbunker.github.io/blog/2026-07-12-activity#%E4%BB%8A%E6%97%A5%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="今日贡献者的直接链接" title="今日贡献者的直接链接" translate="no">​</a></h2>
+<p>按当日非合并 commit 数量排序；PR 创建与合并操作不计入名次。</p>
+<div class="contributors-row"><a href="https://github.com/LunaGlaze" title="@LunaGlaze · 14 个非合并 commit" class="contributor-badge"><img src="https://github.com/LunaGlaze.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LunaGlaze</span></a><a href="https://github.com/RedFeatherJong" title="@RedFeatherJong · 7 个非合并 commit" class="contributor-badge"><img src="https://github.com/RedFeatherJong.png?size=40" width="28" height="28" loading="lazy" alt=""><span>ReaFeather</span></a><a href="https://github.com/Killa-bite" title="@Killa-bite · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/Killa-bite.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Killa-bite</span></a><a href="https://github.com/LYHGLYTX" title="@LYHGLYTX · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/LYHGLYTX.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LYHGLYTX</span></a><a href="https://github.com/lapp2333xhj" title="@lapp2333xhj · 0 个非合并 commit" class="contributor-badge"><img src="https://github.com/lapp2333xhj.png?size=40" width="28" height="28" loading="lazy" alt=""><span>lapp2333xhj</span></a></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已合并-pr6">已合并 PR（6）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-12-activity#%E5%B7%B2%E5%90%88%E5%B9%B6-pr6" class="hash-link" aria-label="已合并 PR（6）的直接链接" title="已合并 PR（6）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>PR</th><th>标题</th><th>创建者</th><th>主要贡献者</th><th>合并者</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/373" target="_blank" rel="noopener noreferrer" class="">#373</a></td><td>Add a world option for faction territory checks</td><td>Killa-bite</td><td>Killa-bite</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/374" target="_blank" rel="noopener noreferrer" class="">#374</a></td><td>The Atomic Items of Cataclysm Have Returned! (Futurism Cataclysm: Legacy Part.1)</td><td>LunaGlaze</td><td>LunaGlaze</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/376" target="_blank" rel="noopener noreferrer" class="">#376</a></td><td>Feat: add generic NPC vehicle part repair service</td><td>Killa-bite</td><td>Killa-bite</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/377" target="_blank" rel="noopener noreferrer" class="">#377</a></td><td>AI-driven robotics powered by dimensional heuristics algorithms are now operational (Futurism Cataclysm: Legacy Part.2)</td><td>LunaGlaze</td><td>LunaGlaze</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/378" target="_blank" rel="noopener noreferrer" class="">#378</a></td><td>Fix the <code>item_group</code> subtype issues in the <code>pride_items</code> mod.</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/379" target="_blank" rel="noopener noreferrer" class="">#379</a></td><td>Add 04/18 UnDeadPeople style textures to multiple mods</td><td>ReaFeather</td><td>ReaFeather</td><td>lapp2333xhj</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="主线直接提交1">主线直接提交（1）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-12-activity#%E4%B8%BB%E7%BA%BF%E7%9B%B4%E6%8E%A5%E6%8F%90%E4%BA%A41" class="hash-link" aria-label="主线直接提交（1）的直接链接" title="主线直接提交（1）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>提交</th><th>说明</th><th>作者</th><th>时间</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/commit/9664d1d6f2fe0443766a1b6784ce4608666b1cdd" target="_blank" rel="noopener noreferrer" class="">9664d1d</a></td><td>Fix unloading nested containers in AIM (#375)</td><td>LYHGLYTX</td><td>2026-07-12</td></tr></tbody></table>]]></content>
+        <author>
+            <name>LunaGlaze</name>
+            <uri>https://github.com/LunaGlaze</uri>
+        </author>
+        <author>
+            <name>ReaFeather</name>
+            <uri>https://github.com/RedFeatherJong</uri>
+        </author>
+        <author>
+            <name>Killa-bite</name>
+            <uri>https://github.com/Killa-bite</uri>
+        </author>
+        <author>
+            <name>lapp2333xhj</name>
+            <uri>https://github.com/lapp2333xhj</uri>
+        </author>
+        <category label="开发动态" term="开发动态"/>
+        <category label="自动生成" term="自动生成"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CCB 开发动态 (2026-07-11)]]></title>
+        <id>https://crimsoncrossbunker.github.io/blog/2026-07-11-activity</id>
+        <link href="https://crimsoncrossbunker.github.io/blog/2026-07-11-activity"/>
+        <updated>2026-07-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026-07-11 开发动态，依据 CCB 主分支记录自动生成。]]></summary>
+        <content type="html"><![CDATA[<p>2026-07-11 开发动态，依据 CCB 主分支记录自动生成。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日贡献者">今日贡献者<a href="https://crimsoncrossbunker.github.io/blog/2026-07-11-activity#%E4%BB%8A%E6%97%A5%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="今日贡献者的直接链接" title="今日贡献者的直接链接" translate="no">​</a></h2>
+<p>按当日非合并 commit 数量排序；PR 创建与合并操作不计入名次。</p>
+<div class="contributors-row"><a href="https://github.com/LYHGLYTX" title="@LYHGLYTX · 12 个非合并 commit" class="contributor-badge"><img src="https://github.com/LYHGLYTX.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LYHGLYTX</span></a><a href="https://github.com/ZihanZheng258" title="@ZihanZheng258 · 4 个非合并 commit" class="contributor-badge"><img src="https://github.com/ZihanZheng258.png?size=40" width="28" height="28" loading="lazy" alt=""><span>zihanZheng</span></a><a href="https://github.com/lapp2333xhj" title="@lapp2333xhj · 0 个非合并 commit" class="contributor-badge"><img src="https://github.com/lapp2333xhj.png?size=40" width="28" height="28" loading="lazy" alt=""><span>lapp2333xhj</span></a></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已合并-pr5">已合并 PR（5）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-11-activity#%E5%B7%B2%E5%90%88%E5%B9%B6-pr5" class="hash-link" aria-label="已合并 PR（5）的直接链接" title="已合并 PR（5）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>PR</th><th>标题</th><th>创建者</th><th>主要贡献者</th><th>合并者</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/365" target="_blank" rel="noopener noreferrer" class="">#365</a></td><td>feat(android): adapt terminal layout to phone displays</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/368" target="_blank" rel="noopener noreferrer" class="">#368</a></td><td>fix(android): date versions, text input and wish layout</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/369" target="_blank" rel="noopener noreferrer" class="">#369</a></td><td>种植系统优化</td><td>zihanZheng</td><td>zihanZheng</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/370" target="_blank" rel="noopener noreferrer" class="">#370</a></td><td>fix(windows): restore SDL2 release variant</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/371" target="_blank" rel="noopener noreferrer" class="">#371</a></td><td>revert(android): separate gesture PRs</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr></tbody></table>]]></content>
+        <author>
+            <name>LYHGLYTX</name>
+            <uri>https://github.com/LYHGLYTX</uri>
+        </author>
+        <author>
+            <name>zihanZheng</name>
+            <uri>https://github.com/ZihanZheng258</uri>
+        </author>
+        <author>
+            <name>lapp2333xhj</name>
+            <uri>https://github.com/lapp2333xhj</uri>
+        </author>
+        <category label="开发动态" term="开发动态"/>
+        <category label="自动生成" term="自动生成"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CCB 开发动态 (2026-07-10)]]></title>
+        <id>https://crimsoncrossbunker.github.io/blog/2026-07-10-activity</id>
+        <link href="https://crimsoncrossbunker.github.io/blog/2026-07-10-activity"/>
+        <updated>2026-07-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026-07-10 开发动态，依据 CCB 主分支记录自动生成。]]></summary>
+        <content type="html"><![CDATA[<p>2026-07-10 开发动态，依据 CCB 主分支记录自动生成。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日贡献者">今日贡献者<a href="https://crimsoncrossbunker.github.io/blog/2026-07-10-activity#%E4%BB%8A%E6%97%A5%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="今日贡献者的直接链接" title="今日贡献者的直接链接" translate="no">​</a></h2>
+<p>按当日非合并 commit 数量排序；PR 创建与合并操作不计入名次。</p>
+<div class="contributors-row"><a href="https://github.com/LYHGLYTX" title="@LYHGLYTX · 14 个非合并 commit" class="contributor-badge"><img src="https://github.com/LYHGLYTX.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LYHGLYTX</span></a><a href="https://github.com/LunaGlaze" title="@LunaGlaze · 8 个非合并 commit" class="contributor-badge"><img src="https://github.com/LunaGlaze.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LunaGlaze</span></a><a href="https://github.com/Minecrafthyr" title="@Minecrafthyr · 6 个非合并 commit" class="contributor-badge"><img src="https://github.com/Minecrafthyr.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Minecrafthyr</span></a><a href="https://github.com/Maleclypse" title="@Maleclypse · 3 个非合并 commit" class="contributor-badge"><img src="https://github.com/Maleclypse.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Maleclypse</span></a><a href="https://github.com/GuardianDll" title="@GuardianDll · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/GuardianDll.png?size=40" width="28" height="28" loading="lazy" alt=""><span>GuardianDll</span></a><a href="https://github.com/ZihanZheng258" title="@ZihanZheng258 · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/ZihanZheng258.png?size=40" width="28" height="28" loading="lazy" alt=""><span>zihanZheng</span></a><a href="https://github.com/armaswiss" title="@armaswiss · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/armaswiss.png?size=40" width="28" height="28" loading="lazy" alt=""><span>armaswiss</span></a><a href="https://github.com/Bobtron" title="@Bobtron · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/Bobtron.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Bobtron</span></a><a href="https://github.com/np4Huk" title="@np4Huk · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/np4Huk.png?size=40" width="28" height="28" loading="lazy" alt=""><span>np4Huk</span></a><a href="https://github.com/Standing-Storm" title="@Standing-Storm · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/Standing-Storm.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Standing-Storm</span></a><a href="https://github.com/lapp2333xhj" title="@lapp2333xhj · 0 个非合并 commit" class="contributor-badge"><img src="https://github.com/lapp2333xhj.png?size=40" width="28" height="28" loading="lazy" alt=""><span>lapp2333xhj</span></a></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已合并-pr9">已合并 PR（9）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-10-activity#%E5%B7%B2%E5%90%88%E5%B9%B6-pr9" class="hash-link" aria-label="已合并 PR（9）的直接链接" title="已合并 PR（9）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>PR</th><th>标题</th><th>创建者</th><th>主要贡献者</th><th>合并者</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/355" target="_blank" rel="noopener noreferrer" class="">#355</a></td><td>交换中文标题和 alt1 标题</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/356" target="_blank" rel="noopener noreferrer" class="">#356</a></td><td>替换项目图标资源</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/357" target="_blank" rel="noopener noreferrer" class="">#357</a></td><td>同步 CDDA 2026-07-10 已选更新</td><td>LYHGLYTX</td><td>Maleclypse</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/358" target="_blank" rel="noopener noreferrer" class="">#358</a></td><td>修复终端模式联机日志漏出</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/359" target="_blank" rel="noopener noreferrer" class="">#359</a></td><td>新增安卓自定义按键</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/360" target="_blank" rel="noopener noreferrer" class="">#360</a></td><td>Assign cosplay flags to more items that meet the criteria.</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/361" target="_blank" rel="noopener noreferrer" class="">#361</a></td><td>修复安卓扩展按键属性与主菜单退出</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/362" target="_blank" rel="noopener noreferrer" class="">#362</a></td><td>灾变乐事，修复物品错误添加的flag</td><td>ZihanZheng258</td><td>zihanZheng</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/363" target="_blank" rel="noopener noreferrer" class="">#363</a></td><td>更新部分 github 自动流程</td><td>Minecrafthyr</td><td>Minecrafthyr</td><td>LYHGLYTX</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="主线直接提交2">主线直接提交（2）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-10-activity#%E4%B8%BB%E7%BA%BF%E7%9B%B4%E6%8E%A5%E6%8F%90%E4%BA%A42" class="hash-link" aria-label="主线直接提交（2）的直接链接" title="主线直接提交（2）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>提交</th><th>说明</th><th>作者</th><th>时间</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/commit/e758eb80069fbce856adf0f102a787c020e56bf1" target="_blank" rel="noopener noreferrer" class="">e758eb8</a></td><td>游戏主界面艺术字</td><td>LYHGLYTX</td><td>2026-07-10</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/commit/b9bb9d133833a96ea17af47bcd9439ed11265987" target="_blank" rel="noopener noreferrer" class="">b9bb9d1</a></td><td>fix(android): prevent main-menu keybinding crash</td><td>LYHGLYTX</td><td>2026-07-10</td></tr></tbody></table>]]></content>
+        <author>
+            <name>LYHGLYTX</name>
+            <uri>https://github.com/LYHGLYTX</uri>
+        </author>
+        <author>
+            <name>LunaGlaze</name>
+            <uri>https://github.com/LunaGlaze</uri>
+        </author>
+        <author>
+            <name>Minecrafthyr</name>
+            <uri>https://github.com/Minecrafthyr</uri>
+        </author>
+        <author>
+            <name>lapp2333xhj</name>
+            <uri>https://github.com/lapp2333xhj</uri>
+        </author>
+        <category label="开发动态" term="开发动态"/>
+        <category label="自动生成" term="自动生成"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CCB 开发动态 (2026-07-08)]]></title>
+        <id>https://crimsoncrossbunker.github.io/blog/2026-07-08-activity</id>
+        <link href="https://crimsoncrossbunker.github.io/blog/2026-07-08-activity"/>
+        <updated>2026-07-08T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026-07-08 开发动态，依据 CCB 主分支记录自动生成。]]></summary>
+        <content type="html"><![CDATA[<p>2026-07-08 开发动态，依据 CCB 主分支记录自动生成。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日贡献者">今日贡献者<a href="https://crimsoncrossbunker.github.io/blog/2026-07-08-activity#%E4%BB%8A%E6%97%A5%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="今日贡献者的直接链接" title="今日贡献者的直接链接" translate="no">​</a></h2>
+<p>按当日非合并 commit 数量排序；PR 创建与合并操作不计入名次。</p>
+<div class="contributors-row"><a href="https://github.com/LYHGLYTX" title="@LYHGLYTX · 8 个非合并 commit" class="contributor-badge"><img src="https://github.com/LYHGLYTX.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LYHGLYTX</span></a><a href="https://github.com/Standing-Storm" title="@Standing-Storm · 3 个非合并 commit" class="contributor-badge"><img src="https://github.com/Standing-Storm.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Standing-Storm</span></a><a href="https://github.com/LunaGlaze" title="@LunaGlaze · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/LunaGlaze.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LunaGlaze</span></a><a href="https://github.com/np4Huk" title="@np4Huk · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/np4Huk.png?size=40" width="28" height="28" loading="lazy" alt=""><span>np4Huk</span></a><a href="https://github.com/Br1ght0ne" title="@Br1ght0ne · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/Br1ght0ne.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Oleksii Filonenko</span></a></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已合并-pr9">已合并 PR（9）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-08-activity#%E5%B7%B2%E5%90%88%E5%B9%B6-pr9" class="hash-link" aria-label="已合并 PR（9）的直接链接" title="已合并 PR（9）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>PR</th><th>标题</th><th>创建者</th><th>主要贡献者</th><th>合并者</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/346" target="_blank" rel="noopener noreferrer" class="">#346</a></td><td>同步 CDDA 2026-07-07 上游更新</td><td>LYHGLYTX</td><td>Standing-Storm</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/347" target="_blank" rel="noopener noreferrer" class="">#347</a></td><td>修复启动数据和掉落回归</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/348" target="_blank" rel="noopener noreferrer" class="">#348</a></td><td>修复 ImGui 空窗口名崩溃、bleach_jug 容器报错和 overmap 死锁</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/349" target="_blank" rel="noopener noreferrer" class="">#349</a></td><td>修复 V 键周围物品菜单长按快速循环时的 SIGSEGV 崩溃</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/350" target="_blank" rel="noopener noreferrer" class="">#350</a></td><td>修复 Windows MSVC 编译错误：const auto * 无法从 iterator 推导类型</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/351" target="_blank" rel="noopener noreferrer" class="">#351</a></td><td>调整 YO 自动整理并修复本地中文语言列表</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/352" target="_blank" rel="noopener noreferrer" class="">#352</a></td><td>修复 experimental release notes 累积问题</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/353" target="_blank" rel="noopener noreferrer" class="">#353</a></td><td>Adjust the positioning order of Quickload in the main menu.</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/354" target="_blank" rel="noopener noreferrer" class="">#354</a></td><td>Delete the Nudist conduct.</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr></tbody></table>]]></content>
+        <author>
+            <name>LYHGLYTX</name>
+            <uri>https://github.com/LYHGLYTX</uri>
+        </author>
+        <author>
+            <name>Standing-Storm</name>
+            <uri>https://github.com/Standing-Storm</uri>
+        </author>
+        <author>
+            <name>LunaGlaze</name>
+            <uri>https://github.com/LunaGlaze</uri>
+        </author>
+        <category label="开发动态" term="开发动态"/>
+        <category label="自动生成" term="自动生成"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CCB 开发动态 (2026-07-07)]]></title>
+        <id>https://crimsoncrossbunker.github.io/blog/2026-07-07-activity</id>
+        <link href="https://crimsoncrossbunker.github.io/blog/2026-07-07-activity"/>
+        <updated>2026-07-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026-07-07 开发动态，依据 CCB 主分支记录自动生成。]]></summary>
+        <content type="html"><![CDATA[<p>2026-07-07 开发动态，依据 CCB 主分支记录自动生成。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日贡献者">今日贡献者<a href="https://crimsoncrossbunker.github.io/blog/2026-07-07-activity#%E4%BB%8A%E6%97%A5%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="今日贡献者的直接链接" title="今日贡献者的直接链接" translate="no">​</a></h2>
+<p>按当日非合并 commit 数量排序；PR 创建与合并操作不计入名次。</p>
+<div class="contributors-row"><a href="https://github.com/ZihanZheng258" title="@ZihanZheng258 · 13 个非合并 commit" class="contributor-badge"><img src="https://github.com/ZihanZheng258.png?size=40" width="28" height="28" loading="lazy" alt=""><span>zihanZheng</span></a><a href="https://github.com/LYHGLYTX" title="@LYHGLYTX · 6 个非合并 commit" class="contributor-badge"><img src="https://github.com/LYHGLYTX.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LYHGLYTX</span></a><a href="https://github.com/lapp2333xhj" title="@lapp2333xhj · 0 个非合并 commit" class="contributor-badge"><img src="https://github.com/lapp2333xhj.png?size=40" width="28" height="28" loading="lazy" alt=""><span>lapp2333xhj</span></a></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已合并-pr5">已合并 PR（5）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-07-activity#%E5%B7%B2%E5%90%88%E5%B9%B6-pr5" class="hash-link" aria-label="已合并 PR（5）的直接链接" title="已合并 PR（5）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>PR</th><th>标题</th><th>创建者</th><th>主要贡献者</th><th>合并者</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/339" target="_blank" rel="noopener noreferrer" class="">#339</a></td><td>[codex] Fix async mapgen unused-state build error</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/340" target="_blank" rel="noopener noreferrer" class="">#340</a></td><td>[codex] Fix startup data errors and single-player turn regressions</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/342" target="_blank" rel="noopener noreferrer" class="">#342</a></td><td>修复安卓图标与启动/游戏主题显示问题</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/345" target="_blank" rel="noopener noreferrer" class="">#345</a></td><td>原版种植系统重构</td><td>zihanZheng</td><td>zihanZheng</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/343" target="_blank" rel="noopener noreferrer" class="">#343</a></td><td>简化 experimental Release 标签与标题</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr></tbody></table>]]></content>
+        <author>
+            <name>zihanZheng</name>
+            <uri>https://github.com/ZihanZheng258</uri>
+        </author>
+        <author>
+            <name>LYHGLYTX</name>
+            <uri>https://github.com/LYHGLYTX</uri>
+        </author>
+        <author>
+            <name>lapp2333xhj</name>
+            <uri>https://github.com/lapp2333xhj</uri>
+        </author>
+        <category label="开发动态" term="开发动态"/>
+        <category label="自动生成" term="自动生成"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CCB 开发动态 (2026-07-06)]]></title>
+        <id>https://crimsoncrossbunker.github.io/blog/2026-07-06-activity</id>
+        <link href="https://crimsoncrossbunker.github.io/blog/2026-07-06-activity"/>
+        <updated>2026-07-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026-07-06 开发动态，依据 CCB 主分支记录自动生成。]]></summary>
+        <content type="html"><![CDATA[<p>2026-07-06 开发动态，依据 CCB 主分支记录自动生成。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日贡献者">今日贡献者<a href="https://crimsoncrossbunker.github.io/blog/2026-07-06-activity#%E4%BB%8A%E6%97%A5%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="今日贡献者的直接链接" title="今日贡献者的直接链接" translate="no">​</a></h2>
+<p>按当日非合并 commit 数量排序；PR 创建与合并操作不计入名次。</p>
+<div class="contributors-row"><a href="https://github.com/LYHGLYTX" title="@LYHGLYTX · 25 个非合并 commit" class="contributor-badge"><img src="https://github.com/LYHGLYTX.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LYHGLYTX</span></a><a href="https://github.com/Standing-Storm" title="@Standing-Storm · 20 个非合并 commit" class="contributor-badge"><img src="https://github.com/Standing-Storm.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Standing-Storm</span></a><a href="https://github.com/GuardianDll" title="@GuardianDll · 19 个非合并 commit" class="contributor-badge"><img src="https://github.com/GuardianDll.png?size=40" width="28" height="28" loading="lazy" alt=""><span>GuardianDll</span></a><a href="https://github.com/Brambor" title="@Brambor · 12 个非合并 commit" class="contributor-badge"><img src="https://github.com/Brambor.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Antonín Drdácký</span></a><a href="https://github.com/np4Huk" title="@np4Huk · 12 个非合并 commit" class="contributor-badge"><img src="https://github.com/np4Huk.png?size=40" width="28" height="28" loading="lazy" alt=""><span>np4Huk</span></a><a href="https://github.com/ZihanZheng258" title="@ZihanZheng258 · 12 个非合并 commit" class="contributor-badge"><img src="https://github.com/ZihanZheng258.png?size=40" width="28" height="28" loading="lazy" alt=""><span>zihanZheng</span></a><a href="https://github.com/busterbogheart" title="@busterbogheart · 11 个非合并 commit" class="contributor-badge"><img src="https://github.com/busterbogheart.png?size=40" width="28" height="28" loading="lazy" alt=""><span>busterbogheart</span></a><a href="https://github.com/Maleclypse" title="@Maleclypse · 8 个非合并 commit" class="contributor-badge"><img src="https://github.com/Maleclypse.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Maleclypse</span></a><a href="https://github.com/Uwuewsky" title="@Uwuewsky · 6 个非合并 commit" class="contributor-badge"><img src="https://github.com/Uwuewsky.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Uwuewsky</span></a><a href="https://github.com/fris0uman" title="@fris0uman · 4 个非合并 commit" class="contributor-badge"><img src="https://github.com/fris0uman.png?size=40" width="28" height="28" loading="lazy" alt=""><span>fris0uman</span></a><a href="https://github.com/gettingusedto" title="@gettingusedto · 4 个非合并 commit" class="contributor-badge"><img src="https://github.com/gettingusedto.png?size=40" width="28" height="28" loading="lazy" alt=""><span>gettingusedto</span></a><a href="https://github.com/John-Candlebury" title="@John-Candlebury · 4 个非合并 commit" class="contributor-badge"><img src="https://github.com/John-Candlebury.png?size=40" width="28" height="28" loading="lazy" alt=""><span>John-Candlebury</span></a><a href="https://github.com/armaswiss" title="@armaswiss · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/armaswiss.png?size=40" width="28" height="28" loading="lazy" alt=""><span>armaswiss</span></a><a href="https://github.com/EliadOArias" title="@EliadOArias · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/EliadOArias.png?size=40" width="28" height="28" loading="lazy" alt=""><span>EliadOArias</span></a><a href="https://github.com/bobokapi" title="@bobokapi · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/bobokapi.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Evan Brown</span></a><a href="https://github.com/Holli-Git" title="@Holli-Git · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/Holli-Git.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Holli-Git</span></a><a href="https://github.com/LunaGlaze" title="@LunaGlaze · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/LunaGlaze.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LunaGlaze</span></a><a href="https://github.com/LyleSY" title="@LyleSY · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/LyleSY.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LyleSY</span></a><a href="https://github.com/kevingranade" title="@kevingranade · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/kevingranade.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Maya Granade</span></a><a href="https://github.com/RangerFromBaja" title="@RangerFromBaja · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/RangerFromBaja.png?size=40" width="28" height="28" loading="lazy" alt=""><span>RangerFromBaja</span></a></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已合并-pr11">已合并 PR（11）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-06-activity#%E5%B7%B2%E5%90%88%E5%B9%B6-pr11" class="hash-link" aria-label="已合并 PR（11）的直接链接" title="已合并 PR（11）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>PR</th><th>标题</th><th>创建者</th><th>主要贡献者</th><th>合并者</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/331" target="_blank" rel="noopener noreferrer" class="">#331</a></td><td>sync: upstream PRs #87678-#87900 (2026-06-27 ~ 2026-07-05)</td><td>EliadOArias</td><td>np4Huk</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/330" target="_blank" rel="noopener noreferrer" class="">#330</a></td><td>vitamin可继承</td><td>ZihanZheng258</td><td>zihanZheng</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/332" target="_blank" rel="noopener noreferrer" class="">#332</a></td><td>性能优化：Tracy 剖析器集成 + flood_fill 与 cast_zlight 并行化</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/190" target="_blank" rel="noopener noreferrer" class="">#190</a></td><td>测试：怪物 AI 确定性重放门槛（多线程工作的安全网）</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/189" target="_blank" rel="noopener noreferrer" class="">#189</a></td><td>性能：怪物 AI 对无幼崽怪物跳过全场护幼扫描（消除 horde O(M²)）</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/333" target="_blank" rel="noopener noreferrer" class="">#333</a></td><td>feat: 联机合作功能 + 多线程选项稳定性标注</td><td>LYHGLYTX</td><td>busterbogheart</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/334" target="_blank" rel="noopener noreferrer" class="">#334</a></td><td>[MoM] Migrate the psionic awakening rate bonus of the Alpha mutation line's <code>Noetic Flexibility</code> to a custom enchantment</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/335" target="_blank" rel="noopener noreferrer" class="">#335</a></td><td>fix(ci): 修复三个 CI 编译错误</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/336" target="_blank" rel="noopener noreferrer" class="">#336</a></td><td>sync: 同步上游 CDDA 至 2026-07-06 (#87869–#87907)</td><td>LYHGLYTX</td><td>Standing-Storm</td><td>LYHGLYTX</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/337" target="_blank" rel="noopener noreferrer" class="">#337</a></td><td>Fix: Airship fast travel and hovering craft material detection</td><td>Killa-bite</td><td>Killa-bite</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/338" target="_blank" rel="noopener noreferrer" class="">#338</a></td><td>fix(build): add asio include path to Makefile CPPFLAGS</td><td>LYHGLYTX</td><td>LYHGLYTX</td><td>LYHGLYTX</td></tr></tbody></table>]]></content>
+        <author>
+            <name>LYHGLYTX</name>
+            <uri>https://github.com/LYHGLYTX</uri>
+        </author>
+        <author>
+            <name>Standing-Storm</name>
+            <uri>https://github.com/Standing-Storm</uri>
+        </author>
+        <author>
+            <name>GuardianDll</name>
+            <uri>https://github.com/GuardianDll</uri>
+        </author>
+        <author>
+            <name>lapp2333xhj</name>
+            <uri>https://github.com/lapp2333xhj</uri>
+        </author>
+        <category label="开发动态" term="开发动态"/>
+        <category label="自动生成" term="自动生成"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CCB 开发动态 (2026-07-05)]]></title>
+        <id>https://crimsoncrossbunker.github.io/blog/2026-07-05-activity</id>
+        <link href="https://crimsoncrossbunker.github.io/blog/2026-07-05-activity"/>
+        <updated>2026-07-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026-07-05 开发动态，依据 CCB 主分支记录自动生成。]]></summary>
+        <content type="html"><![CDATA[<p>2026-07-05 开发动态，依据 CCB 主分支记录自动生成。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日贡献者">今日贡献者<a href="https://crimsoncrossbunker.github.io/blog/2026-07-05-activity#%E4%BB%8A%E6%97%A5%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="今日贡献者的直接链接" title="今日贡献者的直接链接" translate="no">​</a></h2>
+<p>按当日非合并 commit 数量排序；PR 创建与合并操作不计入名次。</p>
+<div class="contributors-row"><a href="https://github.com/LunaGlaze" title="@LunaGlaze · 10 个非合并 commit" class="contributor-badge"><img src="https://github.com/LunaGlaze.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LunaGlaze</span></a><a href="https://github.com/Minecrafthyr" title="@Minecrafthyr · 1 个非合并 commit" class="contributor-badge"><img src="https://github.com/Minecrafthyr.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Minecrafthyr</span></a><a href="https://github.com/lapp2333xhj" title="@lapp2333xhj · 0 个非合并 commit" class="contributor-badge"><img src="https://github.com/lapp2333xhj.png?size=40" width="28" height="28" loading="lazy" alt=""><span>lapp2333xhj</span></a></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已合并-pr3">已合并 PR（3）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-05-activity#%E5%B7%B2%E5%90%88%E5%B9%B6-pr3" class="hash-link" aria-label="已合并 PR（3）的直接链接" title="已合并 PR（3）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>PR</th><th>标题</th><th>创建者</th><th>主要贡献者</th><th>合并者</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/325" target="_blank" rel="noopener noreferrer" class="">#325</a></td><td>Physical damage has absolutely no reason not to be used for destroying terrain or furniture</td><td>LunaGlaze</td><td>LunaGlaze</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/326" target="_blank" rel="noopener noreferrer" class="">#326</a></td><td>将灾变乐事的字符串改为英文</td><td>Minecrafthyr</td><td>Minecrafthyr</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/327" target="_blank" rel="noopener noreferrer" class="">#327</a></td><td>Balance: Rationalize the configuration of certain vehicle parts (shock absorber &amp; superalloy)</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr></tbody></table>]]></content>
+        <author>
+            <name>LunaGlaze</name>
+            <uri>https://github.com/LunaGlaze</uri>
+        </author>
+        <author>
+            <name>Minecrafthyr</name>
+            <uri>https://github.com/Minecrafthyr</uri>
+        </author>
+        <author>
+            <name>lapp2333xhj</name>
+            <uri>https://github.com/lapp2333xhj</uri>
+        </author>
+        <category label="开发动态" term="开发动态"/>
+        <category label="自动生成" term="自动生成"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CCB 开发动态 (2026-07-04)]]></title>
+        <id>https://crimsoncrossbunker.github.io/blog/2026-07-04-activity</id>
+        <link href="https://crimsoncrossbunker.github.io/blog/2026-07-04-activity"/>
+        <updated>2026-07-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026-07-04 开发动态，依据 CCB 主分支记录自动生成。]]></summary>
+        <content type="html"><![CDATA[<p>2026-07-04 开发动态，依据 CCB 主分支记录自动生成。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="今日贡献者">今日贡献者<a href="https://crimsoncrossbunker.github.io/blog/2026-07-04-activity#%E4%BB%8A%E6%97%A5%E8%B4%A1%E7%8C%AE%E8%80%85" class="hash-link" aria-label="今日贡献者的直接链接" title="今日贡献者的直接链接" translate="no">​</a></h2>
+<p>按当日非合并 commit 数量排序；PR 创建与合并操作不计入名次。</p>
+<div class="contributors-row"><a href="https://github.com/LunaGlaze" title="@LunaGlaze · 22 个非合并 commit" class="contributor-badge"><img src="https://github.com/LunaGlaze.png?size=40" width="28" height="28" loading="lazy" alt=""><span>LunaGlaze</span></a><a href="https://github.com/Minecrafthyr" title="@Minecrafthyr · 2 个非合并 commit" class="contributor-badge"><img src="https://github.com/Minecrafthyr.png?size=40" width="28" height="28" loading="lazy" alt=""><span>Minecrafthyr</span></a><a href="https://github.com/lapp2333xhj" title="@lapp2333xhj · 0 个非合并 commit" class="contributor-badge"><img src="https://github.com/lapp2333xhj.png?size=40" width="28" height="28" loading="lazy" alt=""><span>lapp2333xhj</span></a></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="已合并-pr6">已合并 PR（6）<a href="https://crimsoncrossbunker.github.io/blog/2026-07-04-activity#%E5%B7%B2%E5%90%88%E5%B9%B6-pr6" class="hash-link" aria-label="已合并 PR（6）的直接链接" title="已合并 PR（6）的直接链接" translate="no">​</a></h2>
+<table><thead><tr><th>PR</th><th>标题</th><th>创建者</th><th>主要贡献者</th><th>合并者</th></tr></thead><tbody><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/319" target="_blank" rel="noopener noreferrer" class="">#319</a></td><td>Highly efficient synthetic lungs which replace the user's own. (CBMs Rationality Balance Restoration Part 4)</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/320" target="_blank" rel="noopener noreferrer" class="">#320</a></td><td>在readme.md里添加与dda第三方mod的兼容性说明</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/321" target="_blank" rel="noopener noreferrer" class="">#321</a></td><td>堆叠少量遗漏物品</td><td>Minecrafthyr</td><td>Minecrafthyr</td><td>lapp2333xhj</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/322" target="_blank" rel="noopener noreferrer" class="">#322</a></td><td>[innawood] too many recipe obsolete has two definitions</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/323" target="_blank" rel="noopener noreferrer" class="">#323</a></td><td>fix #310</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr><tr><td><a href="https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb/pull/324" target="_blank" rel="noopener noreferrer" class="">#324</a></td><td>Cosplay-related items converted to flags, similar to the legacy FANCY flag</td><td>LunaGlaze</td><td>LunaGlaze</td><td>LunaGlaze</td></tr></tbody></table>]]></content>
+        <author>
+            <name>LunaGlaze</name>
+            <uri>https://github.com/LunaGlaze</uri>
+        </author>
+        <author>
+            <name>Minecrafthyr</name>
+            <uri>https://github.com/Minecrafthyr</uri>
+        </author>
+        <author>
+            <name>lapp2333xhj</name>
+            <uri>https://github.com/lapp2333xhj</uri>
+        </author>
+        <category label="开发动态" term="开发动态"/>
+        <category label="自动生成" term="自动生成"/>
+    </entry>
+</feed>
