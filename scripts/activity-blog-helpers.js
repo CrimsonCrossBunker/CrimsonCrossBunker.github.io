@@ -29,6 +29,12 @@ const KNOWN_LOGIN_BY_NAME = new Map([
   ['oleksii filonenko', 'Br1ght0ne'],
   ['evan brown', 'bobokapi'],
   ['lylesy', 'LyleSY'],
+  ['enkail333', 'Enkail333'],
+  ['ahhwatson', 'ahhwatson'],
+  ['sergey alirzaev', 'l29ah'],
+  ['explosiverunes', 'ExplosiveRunes'],
+  ['kuutekitty', 'kuutekitty'],
+  ['dedmemdev', 'dedmemdev'],
 ]);
 
 const KNOWN_LOGIN_BY_EMAIL = new Map([
@@ -55,6 +61,12 @@ const KNOWN_LOGIN_BY_EMAIL = new Map([
   ['github@brightone.cloud', 'Br1ght0ne'],
   ['ebrown255@gmail.com', 'bobokapi'],
   ['lyle.sollayates@gmail.com', 'LyleSY'],
+  ['enkailgaming@gmail.com', 'Enkail333'],
+  ['alisonw4tson@gmail.com', 'ahhwatson'],
+  ['l29ah@riseup.net', 'l29ah'],
+  ['explosiverunesllc@gmail.com', 'ExplosiveRunes'],
+  ['lifeisneat69@gmail.com', 'kuutekitty'],
+  ['unkown3587@gmail.com', 'dedmemdev'],
 ]);
 
 function collapseDuplicatedName(name) {
