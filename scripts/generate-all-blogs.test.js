@@ -24,6 +24,12 @@ test('把公开 Git 身份映射到已核实的 GitHub 帐号', () => {
   assert.equal(knownLogin('John Candlebury', 'johncandlebury@gmail.com'), 'John-Candlebury');
   assert.equal(knownLogin('Maksim Trukhinov', 'maks.truxinov@yandex.ru'), 'StriderDunedain');
   assert.equal(knownLogin('Kevin Denham - AVIXA', 'kdenham@avixa.org'), 'kevindenham');
+  assert.equal(knownLogin('Enkail333', 'enkailgaming@gmail.com'), 'Enkail333');
+  assert.equal(knownLogin('ahhwatson', 'alisonw4tson@gmail.com'), 'ahhwatson');
+  assert.equal(knownLogin('Sergey Alirzaev', 'l29ah@riseup.net'), 'l29ah');
+  assert.equal(knownLogin('ExplosiveRunes', 'explosiverunesllc@gmail.com'), 'ExplosiveRunes');
+  assert.equal(knownLogin('kuutekitty', 'lifeisneat69@gmail.com'), 'kuutekitty');
+  assert.equal(knownLogin('dedmemdev', 'unkown3587@gmail.com'), 'dedmemdev');
 });
 
 test('贡献者只按非合并 commit 数量排名', () => {

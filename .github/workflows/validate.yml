@@ -1,0 +1,48 @@
+name: Validate homepage
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/validate.yml
+      - docusaurus.config.js
+      - package.json
+      - package-lock.json
+      - scripts/**
+      - src/**
+      - static/**
+      - docs/**
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: homepage-validation-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Run unit and navigation tests
+        run: |
+          npm test
+          npm run test:navigation
+
+      - name: Build production site
+        run: npm run build

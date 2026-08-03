@@ -136,6 +136,11 @@ const config = {
             position: 'right',
           },
           {
+            href: 'https://crimsoncrossbunker.github.io/CCB-Docs/',
+            label: '开发文档 ↗',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/CrimsonCrossBunker/Cataclysm-Cleanwater-Bomb',
             label: 'GitHub ↗',
             position: 'right',
