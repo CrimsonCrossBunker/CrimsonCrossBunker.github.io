@@ -1,0 +1,30 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.newbieSidebar.category.新人教程": {
+    "message": "New player guide",
+    "description": "The label for category '新人教程' in sidebar 'newbieSidebar'"
+  },
+  "sidebar.devSidebar.category.开发者教程": {
+    "message": "Developer guide",
+    "description": "The label for category '开发者教程' in sidebar 'devSidebar'"
+  },
+  "sidebar.devSidebar.category.编译游戏": {
+    "message": "Build the game",
+    "description": "The label for category '编译游戏' in sidebar 'devSidebar'"
+  },
+  "sidebar.modSidebar.category.MOD 制作教程": {
+    "message": "Create MODs",
+    "description": "The label for category 'MOD 制作教程' in sidebar 'modSidebar'"
+  },
+  "sidebar.contributeSidebar.category.贡献指南": {
+    "message": "Contribution guide",
+    "description": "The label for category '贡献指南' in sidebar 'contributeSidebar'"
+  },
+  "sidebar.roadmapSidebar.category.开发路线": {
+    "message": "Roadmap",
+    "description": "The label for category '开发路线' in sidebar 'roadmapSidebar'"
+  }
+}

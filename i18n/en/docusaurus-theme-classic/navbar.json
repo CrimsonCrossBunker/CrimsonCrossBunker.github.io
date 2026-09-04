@@ -1,0 +1,50 @@
+{
+  "title": {
+    "message": "CCB",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "CCB Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.开始游玩": {
+    "message": "Play",
+    "description": "Navbar item with label 开始游玩"
+  },
+  "item.label.开发": {
+    "message": "Develop",
+    "description": "Navbar item with label 开发"
+  },
+  "item.label.制作 MOD": {
+    "message": "Create MODs",
+    "description": "Navbar item with label 制作 MOD"
+  },
+  "item.label.MOD 中心": {
+    "message": "MOD hub",
+    "description": "Navbar item with label MOD 中心"
+  },
+  "item.label.参与贡献": {
+    "message": "Contribute",
+    "description": "Navbar item with label 参与贡献"
+  },
+  "item.label.项目动态": {
+    "message": "Updates",
+    "description": "Navbar item with label 项目动态"
+  },
+  "item.label.社区": {
+    "message": "Community",
+    "description": "Navbar item with label 社区"
+  },
+  "item.label.物品维基 ↗": {
+    "message": "Game data ↗",
+    "description": "Navbar item with label 物品维基 ↗"
+  },
+  "item.label.开发文档 ↗": {
+    "message": "Developer docs ↗",
+    "description": "Navbar item with label 开发文档 ↗"
+  },
+  "item.label.GitHub ↗": {
+    "message": "GitHub ↗",
+    "description": "Navbar item with label GitHub ↗"
+  }
+}

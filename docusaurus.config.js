@@ -54,9 +54,10 @@ const config = {
   // 国际化：简体中文为主，英文备选
   i18n: {
     defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans'],
+    locales: ['zh-Hans', 'en'],
     localeConfigs: {
       'zh-Hans': {label: '简体中文'},
+      en: {label: 'English'},
     },
   },
 
@@ -122,6 +123,7 @@ const config = {
             position: 'left',
             label: '制作 MOD',
           },
+          {to: '/mods', label: 'MOD 中心', position: 'left'},
           {
             type: 'docSidebar',
             sidebarId: 'contributeSidebar',
@@ -131,7 +133,7 @@ const config = {
           {to: '/blog', label: '项目动态', position: 'left'},
           {to: '/community', label: '社区', position: 'left'},
           {
-            href: 'https://crimsoncrossbunker.github.io/CCB-GUIDE/?lang=zh_CN',
+            href: 'https://crimsoncrossbunker.github.io/CCB-GUIDE/',
             label: '物品维基 ↗',
             position: 'right',
           },
@@ -145,6 +147,7 @@ const config = {
             label: 'GitHub ↗',
             position: 'right',
           },
+          {type: 'localeDropdown', position: 'right'},
         ],
       },
       footer: {
@@ -164,6 +167,10 @@ const config = {
               {
                 label: 'MOD 教程',
                 to: '/docs/mod/intro',
+              },
+              {
+                label: 'MOD 中心',
+                to: '/mods',
               },
               {
                 label: '贡献指南',
@@ -210,7 +217,11 @@ const config = {
               },
               {
                 label: '游戏资料指南',
-                href: 'https://crimsoncrossbunker.github.io/CCB-GUIDE/?lang=zh_CN',
+                href: 'https://crimsoncrossbunker.github.io/CCB-GUIDE/',
+              },
+              {
+                label: 'CCB MOD 目录',
+                href: 'https://crimsoncrossbunker.github.io/CCB-MOD/',
               },
               {
                 label: '指南源码',
