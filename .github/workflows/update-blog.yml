@@ -47,18 +47,5 @@ jobs:
             git push
           fi
 
-      - name: 构建站点
-        if: env.NO_CHANGE != 'true'
-        run: npm run build
-
-      - name: 部署到 gh-pages
-        if: env.NO_CHANGE != 'true'
-        run: |
-          cd build
-          git init
-          git checkout -b gh-pages
-          git add -A
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git commit -m "自动部署 $(date +%Y-%m-%d)"
-          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" gh-pages
+      # deploy.yml listens for this workflow's completion, including bot
+      # commits that do not trigger push workflows. It also publishes CCB-MOD.
