@@ -4,7 +4,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 
-const GUIDE_URL = 'https://crimsoncrossbunker.github.io/CCB-GUIDE/?lang=zh_CN';
+const GUIDE_URL = 'https://crimsoncrossbunker.github.io/CCB-GUIDE/';
 const DOCS_URL = 'https://crimsoncrossbunker.github.io/CCB-Docs/';
 
 function navbarExternalItems(source) {

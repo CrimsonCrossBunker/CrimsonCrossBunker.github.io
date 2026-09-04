@@ -1,38 +1,46 @@
 ---
 sidebar_position: 1
-title: MOD 教程总览
-description: 以 CCB 当前代码和 JSON 为准，从零创建、调试、兼容并发布一个 MOD。
+title: MOD 制作入口
+description: 选择 Lua Platform v1 行为开发或静态 JSON 内容，并把 MOD 登记到 CCB 目录。
 ---
 
-# MOD 制作教程
+# MOD 制作入口
 
 :::info[路线档案]
-**适合**：想添加物品、配方、怪物、地图、职业、对话或规则的创作者　·　**前置**：会编辑文本文件　·　**最终成果**：一个能独立加载、验证和发布的 CCB MOD
+**适合**：想制作 CCB MOD 的创作者　·　**前置**：会编辑文本文件　·　**最终成果**：一个能加载、验证并登记到 CCB-MOD 的 MOD
 :::
 
-CCB 的大量内容由 JSON 定义。多数 MOD 不需要修改 C++ 或重新编译游戏；游戏会扫描内置 `data/mods/`、安装目录 `mods/` 和用户目录下的 MOD，并加载其中的 `modinfo.json` 与内容 JSON。
+CCB 当前只有一套可执行 MOD 接口：**Lua Platform v1**。新的行为、条件、效果和工作流用 Lua 编写；物品数值等静态、可校验的数据仍可使用 JSON。两种内容都不需要修改 C++ 或重新编译游戏。
+
+| 你要做什么 | 从这里开始 |
+|---|---|
+| 编写行为、事件、条件、交互或 UI | [Lua Platform v1 快速上手](https://crimsoncrossbunker.github.io/CCB-Docs/api/lua/v1/overview/) |
+| 添加静态物品、配方、怪物或地图数据 | [创建第一个 JSON MOD](./first-mod) |
+| 找 MOD、安装 MOD | [CCB MOD 中心](/mods) |
+| 登记作者仓库中的民间 MOD | [民间 MOD 登记说明](https://github.com/CrimsonCrossBunker/CCB-MOD/blob/main/docs/register.zh-Hans.md) |
 
 ## 完整学习路线
 
 | 课程 | 你会完成 |
 |---|---|
-| [创建第一个 MOD](./first-mod) | 选择安装位置，写出由当前代码支持的 `MOD_INFO` |
+| [创建第一个 JSON MOD](./first-mod) | 选择安装位置，写出由当前代码支持的静态 `MOD_INFO` |
 | [添加物品与配方](./content) | 理解 ID、引用、单位、文件拆分与查找现有例子 |
 | [调试与验证](./debugging) | 使用 `--check-mods`、独立用户目录、日志和调试菜单 |
 | [依赖与兼容](./compatibility) | 处理依赖、冲突、跨 MOD 交互和存档稳定性 |
 | [测试与发布](./test-and-publish) | 制作发布包，说明版本与许可，满足内置 MOD 维护要求 |
 
-## MOD、核心数据和 C++ 的边界
+## Lua、静态 JSON 和 C++ 的边界
 
 | 需求 | 优先方案 |
 |---|---|
-| 新物品、配方、怪物、职业、场景、地图、任务、对话 | JSON MOD |
+| 新行为、条件、效果、事件和交互流程 | Lua Platform v1 |
+| 只包含静态字段的物品、配方、怪物、职业和地图数据 | JSON MOD |
 | 调整数值、继承现有对象、增删 flags | JSON 的 `copy-from`、`relative`、`proportional`、`extend/delete` |
 | 只在另一个 MOD 启用时加载兼容内容 | `mod_interactions/<对方 mod id>/` |
-| 新增当前 JSON 不支持的底层能力 | 先讨论 C++ / JSON API 改动 |
+| 新增当前 Platform 不支持的底层能力 | 先讨论 C++ / Lua Platform API 改动 |
 | 修改渲染后端、性能热路径或系统级输入 | C++ 与平台代码 |
 
-不要先假设“这个只能改源码”。先在当前 `data/json/`、`data/mods/` 和 `doc/JSON/` 搜索相似行为；很多看似引擎级的机制已经开放为 JSON。
+不要为新 MOD 使用已经移除的 Lua API v5、`game.*` 全局表、Capability Manifest 或旧 JSON 行为教程。接口细节以 CCB 的 `ccb_platform_v1.d.lua`、机器契约和测试为准。
 
 ## 事实来源的优先级
 

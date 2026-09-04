@@ -1,10 +1,10 @@
 ---
 sidebar_position: 2
-title: 创建第一个 MOD
+title: 创建第一个 JSON MOD
 description: 选择正确目录，按 CCB 当前加载器支持的字段建立 modinfo.json。
 ---
 
-# 创建第一个 MOD
+# 创建第一个 JSON MOD
 
 :::info[本课目标]
 **完成标志**：重启游戏后，新建世界的 MOD 列表能找到“幸存者工具箱”，依赖自动带上 CCB 核心内容
