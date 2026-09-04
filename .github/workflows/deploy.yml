@@ -18,15 +18,40 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Check out the CCB MOD catalog
+        uses: actions/checkout@v4
+        with:
+          repository: CrimsonCrossBunker/CCB-MOD
+          ref: main
+          path: ccb-mod-source
+
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: ccb-mod-source/requirements.txt
+
       - name: Install dependencies
         run: npm ci
 
+      - name: Validate and package the CCB MOD catalog
+        run: |
+          python -m pip install -r ccb-mod-source/requirements.txt
+          python ccb-mod-source/scripts/build_catalog.py --check
+          python ccb-mod-source/scripts/package_mods.py \
+            --output ccb-mod-source/site/packages
+
       - name: Build site
         run: npm run build
+
+      - name: Add the CCB MOD catalog to the organization site
+        run: |
+          mkdir -p build/CCB-MOD
+          cp -a ccb-mod-source/site/. build/CCB-MOD/
 
       - uses: actions/configure-pages@v4
 
