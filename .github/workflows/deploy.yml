@@ -3,6 +3,14 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  workflow_dispatch:
+  workflow_run:
+    workflows: [更新工作状态博客]
+    types: [completed]
+
+concurrency:
+  group: organization-pages
+  cancel-in-progress: false
 
 permissions:
   contents: read
@@ -11,12 +19,15 @@ permissions:
 
 jobs:
   deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Check out the CCB MOD catalog
         uses: actions/checkout@v4
