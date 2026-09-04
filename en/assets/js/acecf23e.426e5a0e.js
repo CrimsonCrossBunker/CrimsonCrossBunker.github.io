@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkccb_site=self.webpackChunkccb_site||[]).push([["3220"],{1912(e){e.exports=JSON.parse('{"blogBasePath":"/en/blog","blogTitle":"Development updates","authorsListPath":"/en/blog/authors"}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkccb_site=self.webpackChunkccb_site||[]).push([["8915"],{76004(e){e.exports=JSON.parse('{"metadata":{"permalink":"/en/blog","page":1,"postsPerPage":10,"totalPages":9,"totalCount":90,"nextPage":"/en/blog/page/2","blogDescription":"CCB development progress and upstream sync log","blogTitle":"Development updates"}}')}}]);
