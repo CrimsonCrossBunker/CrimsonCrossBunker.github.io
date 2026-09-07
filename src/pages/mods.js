@@ -12,7 +12,7 @@ const COPY = {
     author: '我是 MOD 作者', authorSteps: ['用 Lua Platform v1 编写行为；静态、可校验的数据可以继续使用 JSON。', '在自己的仓库发布单个 MOD 的固定版本 ZIP，或申请由 CCB-MOD 维护源码。', '打开申请收录页面，填写信息并生成 GitHub 申请草稿；补充测试记录后提交，等待人工审核。熟悉 Git 的作者也可以直接提交 PR。'],
     docs: 'Lua Platform v1 文档', register: '登记民间 MOD', maintained: 'CCB 维护', maintainedText: '源码在 CCB-MOD，由核心成员或指定维护者修复和适配。',
     community: '民间维护', communityText: '源码在作者仓库，CCB 目录只展示登记信息与验证结果，不接管维护。',
-    status: '首版状态', statusText: '当前收录 g1ytx 的「猴王传承」0.4.0，要求包含职业/变异引用修复的 CCB 2026-09-07-2111。具体测试范围以目录记录为准；游戏内文本为简中，许可证未声明。不要用旧示例的验收记录判断本 MOD。',
+    status: '首版状态', statusText: '当前收录「猴王传承」0.4.0，作者和维护人均为 g1ytx，要求包含职业/变异引用修复的 CCB 2026-09-07-2111。具体测试范围以目录记录为准；游戏内文本为简中，许可证未声明。不要用旧示例的验收记录判断本 MOD。',
   },
   en: {
     title: 'CCB MOD hub', description: 'Find, install, create, and register CCB MODs.', eyebrow: 'CCB / MOD',
@@ -22,7 +22,7 @@ const COPY = {
     author: 'I am a MOD author', authorSteps: ['Write behaviour with Lua Platform v1. Passive, schema-validatable data may remain JSON.', 'Publish a fixed-version ZIP containing one MOD, or ask CCB-MOD to maintain the source.', 'Fill in the submission form, open the GitHub application draft, add test evidence and submit for manual review. You can also submit a PR directly.'],
     docs: 'Lua Platform v1 docs', register: 'Register a community MOD', maintained: 'CCB maintained', maintainedText: 'Source lives in CCB-MOD and is adapted by core or assigned maintainers.',
     community: 'Community maintained', communityText: "Source stays in the author's repository; the CCB catalog shows the author's claim and validation result.",
-    status: 'Version-one status', statusText: 'The catalog now features Monkey King Legacy 0.4.0 by g1ytx, requiring the profession/mutation fix in CCB 2026-09-07-2111. Consult its catalog record for verification scope. In-game text is Chinese and the license is undeclared. Former example tests do not validate this MOD.',
+    status: 'Version-one status', statusText: 'The catalog now features Monkey King Legacy 0.4.0, authored and maintained by g1ytx, requiring the profession/mutation fix in CCB 2026-09-07-2111. Consult its catalog record for verification scope. In-game text is Chinese and the license is undeclared. Former example tests do not validate this MOD.',
   },
 };
 
